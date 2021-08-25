@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import useContent from '@/helpers/use-content'
-import Layout from '@/components/layout'
+import Layout from '@/components/Layout'
 
 export default function Home() {
   const { site_title, site_description } = useContent()
