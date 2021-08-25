@@ -1,9 +1,12 @@
 import Head from 'next/head'
-import content from '@/content.json'
-
-const { site_title } = content
+import useContent from '@/helpers/use-content'
 
 export default function Home() {
+  const content = useContent()
+  const { site_title } = content
+
+  console.log(content)
+
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
       <Head>
