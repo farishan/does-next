@@ -37,7 +37,7 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="flex flex-col items-center justify-center w-full pb-20 pt-10 font-montserrat">
+    <footer className="flex flex-col items-center justify-center w-full pb-20 pt-10">
       <div className="w-44 flex justify-between mb-14">
         {socialMediaLogoPaths.map((item, idx) => (
           <Link key={idx} href={item.path}>

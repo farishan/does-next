@@ -1,3 +1,28 @@
+/**
+ * Global Styles Plugin
+ *
+ * This plugin modifies Tailwind’s base styles using values from the theme.
+ * https://tailwindcss.com/docs/adding-base-styles#using-a-plugin
+ */
+const globalStyles = ({ addBase, config }) => {
+  addBase({
+    html: {
+      fontFamily: config('theme.fontFamily.body')
+    },
+    body: {
+      backgroundColor: config('theme.colors.black'),
+      color: config('theme.colors.white')
+    },
+    a: {
+      transition: 'color 0.2s',
+      color: config('theme.colors.dark'),
+      '&:hover': {
+        color: config('theme.colors.primary')
+      }
+    }
+  })
+}
+
 const screensConfig = {
   sm: '375px',
   md: '768px',
@@ -55,14 +80,19 @@ module.exports = {
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        dark: '#222222',
+        primary: '#D2292D'
+      }
+    },
     fontFamily: {
-      poppins: ['Poppins', 'ui-sans-serif'],
-      montserrat: ['Montserrat', 'ui-sans-serif']
+      accent: ['Poppins', 'ui-sans-serif'],
+      body: ['Montserrat', 'ui-sans-serif', 'sans-serif']
     }
   },
   variants: {
     extend: {}
   },
-  plugins: [containerStyles]
+  plugins: [globalStyles, containerStyles]
 }
