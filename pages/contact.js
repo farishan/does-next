@@ -3,18 +3,18 @@ import Layout from '@/components/Layout'
 import useContent from '@/helpers/use-content'
 import Head from 'next/head'
 
-export default function About() {
-  const { site_title, nav_about } = useContent()
+export default function Contact() {
+  const { site_title, atf_contact } = useContent()
 
   return (
     <Layout>
       <Head>
         <title>
-          {nav_about} - {site_title}
+          {atf_contact} - {site_title}
         </title>
       </Head>
 
-      <ATF title={nav_about} imageURL={`/images/placeholder.png`} />
+      <ATF title={atf_contact} imageURL={`/images/placeholder.png`} />
 
       <div className="container py-10 md:py-20">Lorem ipsum</div>
     </Layout>

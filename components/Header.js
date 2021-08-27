@@ -7,11 +7,12 @@ export default function Header() {
 
   const navItems = [
     { label: 'TENTANG KAMI', path: '/about' },
-    { label: 'KARYA', path: '#' },
-    { label: 'BERITA', path: '#' },
-    { label: 'MERCHANDISE', path: '#' },
-    { label: 'DONASI', path: '#' },
-    { label: 'PENDAFTARAN', path: '#' }
+    // { label: 'KARYA', path: '#' },
+    // { label: 'BERITA', path: '#' },
+    // { label: 'MERCHANDISE', path: '#' },
+    // { label: 'DONASI', path: '#' },
+    { label: 'KONTAK', path: '/contact' }
+    // { label: 'PENDAFTARAN', path: '#' }
   ]
 
   return (

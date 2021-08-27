@@ -9,6 +9,18 @@
   },
   {
     "key": "site_logo",
-    "value": "https://i.imgur.com/OrLxylW.png"
+    "value": "https://i.imgur.com/uExJ6ua.png"
+  },
+  {
+    "key": "nav_about",
+    "value": "Tentang Kami"
+  },
+  {
+    "key": "nav_contact",
+    "value": "Kontak"
+  },
+  {
+    "key": "atf_contact",
+    "value": "Hubungi Kami"
   }
 ]
