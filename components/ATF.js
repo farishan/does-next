@@ -13,9 +13,11 @@ export default function ATF({ title, imageURL }) {
           />
         )}
 
-        <h1 className="uppercase font-bold tracking-widest text-2xl lg:text-5xl relative z-10">
-          {title}
-        </h1>
+        {title && (
+          <h1 className="uppercase font-bold tracking-widest text-2xl lg:text-5xl relative z-10">
+            {title}
+          </h1>
+        )}
       </div>
     </>
   )

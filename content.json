@@ -22,5 +22,29 @@
   {
     "key": "atf_contact",
     "value": "Hubungi Kami"
+  },
+  {
+    "key": "work",
+    "value": "Karya"
+  },
+  {
+    "key": "featured_work_title",
+    "value": "Karya Unggulan"
+  },
+  {
+    "key": "featured_work_description",
+    "value": "Karya unggulan dari murid DOES University di setiap generasi."
+  },
+  {
+    "key": "work_title",
+    "value": "Karya Pendek"
+  },
+  {
+    "key": "work_description",
+    "value": "Karya-karya dari murid DOES University dalam rangka memeriahkan suatu event."
+  },
+  {
+    "key": "view_more_label",
+    "value": "Selengkapnya"
   }
 ]
