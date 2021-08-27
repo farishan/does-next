@@ -87,8 +87,13 @@ module.exports = {
       }
     },
     fontFamily: {
-      accent: ['Poppins', 'ui-sans-serif'],
-      body: ['Montserrat', 'ui-sans-serif', 'sans-serif']
+      body: ['Poppins', 'ui-sans-serif'],
+      accent: ['Montserrat', 'ui-sans-serif', 'sans-serif']
+    },
+    minHeight: {
+      '50vh': '50vh',
+      '70vh': '70vh',
+      '90vh': '90vh'
     }
   },
   variants: {
