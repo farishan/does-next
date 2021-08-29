@@ -12,6 +12,26 @@
     "value": "https://i.imgur.com/uExJ6ua.png"
   },
   {
+    "key": "site_address",
+    "value": "Area Sawah, Sidoarum, Kec. Godean, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55264"
+  },
+  {
+    "key": "site_phone",
+    "value": "0823-0209-2302"
+  },
+  {
+    "key": "site_phone_alt",
+    "value": "0898-0935-556"
+  },
+  {
+    "key": "site_email",
+    "value": "doesuniversity@gmail.com"
+  },
+  {
+    "key": "site_latlong",
+    "value": "-7.7803688, 110.3122047846575"
+  },
+  {
     "key": "nav_about",
     "value": "Tentang Kami"
   },
@@ -46,5 +66,9 @@
   {
     "key": "view_more_label",
     "value": "Selengkapnya"
+  },
+  {
+    "key": "contact_description",
+    "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque vitae quam vitae elit eu. Non ullamcorper cras nibh eget a et. Enim, in tellus sit integer nibh. Egestas et facilisi massa arcu ut sit tincidunt. Eu mauris in diam fusce odio eu. Dui in consequat mattis est. Quis imperdiet morbi arcu, amet non enim sit. Turpis nec arcu egestas facilisis tincidunt sed vel donec eu. Neque morbi pretium, diam volutpat, orci. Vivamus facilisis volutpat netus in volutpat at vitae. Nunc, eu, sit felis sed tristique."
   }
 ]
