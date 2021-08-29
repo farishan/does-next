@@ -1,6 +1,6 @@
 import useContent from '@/helpers/use-content'
 
-export default function Button({ viewMore, children }) {
+export default function Button({ viewMore, extendClass, children, ...props }) {
   const { view_more_label } = useContent()
   const text = viewMore ? view_more_label : children
 
@@ -9,7 +9,8 @@ export default function Button({ viewMore, children }) {
   return (
     <>
       <button
-        className={`${animationClass} border border-transparent bg-primary py-4 px-6 text-white hover:text-primary hover:bg-black hover:border-primary`}
+        className={`${animationClass} border border-transparent bg-primary py-4 px-6 text-white hover:text-primary hover:bg-black hover:border-primary ${extendClass}`}
+        {...props}
       >
         {text}
       </button>

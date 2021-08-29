@@ -84,17 +84,21 @@ module.exports = {
       colors: {
         dark: '#222222',
         primary: '#D2292D',
+        'gray-333': '#333333',
         'gray-666': '#666666'
+      },
+      fontSize: {
+        xl: ['1.25rem', '2.5rem']
+      },
+      fontFamily: {
+        accent: ['Poppins', 'ui-sans-serif'],
+        body: ['Montserrat', 'ui-sans-serif', 'sans-serif']
+      },
+      minHeight: {
+        '50vh': '50vh',
+        '70vh': '70vh',
+        '90vh': '90vh'
       }
-    },
-    fontFamily: {
-      body: ['Poppins', 'ui-sans-serif'],
-      accent: ['Montserrat', 'ui-sans-serif', 'sans-serif']
-    },
-    minHeight: {
-      '50vh': '50vh',
-      '70vh': '70vh',
-      '90vh': '90vh'
     }
   },
   variants: {
