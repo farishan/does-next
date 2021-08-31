@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import useContent from '@/helpers/use-content'
 import Image from 'next/image'
 import Link from 'next/link'
-import IconRight from './icons/iconRight'
+import IconRight from 'components/icons/iconRight'
 
 export default function Header() {
   const [showNavModal, setShowNavModal] = useState(false)
