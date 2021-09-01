@@ -34,7 +34,7 @@ export default function ContactForm() {
       </div>
 
       <div className="mb-8 lg:mb-16">
-        <Label extendClass="lg:mb-6">Pesan</Label>
+        <Label extendClass="lg:mb-6">Pesan*</Label>
         <Textarea {...register('message', { required: true })} />
         {errors.message && (
           <p className="text-red-600">This field is required</p>
