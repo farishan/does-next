@@ -3,7 +3,7 @@ import useContent from '@/helpers/use-content'
 import Button from '@/components/Button'
 
 export default function SectionWork() {
-  const { work_title, work_description, view_more_label } = useContent()
+  const { work_title, work_description } = useContent()
 
   const title = work_title
   const description = work_description

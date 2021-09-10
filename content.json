@@ -4,8 +4,12 @@
     "value": "DOES University"
   },
   {
+    "key": "site_description_short",
+    "value": "Merupakan sekolah bakat non-formal dan non-komersial yang ditujukan untuk mengajarkan ilmu sesuai minat dan bakat peserta didik."
+  },
+  {
     "key": "site_description",
-    "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque vitae quam vitae elit eu. Non ullamcorper cras nibh eget a et. Enim, in tellus sit integer nibh. Egestas et facilisi massa arcu ut sit tincidunt. Eu mauris in diam fusce odio eu. Dui in consequat mattis est. Quis imperdiet morbi arcu, amet non enim sit. Turpis nec arcu egestas facilisis tincidunt sed vel donec eu. Neque morbi pretium, diam volutpat, orci. Vivamus facilisis volutpat netus in volutpat at vitae. Nunc, eu, sit felis sed tristique."
+    "value": "Merupakan sekolah bakat non-formal dan non-komersial yang ditujukan untuk mengajarkan ilmu sesuai minat dan bakat peserta didik."
   },
   {
     "key": "site_logo",
@@ -68,8 +72,12 @@
     "value": "Karya-karya dari murid DOES University dalam rangka memeriahkan suatu event."
   },
   {
-    "key": "view_more_label",
+    "key": "label_view_more",
     "value": "Selengkapnya"
+  },
+  {
+    "key": "label_view_detail",
+    "value": "Lihat Detail"
   },
   {
     "key": "contact_description",

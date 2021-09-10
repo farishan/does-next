@@ -1,8 +1,8 @@
 import useContent from '@/helpers/use-content'
 
 export default function Button({ viewMore, extendClass, children, ...props }) {
-  const { view_more_label } = useContent()
-  const text = viewMore ? view_more_label : children
+  const { label_view_more } = useContent()
+  const text = viewMore ? label_view_more : children
 
   const animationClass = 'transition-all duration-200 ease-in-out'
 
