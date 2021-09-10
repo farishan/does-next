@@ -1,6 +1,11 @@
 import useContent from '@/helpers/use-content'
 
-export default function Button({ viewMore, extendClass, children, ...props }) {
+export default function Button({
+  viewMore,
+  extendClass = '',
+  children,
+  ...props
+}) {
   const { label_view_more } = useContent()
   const text = viewMore ? label_view_more : children
 

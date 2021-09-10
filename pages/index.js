@@ -5,6 +5,7 @@ import ATF from '@/components/ATF'
 import SectionFeatured from '@/components/sections/SectionFeatured'
 import SectionWork from '@/components/sections/SectionWork'
 import Button from '@/components/Button'
+import Section from '@/components/Section'
 
 export default function Home() {
   const { site_title, site_description } = useContent()
@@ -25,8 +26,13 @@ export default function Home() {
       <SectionFeatured />
       <SectionWork />
 
-      <section className="bg-gray-666 py-16 md:py-32">
-        <div className="flex flex-col items-center justify-center min-h-screen py-2">
+      <Section
+        fullscreen
+        container
+        overlay
+        // backgroundImage={`/images/placeholder_hero.jpg`}
+      >
+        <div className="flex flex-col items-center justify-center py-16 md:py-32">
           <main className="flex flex-col items-center justify-center w-full flex-1 px-5 lg:px-20 text-center">
             <h1 className="text-4xl lg:text-6xl font-bold mb-8">
               Welcome to{' '}
@@ -38,7 +44,7 @@ export default function Home() {
             <p>{site_description}</p>
           </main>
         </div>
-      </section>
+      </Section>
 
       <section className="container py-8 md:py-16">
         <h2 className="text-2xl font-bold tracking-widest mb-4 text-center uppercase">
