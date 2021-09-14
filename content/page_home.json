@@ -1,0 +1,42 @@
+[
+  {
+    "key": "section_about_backgroundImage_src",
+    "value": "https://i.ibb.co/Qdy3k0Q/Mask-Group-5-1.jpg"
+  },
+  {
+    "key": "section_about_backgroundImage_alt",
+    "value": "Foto siswa DOES University generasi ke-7"
+  },
+  {
+    "key": "section_about_title",
+    "value": "<strong>DOES</strong> <span class=\"font-light\">University</span>"
+  },
+  {
+    "key": "section_about_description",
+    "value": "Merupakan sekolah bakat non-formal dan non-komersial yang ditujukan untuk mengajarkan ilmu sesuai minat dan bakat peserta didik."
+  },
+  {
+    "key": "section_about_linkText",
+    "value": "Selengkapnya"
+  },
+  {
+    "key": "section_about_linkHref",
+    "value": "/about"
+  },
+  {
+    "key": "section_about_mainImage_src",
+    "value": "https://i.ibb.co/30pjWJX/erix-2-1.png"
+  },
+  {
+    "key": "section_about_mainImage_alt",
+    "value": "Foto Erix Soekamti, pendiri/founder DOES University"
+  },
+  {
+    "key": "section_about_label_text",
+    "value": "Tentang DOES"
+  },
+  {
+    "key": "section_about_label_icon",
+    "value": "home"
+  }
+]

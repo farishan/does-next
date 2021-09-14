@@ -6,6 +6,7 @@ import Head from 'next/head'
 import works from '@/assets/works.dummy.json'
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
+import Html from '@/components/Html'
 
 /* @todo: split to other file */
 const PageSection = ({ data = {} }) => {
@@ -96,8 +97,7 @@ export default function WorkDetail() {
           <>
             <div className="container">
               <h1>{title}</h1>
-              {/* @todo: sanitize html */}
-              <div dangerouslySetInnerHTML={{ __html: content }}></div>
+              <Html block>{content}</Html>
               <div className="py-4">
                 <p>{video.title}</p>
                 <iframe

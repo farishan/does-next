@@ -81,11 +81,13 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      screens: screensConfig,
       colors: {
         dark: '#222222',
         primary: '#D2292D',
         'gray-333': '#333333',
-        'gray-666': '#666666'
+        'gray-666': '#666666',
+        'gray-888': '#888888'
       },
       fontSize: {
         xl: ['1.25rem', '2.5rem']

@@ -7,7 +7,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "isomorphic-dompurify": "^0.15.0",
     "next": "latest",
+    "nextjs-progressbar": "^0.0.11",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-hook-form": "^7.14.0"
@@ -17,7 +19,6 @@
     "eslint": "^7.32.0",
     "eslint-config-next": "^11.1.0",
     "eslint-config-prettier": "^8.3.0",
-    "nextjs-progressbar": "^0.0.11",
     "postcss": "^8.3.5",
     "prettier": "^2.3.2",
     "tailwindcss": "^2.2.4"
