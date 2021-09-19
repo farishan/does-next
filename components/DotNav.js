@@ -46,14 +46,10 @@ export default function DotNav() {
             key={`dot_${index}`}
           />
         ) : (
-          <>
+          <div className="flex flex-col items-center" key={`dot_${index}`}>
             <Line isActive={index <= a} />
-            <Dot
-              isActive={index <= a}
-              onClick={() => setA(index)}
-              key={`dot_${index}`}
-            />
-          </>
+            <Dot isActive={index <= a} onClick={() => setA(index)} />
+          </div>
         )
       )}
     </div>

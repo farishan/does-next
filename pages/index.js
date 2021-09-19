@@ -7,6 +7,7 @@ import SectionWork from '@/components/sections/SectionWork'
 import SectionAbout from '@/components/sections/SectionAbout'
 import SectionFeatured from '@/components/sections/SectionFeatured'
 import SectionFeaturedBlog from '@/components/sections/SectionFeaturedBlog'
+import TabNav from '@/components/TabNav'
 
 export default function Home() {
   const { site_title } = useContent()
@@ -53,6 +54,10 @@ export default function Home() {
       {/* TODO integrate dots with sections */}
       <div className="fixed z-40 hidden lg:block right-16 top-1/2 -translate-y-1/2">
         <DotNav />
+      </div>
+
+      <div className="container">
+        <TabNav />
       </div>
 
       {/* Modular, adjustable sections */}

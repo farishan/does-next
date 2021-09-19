@@ -100,6 +100,9 @@ module.exports = {
         '50vh': '50vh',
         '70vh': '70vh',
         '90vh': '90vh'
+      },
+      transitionTimingFunction: {
+        'custom-cubic': 'cubic-bezier(.63,0,.52,.77)'
       }
     }
   },

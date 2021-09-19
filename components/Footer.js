@@ -3,36 +3,36 @@ import Link from 'next/link'
 
 export default function Footer() {
   const navItems = [
-    { label: 'TENTANG DOES', path: '#' },
-    { label: 'JURUSAN', path: '#' },
-    { label: 'HUBUNGI KAMI', path: '#' },
-    { label: 'KARYA UNGGULAN', path: '#' },
-    { label: 'KARYA PENDEK', path: '#' },
-    { label: 'BERITA', path: '#' },
-    { label: 'MERCHANDISE', path: '#' },
-    { label: 'DONASI', path: '#' }
+    { label: 'TENTANG DOES', path: '/' },
+    { label: 'JURUSAN', path: '/' },
+    { label: 'HUBUNGI KAMI', path: '/' },
+    { label: 'KARYA UNGGULAN', path: '/' },
+    { label: 'KARYA PENDEK', path: '/' },
+    { label: 'BERITA', path: '/' },
+    { label: 'MERCHANDISE', path: '/' },
+    { label: 'DONASI', path: '/' }
   ]
 
   const socialMediaLogoPaths = [
     {
       name: 'facebook',
       src: require('../assets/icons/icon-fb-white.png'),
-      path: '#'
+      path: '/'
     },
     {
       name: 'twitter',
       src: require('../assets/icons/icon-twitter-white.png'),
-      path: '#'
+      path: '/'
     },
     {
       name: 'instagram',
       src: require('../assets/icons/icon-ig-white.png'),
-      path: '#'
+      path: '/'
     },
     {
       name: 'youtube',
       src: require('../assets/icons/icon-youtube-white.png'),
-      path: '#'
+      path: '/'
     }
   ]
 
