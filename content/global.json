@@ -36,16 +36,44 @@
     "value": "-7.7803688, 110.3122047846575"
   },
   {
-    "key": "nav_about",
-    "value": "Tentang Kami"
-  },
-  {
     "key": "nav_works",
     "value": "Karya"
   },
   {
+    "key": "nav_works_top",
+    "value": "Karya Unggulan"
+  },
+  {
+    "key": "nav_works_short",
+    "value": "Karya Pendek"
+  },
+  {
+    "key": "nav_news",
+    "value": "Berita"
+  },
+  {
+    "key": "nav_merchandise",
+    "value": "Merchandise"
+  },
+  {
+    "key": "nav_registration",
+    "value": "Pendaftaran"
+  },
+  {
+    "key": "nav_about",
+    "value": "Tentang Does"
+  },
+  {
+    "key": "nav_department",
+    "value": "Jurusan"
+  },
+  {
+    "key": "nav_donation",
+    "value": "Donasi"
+  },
+  {
     "key": "nav_contact",
-    "value": "Kontak"
+    "value": "Hubungi Kami"
   },
   {
     "key": "atf_contact",
