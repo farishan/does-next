@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import ATF from '@/components/ATF'
 import Layout from '@/components/Layout'
-import DotNav from '@/components/DotNav'
+import VerticalStepper from '@/components/VerticalStepper'
 import useContent from '@/helpers/use-content'
 import SectionWork from '@/components/sections/SectionWork'
 import SectionAbout from '@/components/sections/SectionAbout'
@@ -50,10 +50,10 @@ export default function Home() {
 
       <ATF />
 
-      {/* Floating dots navigation */}
-      {/* TODO integrate dots with sections */}
+      {/* Floating vertical stepper navigation */}
+      {/* TODO integrate vertical stepper with sections */}
       <div className="fixed z-40 hidden lg:block right-16 top-1/2 -translate-y-1/2">
-        <DotNav />
+        <VerticalStepper />
       </div>
 
       <div className="container">
