@@ -4,7 +4,7 @@ import { useState } from 'react'
 
 const animationClass = 'transition-all duration-200 ease-in-out'
 
-const Dot = ({ isActive, ...props }) => {
+const Circle = ({ isActive, ...props }) => {
   return (
     <div
       className={`cursor-pointer rounded-full border border-white ${
@@ -31,24 +31,24 @@ const Line = ({ isActive }) => {
   )
 }
 
-export default function DotNav() {
+export default function VerticalStepper() {
   const [a, setA] = useState(0)
 
-  const dots = [1, 2, 3, 4]
+  const steps = [1, 2, 3, 4]
 
   return (
     <div className="flex flex-col items-center justify-between">
-      {dots.map((dot, index) =>
+      {steps.map((step, index) =>
         index === 0 ? (
-          <Dot
+          <Circle
             isActive={index <= a}
             onClick={() => setA(index)}
-            key={`dot_${index}`}
+            key={`step_${index}`}
           />
         ) : (
-          <div className="flex flex-col items-center" key={`dot_${index}`}>
+          <div className="flex flex-col items-center" key={`step_${index}`}>
             <Line isActive={index <= a} />
-            <Dot isActive={index <= a} onClick={() => setA(index)} />
+            <Circle isActive={index <= a} onClick={() => setA(index)} />
           </div>
         )
       )}

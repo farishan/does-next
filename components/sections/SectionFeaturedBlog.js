@@ -1,4 +1,5 @@
 import Button from '@/components/Button'
+import Link from 'next/link'
 
 const blog_title = 'Blog'
 const blog_description = 'Our featured blogposts'
@@ -14,7 +15,11 @@ export default function SectionFeaturedBlog() {
         Featured blogposts goes here
       </div>
       <div className="text-center mt-16">
-        <Button viewMore />
+        <Link href="/blog">
+          <a>
+            <Button viewMore />
+          </a>
+        </Link>
       </div>
     </section>
   )

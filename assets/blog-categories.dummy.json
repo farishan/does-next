@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "slug": "category-a",
+    "title": "Category A"
+  },
+  {
+    "id": 2,
+    "slug": "category-b",
+    "title": "Category B"
+  }
+]
