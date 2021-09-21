@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import { useRouter } from 'next/router'
 import useContent from '@/helpers/use-content'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -8,7 +9,9 @@ import NavbarMobileView from './NavbarMobileView'
 export default function Header() {
   const [showNavModal, setShowNavModal] = useState(false)
   const [hoveredNav, setHoveredNav] = useState(null)
+  const [activeRoute, setActiveRoute] = useState('/')
 
+  const router = useRouter()
   const {
     site_logo,
     nav_works,
@@ -23,6 +26,11 @@ export default function Header() {
     nav_donation,
     nav_contact
   } = useContent()
+
+  useEffect(() => {
+    const currentRoute = router.pathname
+    setActiveRoute(currentRoute)
+  }, [])
 
   // const navItems = [
   //   { label: nav_about, path: '/about' },
@@ -124,6 +132,7 @@ export default function Header() {
             showNavModal={showNavModal}
             siteLogo={renderSiteLogo}
             socialMediaLogoPaths={socialMediaLogoPaths}
+            activeRoute={activeRoute}
           />
         </div>
       </div>
