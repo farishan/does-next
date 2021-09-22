@@ -20,7 +20,7 @@ const Navbar = ({
           <div className="w-3 border-b-2" />
         </button>
       ) : (
-        <div className="bg-black backdrop-filter backdrop-blur-xl bg-opacity-90 fixed right-0 top-0 w-screen h-screen flex flex-col justify-between pb-14">
+        <div className="bg-black z-50 backdrop-filter backdrop-blur-xl bg-opacity-90 fixed right-0 top-0 w-screen h-screen flex flex-col justify-between pb-14">
           <div className="container flex items-center justify-between h-24">
             {siteLogo()}
             <div className="flex items-center">
@@ -74,7 +74,7 @@ const Navbar = ({
               }
             })}
           </nav>
-          <div className="container w-full flex justify-between items-center">
+          <div className="container w-full flex flex-col md:flex-row justify-between items-start md:items-center">
             <nav className="w-full flex">
               {navItems.map((navItem, index) => {
                 const isHighlighted =
@@ -87,10 +87,11 @@ const Navbar = ({
                       key={index}
                       onMouseOver={() => handleHover(navItems.indexOf(navItem))}
                       onMouseLeave={() => handleHover(false)}
+                      className="flex flex-wrap"
                     >
                       <Link href={navItem.path}>
                         <span
-                          className={`font-accent text-xs uppercase flex ${
+                          className={`font-accent text-xs uppercase ${
                             index !== navItems.length - 1 ? 'mr-10' : 'mr-0'
                           } ${
                             isHighlighted
@@ -98,7 +99,7 @@ const Navbar = ({
                               : 'text-gray-400'
                           }`}
                         >
-                          <span className="mr-1">{navItem.label}</span>
+                          {navItem.label}
                         </span>
                       </Link>
                     </div>
@@ -107,7 +108,7 @@ const Navbar = ({
               })}
             </nav>
             <div>
-              <div className="flex">
+              <div className="flex mt-10 md:mt-0">
                 {socialMediaLogoPaths.map((item, idx) => (
                   <Link key={idx} href={item.path}>
                     <a
@@ -122,7 +123,7 @@ const Navbar = ({
                         src={item.src}
                         height={20}
                         width={20}
-                        alt="facebook"
+                        alt="socmedicon"
                       />
                     </a>
                   </Link>
