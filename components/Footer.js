@@ -1,73 +1,132 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import useContent from '@/helpers/use-content'
+import UnderlinedTitle from './UnderlinedTitle'
 
 export default function Footer() {
+  const {
+    site_logo,
+    nav_works_top,
+    nav_works_short,
+    nav_news,
+    nav_merchandise,
+    nav_registration,
+    nav_about,
+    nav_department,
+    nav_donation,
+    nav_contact,
+    copy_right
+  } = useContent()
+
   const navItems = [
-    { label: 'TENTANG DOES', path: '/' },
-    { label: 'JURUSAN', path: '/' },
-    { label: 'HUBUNGI KAMI', path: '/' },
-    { label: 'KARYA UNGGULAN', path: '/' },
-    { label: 'KARYA PENDEK', path: '/' },
-    { label: 'BERITA', path: '/' },
-    { label: 'MERCHANDISE', path: '/' },
-    { label: 'DONASI', path: '/' }
+    {
+      label: 'TENTANG KAMI',
+      children: [
+        { label: nav_about, path: '#' },
+        { label: nav_department, path: '#' },
+        { label: nav_registration, path: '#' }
+      ]
+    },
+    {
+      label: 'KARYA',
+      children: [
+        { label: nav_works_short, path: '#' },
+        { label: nav_works_top, path: '#' }
+      ]
+    },
+    {
+      label: 'LAIN-LAIN',
+      children: [
+        { label: nav_news, path: '#' },
+        { label: nav_merchandise, path: '#' },
+        { label: nav_contact, path: '#' },
+        { label: nav_donation, path: '#' }
+      ]
+    }
   ]
 
   const socialMediaLogoPaths = [
     {
       name: 'facebook',
-      src: require('../assets/icons/icon-fb-white.png'),
+      src: require('../assets/icons/icon-fb-grey.png'),
       path: '/'
     },
     {
       name: 'twitter',
-      src: require('../assets/icons/icon-twitter-white.png'),
+      src: require('../assets/icons/icon-twitter-grey.png'),
       path: '/'
     },
     {
       name: 'instagram',
-      src: require('../assets/icons/icon-ig-white.png'),
-      path: '/'
+      src: require('../assets/icons/icon-ig-grey.png'),
+      path: 'https://www.instagram.com/doesofficial'
     },
     {
       name: 'youtube',
-      src: require('../assets/icons/icon-youtube-white.png'),
-      path: '/'
+      src: require('../assets/icons/icon-youtube-grey.png'),
+      path: 'https://www.youtube.com/channel/UCLAlGn0fvx92nQkF_v4Yq1w'
     }
   ]
 
   return (
-    <footer className="flex flex-col items-center justify-center w-full pb-20 pt-10">
-      <div className="w-44 flex justify-between mb-14">
-        {socialMediaLogoPaths.map((item, idx) => (
-          <Link key={idx} href={item.path}>
+    <footer className="container">
+      <div className="hidden sm:flex justify-between py-7">
+        <div className="flex justify-start w-1/2">
+          <Link href="/">
             <a>
-              <Image src={item.src} height={20} width={20} alt="facebook" />
+              <Image src={site_logo} height={200} width={358} alt="main-logo" />
             </a>
           </Link>
-        ))}
+        </div>
+        <div className="w-1/2 flex justify-start">
+          {navItems.map((item, index) => {
+            return (
+              <div
+                key={index}
+                className="w-1/3 flex flex-col items-start uppercase"
+              >
+                <span className="font-body text-white mb-7">{item.label}</span>
+                <div className="flex flex-col items-start">
+                  {item.children?.map((subItem, idx) => {
+                    return (
+                      <Link key={idx} href={subItem.path}>
+                        <a className="font-body text-gray-500 mb-7">
+                          {subItem.label}
+                        </a>
+                      </Link>
+                    )
+                  })}
+                </div>
+              </div>
+            )
+          })}
+        </div>
       </div>
-      <div className="flex flex-wrap justify-center mb-10 w-2/3">
-        {navItems.map((item, idx) => (
-          <div key={idx} className="flex items-center">
-            <Link href={item.path}>
+      <div className="flex py-7 items-center">
+        <div className="flex flex-col items-start w-1/2">
+          <span className="font-extralight mb-7">HUBUNGI KAMI DI</span>
+          <span className="text-lg">
+            <UnderlinedTitle text1="doesuniversity@gmail.com" />
+          </span>
+        </div>
+        <div className="w-1/2 flex justify-end mr-10">
+          {socialMediaLogoPaths.map((item, idx) => (
+            <Link key={idx} href={item.path}>
               <a
-                className={`text-white ${
-                  idx !== navItems.length - 1 ? 'mr-4' : 'mr-0'
+                target="_blank"
+                className={`${
+                  idx !== socialMediaLogoPaths.length - 1 ? 'mr-7' : 'mr-0'
                 }`}
               >
-                {item.label}
+                <Image src={item.src} height={20} width={20} alt="socmedicon" />
               </a>
             </Link>
-            {idx !== navItems.length - 1 && (
-              <div className="h-5 border-r mr-4" />
-            )}
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-      <p className="text-gray-400 text-sm">
-        &copy; 2015 - 2021 DOES UNIVERSITY{' '}
-      </p>
+      <div className="flex justify-start py-7">
+        <span className="text-gray-600">{copy_right}</span>
+      </div>
     </footer>
   )
 }
