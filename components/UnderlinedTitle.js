@@ -1,9 +1,13 @@
 import React from 'react'
 
-export default function UnderlinedTitle({ text1, text2 }) {
+export default function UnderlinedTitle({ text1, text2, lineBold, BigText }) {
   const renderText = (text) => {
     return (
-      <span className="text-white font-body text-5xl relative z-10">
+      <span
+        className={`text-white font-body relative z-10 ${
+          BigText ? 'text-5xl' : 'text-4xl'
+        }`}
+      >
         {text}
       </span>
     )
@@ -11,7 +15,11 @@ export default function UnderlinedTitle({ text1, text2 }) {
 
   const renderUnderline = () => {
     return (
-      <div className="w-full h-10 border-t-8 border-red-700 -translate-y-3" />
+      <div
+        className={`w-full h-10 border-red-700 ${
+          lineBold ? 'border-t-8 -translate-y-3' : 'border-t-2 translate-y-4'
+        }`}
+      />
     )
   }
 
