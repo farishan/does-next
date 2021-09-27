@@ -114,5 +114,9 @@
   {
     "key": "works_image",
     "value": "/images/placeholder.png"
+  },
+  {
+    "key": "copy_right",
+    "value": "© 2021 DOES University | Designed by Gen 7, Developed by Gen 3 & Gen 6"
   }
 ]
