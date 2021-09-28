@@ -30,7 +30,7 @@ export default function Header() {
   useEffect(() => {
     const currentRoute = router.pathname
     setActiveRoute(currentRoute)
-  }, [])
+  }, [router.pathname])
 
   // const navItems = [
   //   { label: nav_about, path: '/about' },

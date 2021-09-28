@@ -62,7 +62,8 @@ const containerStyles = ({ addComponents }) => {
     '.container': {
       ...containerBase,
       '@screen xl': {
-        maxWidth: screensConfig['xl']
+        // maxWidth: screensConfig['xl']
+        maxWidth: '1200px'
       }
     },
     '.container-fluid': {
@@ -87,7 +88,8 @@ module.exports = {
         primary: '#D2292D',
         'gray-333': '#333333',
         'gray-666': '#666666',
-        'gray-888': '#888888'
+        'gray-888': '#888888',
+        'gray-bbb': '#BBBBBB'
       },
       fontSize: {
         xl: ['1.25rem', '2.5rem']

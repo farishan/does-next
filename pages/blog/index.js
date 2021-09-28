@@ -6,6 +6,8 @@ import { sanitize } from 'isomorphic-dompurify'
 import Button from '@/components/Button'
 import useContent from '@/helpers/use-content'
 import Link from 'next/link'
+import UnderlinedTitle from '@/components/UnderlinedTitle'
+import PopularPosts from '@/components/PopularPosts'
 
 const Excerpt = ({ data }) => {
   const MAX_CHAR = 50
@@ -30,7 +32,12 @@ export default function Blog() {
     <Layout>
       <ATF title="Berita" />
 
-      <div className="container py-8">
+      <div className="container">
+        <div className="py-10 md:py-20 lg:py-40">
+          <UnderlinedTitle text1={`Popular News`} lineBold BigText />
+          <PopularPosts data={[]} extendClass={'mt-4 md:mt-10 lg:mt-20'} />
+        </div>
+
         {blogs.map((blog) => (
           <div key={blog.slug}>
             <div className="relative p-4">
