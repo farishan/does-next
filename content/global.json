@@ -104,6 +104,14 @@
     "value": "Selengkapnya"
   },
   {
+    "key": "label_read_more",
+    "value": "Baca Selengkapnya"
+  },
+  {
+    "key": "label_show_more",
+    "value": "Tampilkan Lebih Banyak"
+  },
+  {
     "key": "label_view_detail",
     "value": "Lihat Detail"
   },

@@ -1,18 +1,22 @@
 import ATF from '@/components/ATF'
 import Layout from '@/components/Layout'
-import blogs from '@/assets/blogs.dummy.json'
+import blogHandler from '@/helpers/api/blog'
+import dayjs from 'dayjs'
 import { sanitize } from 'isomorphic-dompurify'
 import Image from 'next/image'
 
 export default function BlogDetail({ data = {} }) {
-  const { title, blocks = [], slug } = data
+  const { title, blocks = [], slug, featured_image, date } = data
+
+  const dateFormatted = dayjs(date).format('DD MMMM YYYY')
 
   return (
     <Layout>
-      <ATF title={title} />
+      <ATF title={title} imageURL={featured_image} />
 
       <div className="container py-8">
         <h1 className="text-2xl font-bold mb-8">{title}</h1>
+        {dateFormatted}
         {blocks.map((block) => (
           <div key={block.id}>
             {block.type === 'rich' ? (
@@ -41,6 +45,7 @@ export default function BlogDetail({ data = {} }) {
 }
 
 export async function getStaticPaths() {
+  const blogs = blogHandler.getAll()
   const paths = blogs.map((post) => ({
     params: { slug: post.slug }
   }))
@@ -49,6 +54,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
+  const blogs = blogHandler.getAll()
   const data = blogs.find((b) => b.slug === params.slug)
 
   return { props: { data } }

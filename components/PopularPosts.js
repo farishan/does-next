@@ -1,18 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import DateLabel from './DateLabel'
 import LinkArrow from './LinkArrow'
-
-const DateLabel = ({ extendClass = '', children }) => {
-  return (
-    <>
-      <p
-        className={`pl-4 border-l-2 border-primary text-xs lg:text-sm uppercase text-gray-bbb ${extendClass}`}
-      >
-        {children}
-      </p>
-    </>
-  )
-}
 
 const BigCard = () => {
   return (
@@ -72,6 +61,8 @@ const SmallCard = () => {
                   alt="placeholder"
                   layout="fill"
                   className="object-cover"
+                  blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAARVJREFUWEfVlzEOgzAMRc3EkAGJkZn7nyRHQGwwIjEwMFG5FSqiCfk2JFAmIIn/c2xwnFlrl7IsKc9zSnnN80zDMFDWtu3CN3VdU1EUSRjGcaSmaYgdz7quW4wx7xcpIFZx1pqm6QNQVRVtB2LtxF6j7/svAO99TAiX7R+AWBA+x5wAV0Mc7aoX4CqIUEgPAc5ChMTZfhBAC4GIwwBSCFRcBIBCSMTFACEIqbgKwAehEVcD7CH4WVtHoK/AVx5Xr3lcW8T+F2Ab8+QhcCVcsiQ8EtJAiHIAEUDmbJMaBpAYlsyFACQGV+/QNUEA1JDrX4Gsfe6BBKFHGwjxkexK8VBOPOtYHsPzfZi8jcmtrdntzend7fkL2HsfP/U3Za8AAAAASUVORK5CYII="
+                  placeholder="blur"
                 />
               </div>
             </a>
