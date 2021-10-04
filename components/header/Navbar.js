@@ -44,13 +44,14 @@ const Navbar = ({
             {navItems.map((item, idx) => {
               const isHighlighted =
                 hoveredNav === navItems.indexOf(item) ||
-                (activeRoute === item.path && (!hoveredNav || hoveredNav > 4))
+                (activeRoute === item.path &&
+                  ((!hoveredNav && hoveredNav !== 0) || hoveredNav > 4))
               if (idx <= 4) {
                 return (
                   <div
                     key={idx}
                     onMouseOver={() => handleHover(navItems.indexOf(item))}
-                    onMouseLeave={() => handleHover(false)}
+                    onMouseLeave={() => handleHover()}
                     className="w-max"
                   >
                     <Link href={item.path}>
@@ -76,7 +77,7 @@ const Navbar = ({
           </nav>
           <div className="container w-full flex flex-col md:flex-row justify-between items-start md:items-center">
             <nav className="w-full flex">
-              {navItems.map((navItem, index) => {
+              {navItems?.map((navItem, index) => {
                 const isHighlighted =
                   hoveredNav === navItems.indexOf(navItem) ||
                   (activeRoute === navItem.path &&

@@ -32,24 +32,10 @@ export default function Header() {
     setActiveRoute(currentRoute)
   }, [router.pathname])
 
-  // const navItems = [
-  //   { label: nav_about, path: '/about' },
-  //   {
-  //     label: nav_works,
-  //     path: '/works',
-  //     children: [{ label: featured_work_title, path: '/works/featured' }]
-  //   },
-  //   // { label: 'BERITA', path: '#' },
-  //   // { label: 'MERCHANDISE', path: '#' },
-  //   // { label: 'DONASI', path: '#' },
-  //   { label: nav_contact, path: '/contact' }
-  //   // { label: 'PENDAFTARAN', path: '#' }
-  // ]
-
   const navItems = [
     { label: nav_works_top, path: '/works/featured' },
     { label: nav_works_short, path: '#' },
-    { label: nav_news, path: '#' },
+    { label: nav_news, path: '/blog' },
     { label: nav_merchandise, path: '#' },
     { label: nav_registration, path: '#' },
     { label: nav_about, path: '/about' },
@@ -86,6 +72,7 @@ export default function Header() {
   }
 
   const handleHover = (index = null) => {
+    console.log('handleHover >>> index ', index)
     setHoveredNav(index)
   }
 
