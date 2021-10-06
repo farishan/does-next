@@ -1,15 +1,15 @@
+import Link from 'next/link'
 import ATF from '@/components/ATF'
-import Layout from '@/components/Layout'
-import useContent from '@/helpers/use-content'
-
-import UnderlinedTitle from '@/components/UnderlinedTitle'
-import PopularPosts from '@/components/PopularPosts'
-
-import { useEffect, useState } from 'react'
 import Button from '@/components/Button'
+import Layout from '@/components/Layout'
+import { useEffect, useState } from 'react'
+import useContent from '@/helpers/use-content'
 import PostCards from '@/components/PostCards'
+import PopularPosts from '@/components/PopularPosts'
+import UnderlinedTitle from '@/components/UnderlinedTitle'
 
 const LIMIT = 6
+const WITH_INFINITE_SCROLL = false
 
 export default function Blog() {
   const { label_show_more } = useContent()
@@ -21,7 +21,7 @@ export default function Blog() {
   useEffect(() => {
     if (isFetching === false && posts === null) {
       setIsFetching(true)
-      fetch(`/api/blog?limit=${LIMIT}&offset=${offset}}`)
+      fetch(`/api/blog?limit=${LIMIT}&offset=${offset}`)
         .then((res) => res.json())
         .then((res) => {
           if (res.data) {
@@ -45,7 +45,7 @@ export default function Blog() {
   const handleShowMore = () => {
     if (isFetching === false) {
       setIsFetching(true)
-      fetch(`/api/blog?limit=${LIMIT}&offset=${offset}}`)
+      fetch(`/api/blog?limit=${LIMIT}&offset=${offset}`)
         .then((res) => res.json())
         .then((res) => {
           if (res.data) {
@@ -78,21 +78,31 @@ export default function Blog() {
 
         {!posts || posts === null ? <>No data.</> : <PostCards posts={posts} />}
 
-        <div className="flex justify-center mb-40">
-          {canShowMore ? (
-            <>
-              {isFetching ? (
-                <p className="italic opacity-50">Fetching...</p>
-              ) : (
-                <Button outline onClick={handleShowMore}>
-                  {label_show_more}
-                </Button>
-              )}
-            </>
-          ) : (
-            <p className="italic opacity-50">No more posts.</p>
-          )}
-        </div>
+        {WITH_INFINITE_SCROLL ? (
+          <div className="flex justify-center mb-40">
+            {canShowMore ? (
+              <>
+                {isFetching ? (
+                  <p className="italic opacity-50">Fetching...</p>
+                ) : (
+                  <Button outline onClick={handleShowMore}>
+                    {label_show_more}
+                  </Button>
+                )}
+              </>
+            ) : (
+              <p className="italic opacity-50">No more posts.</p>
+            )}
+          </div>
+        ) : (
+          <div className="flex justify-center mb-40">
+            <Link href="/blog/listing">
+              <a>
+                <Button outline>{label_show_more}</Button>
+              </a>
+            </Link>
+          </div>
+        )}
       </div>
     </Layout>
   )

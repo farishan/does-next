@@ -76,6 +76,21 @@ const containerStyles = ({ addComponents }) => {
   })
 }
 
+const scrollBarStyles = ({ addComponents }) => {
+  addComponents({
+    '.no-scrollbar': {
+      /* Hide scrollbar for IE, Edge and Firefox */
+      '-ms-overflow-style': 'none' /* IE and Edge */,
+      'scrollbar-width': 'none' /* Firefox */,
+
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      '&::-webkit-scrollbar': {
+        display: 'none'
+      }
+    }
+  })
+}
+
 module.exports = {
   mode: 'jit',
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
@@ -111,5 +126,5 @@ module.exports = {
   variants: {
     extend: {}
   },
-  plugins: [globalStyles, containerStyles]
+  plugins: [globalStyles, containerStyles, scrollBarStyles]
 }

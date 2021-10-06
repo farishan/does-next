@@ -17,7 +17,7 @@ export default function PostCards({ posts }) {
           posts.map((post) => (
             <div
               key={post.slug}
-              className="w-full lg:w-1/3 px-5 mb-12 lg:mb-24"
+              className="w-full md:w-1/2 lg:w-1/3 px-5 mb-12 lg:mb-24"
             >
               <Link href={`/blog/${post.slug}`}>
                 <a
@@ -37,34 +37,32 @@ export default function PostCards({ posts }) {
                       placeholder="blur"
                     />
                   )}
-                  <Link href={`/blog/${post.slug}`}>
-                    <a className="text-white absolute bottom-0 right-0 overflow-hidden">
-                      <button
-                        className={`bg-primary text-white py-4 pr-5 pl-6 text-sm font-light flex items-center uppercase ${
-                          hovered === post.id ? '' : 'translate-y-full'
-                        } transition-transform duration-200 ease-in-out`}
+                  <span className="absolute bottom-0 right-0 overflow-hidden">
+                    <button
+                      className={`bg-primary text-white py-4 pr-5 pl-6 text-sm font-light flex items-center uppercase ${
+                        hovered === post.id ? '' : 'translate-y-full'
+                      } transition-transform duration-200 ease-in-out`}
+                    >
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 14 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        style={{ minWidth: '14px' }}
+                        className="mr-3.5"
                       >
-                        <svg
-                          width="14"
-                          height="14"
-                          viewBox="0 0 14 14"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                          style={{ minWidth: '14px' }}
-                          className="mr-3.5"
-                        >
-                          <path
-                            d="M7 7V13M1 7H7H1ZM13 7H7H13ZM7 7V1V7Z"
-                            stroke="white"
-                            strokeWidth="1.5"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
-                        {label_read_more}
-                      </button>
-                    </a>
-                  </Link>
+                        <path
+                          d="M7 7V13M1 7H7H1ZM13 7H7H13ZM7 7V1V7Z"
+                          stroke="white"
+                          strokeWidth="1.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                      {label_read_more}
+                    </button>
+                  </span>
                 </a>
               </Link>
               <div className="relative z-10">

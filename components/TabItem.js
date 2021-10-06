@@ -5,10 +5,11 @@ export default function TabItem({
   isActive,
   children,
   onActive,
+  isLast,
   ...props
 }) {
   const ref = useRef()
-  const baseClass = `py-3 md:py-5 mr-10 lg:mr-20 lg:text-2xl select-none relative`
+  const baseClass = `TabItem py-3 md:py-5 px-5 ${isLast ? '' : 'mr-10'} lg:text-2xl select-none relative`
   const animationClass = 'transition-color duration-200 ease-in-out'
   const stateClass = `${
     isActive
@@ -32,7 +33,7 @@ export default function TabItem({
       </span>
 
       {/* Masking to fix font-weight glitch */}
-      <span className="absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 w-full pointer-events-none">
+      <span className="absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 w-full pointer-events-none text-center">
         {children}
       </span>
     </div>
