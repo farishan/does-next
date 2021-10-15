@@ -8,7 +8,7 @@ export default function Footer() {
     site_logo,
     nav_works_top,
     nav_works_short,
-    nav_news,
+    nav_blog,
     nav_merchandise,
     nav_registration,
     nav_about,
@@ -37,7 +37,7 @@ export default function Footer() {
     {
       label: 'LAIN-LAIN',
       children: [
-        { label: nav_news, path: '#' },
+        { label: nav_blog, path: '/blog' },
         { label: nav_merchandise, path: '#' },
         { label: nav_contact, path: '#' },
         { label: nav_donation, path: '#' }
@@ -105,7 +105,7 @@ export default function Footer() {
       <div className="flex py-7 items-center">
         <div className="flex flex-col items-start w-1/2">
           <span className="font-extralight mb-7">HUBUNGI KAMI DI</span>
-          <span className="text-lg">
+          <span className="text-lg bra">
             <UnderlinedTitle text1="doesuniversity@gmail.com" />
           </span>
         </div>

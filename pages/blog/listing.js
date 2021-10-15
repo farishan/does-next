@@ -1,7 +1,7 @@
 import ATF from '@/components/ATF'
 import Layout from '@/components/Layout'
 import useContent from '@/helpers/use-content'
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import Button from '@/components/Button'
 import PostCards from '@/components/PostCards'
 import TabNav from '@/components/TabNav'
@@ -21,6 +21,23 @@ export default function BlogListing() {
       label: 'All'
     }
   ])
+
+  const fetcher = useCallback(
+    (callback) => {
+      setIsFetching(true)
+      fetch(`/api/blog?limit=${LIMIT}&offset=${offset}`)
+        .then((res) => res.json())
+        .then((res) => {
+          if (callback) callback(res)
+        })
+        .catch((err) => {
+          console.log(err)
+          setPosts(undefined)
+        })
+        .finally(() => setIsFetching(false))
+    },
+    [offset]
+  )
 
   useEffect(() => {
     if (categories === null) {
@@ -48,28 +65,20 @@ export default function BlogListing() {
   }, [categories])
 
   useEffect(() => {
-    if (isFetching === false && posts === null) {
-      setIsFetching(true)
-      fetch(`/api/blog?limit=${LIMIT}&offset=${offset}`)
-        .then((res) => res.json())
-        .then((res) => {
-          if (res.data) {
-            setPosts(res.data)
-            setOffset(offset + LIMIT)
-          } else {
-            setPosts(undefined)
-          }
-          if (!res.next) {
-            setCanShowMore(false)
-          }
-        })
-        .catch((err) => {
-          console.log(err)
+    if (isFetching || posts !== null) {
+      fetcher((res) => {
+        if (res.data) {
+          setPosts(res.data)
+          setOffset(offset + LIMIT)
+        } else {
           setPosts(undefined)
-        })
-        .finally(() => setIsFetching(false))
+        }
+        if (!res.next) {
+          setCanShowMore(false)
+        }
+      })
     }
-  }, [isFetching, offset, posts])
+  }, [isFetching, offset, posts, fetcher])
 
   const handleShowMore = () => {
     if (isFetching === false) {
@@ -89,6 +98,18 @@ export default function BlogListing() {
           console.log(err)
         })
         .finally(() => setIsFetching(false))
+
+      fetcher((res) => {
+        if (res.data) {
+          const newPosts = [...posts, ...res.data]
+          setPosts(newPosts)
+          setOffset(offset + LIMIT)
+        }
+
+        if (!res.next) {
+          setCanShowMore(false)
+        }
+      })
     }
   }
 

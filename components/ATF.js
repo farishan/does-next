@@ -1,3 +1,4 @@
+import { BLUR_IMAGE } from '@/constants'
 import Image from 'next/image'
 
 export default function ATF({
@@ -12,7 +13,7 @@ export default function ATF({
           layout="fill"
           className="object-cover"
           alt={title}
-          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAARVJREFUWEfVlzEOgzAMRc3EkAGJkZn7nyRHQGwwIjEwMFG5FSqiCfk2JFAmIIn/c2xwnFlrl7IsKc9zSnnN80zDMFDWtu3CN3VdU1EUSRjGcaSmaYgdz7quW4wx7xcpIFZx1pqm6QNQVRVtB2LtxF6j7/svAO99TAiX7R+AWBA+x5wAV0Mc7aoX4CqIUEgPAc5ChMTZfhBAC4GIwwBSCFRcBIBCSMTFACEIqbgKwAehEVcD7CH4WVtHoK/AVx5Xr3lcW8T+F2Ab8+QhcCVcsiQ8EtJAiHIAEUDmbJMaBpAYlsyFACQGV+/QNUEA1JDrX4Gsfe6BBKFHGwjxkexK8VBOPOtYHsPzfZi8jcmtrdntzend7fkL2HsfP/U3Za8AAAAASUVORK5CYII="
+          blurDataURL={BLUR_IMAGE}
           placeholder="blur"
         />
 

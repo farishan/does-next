@@ -18,7 +18,7 @@ export default function Header() {
     featured_work_title,
     nav_works_top,
     nav_works_short,
-    nav_news,
+    nav_blog,
     nav_merchandise,
     nav_registration,
     nav_about,
@@ -35,7 +35,7 @@ export default function Header() {
   const navItems = [
     { label: nav_works_top, path: '/works/featured' },
     { label: nav_works_short, path: '#' },
-    { label: nav_news, path: '/blog' },
+    { label: nav_blog, path: '/blog' },
     { label: nav_merchandise, path: '#' },
     { label: nav_registration, path: '#' },
     { label: nav_about, path: '/about' },

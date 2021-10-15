@@ -9,8 +9,8 @@ import PostCards from '../PostCards'
 const LIMIT = 3
 
 export default function SectionFeaturedBlog() {
-  const { nav_news } = useContent()
-  const sectionTitle = nav_news
+  const { nav_blog } = useContent()
+  const sectionTitle = nav_blog
   const [posts, setPosts] = useState(null)
   const [isFetching, setIsFetching] = useState(false)
 

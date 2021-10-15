@@ -3,7 +3,7 @@ import blogs from '../../assets/__generated-blog.dummy.json'
 import blogCategories from '../../assets/blog-categories.dummy.json'
 
 const blogHandler = {
-  getAll: () => blogs,
+  getAll: () => blogs.sort((a, b) => new Date(a) - new Date(b)),
   getAllCategories: () => blogCategories,
   getByCategory: (catId) =>
     catId === 'all'

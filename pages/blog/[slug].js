@@ -18,7 +18,7 @@ export default function BlogDetail({ data = {} }) {
         <h1 className="text-2xl font-bold mb-8">{title}</h1>
         {dateFormatted}
         {blocks.map((block) => (
-          <div key={block.id}>
+          <div key={`block_${block.id}`}>
             {block.type === 'rich' ? (
               <div
                 dangerouslySetInnerHTML={{ __html: sanitize(block.content) }}
@@ -27,13 +27,17 @@ export default function BlogDetail({ data = {} }) {
             ) : (
               <div className="mb-8">
                 {block.images.map((image) => (
-                  <Image
-                    key={image.src}
-                    src={image.src}
-                    alt={image.alt}
-                    width="200px"
-                    height="200px"
-                  />
+                  <div
+                    className="relative"
+                    key={`block_image_${image.src}_${Math.random()}`}
+                  >
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      width={200}
+                      height={200}
+                    />
+                  </div>
                 ))}
               </div>
             )}

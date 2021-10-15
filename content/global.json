@@ -36,6 +36,14 @@
     "value": "-7.7803688, 110.3122047846575"
   },
   {
+    "key": "site_no_data",
+    "value": "No data."
+  },
+  {
+    "key": "site_fetching",
+    "value": "Fetching..."
+  },
+  {
     "key": "nav_works",
     "value": "Karya"
   },
@@ -48,7 +56,7 @@
     "value": "Karya Pendek"
   },
   {
-    "key": "nav_news",
+    "key": "nav_blog",
     "value": "Berita"
   },
   {
@@ -114,6 +122,18 @@
   {
     "key": "label_view_detail",
     "value": "Lihat Detail"
+  },
+  {
+    "key": "label_popular_post",
+    "value": "Popular News"
+  },
+  {
+    "key": "label_latest_post",
+    "value": "Latest News"
+  },
+  {
+    "key": "label_no_more_post",
+    "value": "No more posts."
   },
   {
     "key": "contact_description",

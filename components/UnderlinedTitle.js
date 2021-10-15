@@ -5,7 +5,7 @@ export default function UnderlinedTitle({ text1, text2, lineBold, BigText }) {
     return (
       <span
         className={`text-white font-body relative z-10 ${
-          BigText ? 'text-5xl' : 'text-4xl'
+          BigText ? 'text-2xl md:text-5xl' : 'text-2xl md:text-4xl'
         }`}
       >
         {text}
