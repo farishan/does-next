@@ -40,44 +40,44 @@ export default function BlogListing() {
   )
 
   useEffect(() => {
-    if (categories === null) {
-      fetch(`/api/blog-categories`)
-        .then((res) => res.json())
-        .then((res) => {
-          if (res.data) {
-            setCategories(res.data)
-            setTabs([
-              {
-                id: 'all',
-                label: 'All'
-              },
-              ...res.data.map((d) => ({ id: d.id, label: d.title }))
-            ])
-          } else {
-            setCategories(undefined)
-          }
-        })
-        .catch((err) => {
-          console.log(err)
+    if (categories !== null) return
+
+    fetch(`/api/blog-categories`)
+      .then((res) => res.json())
+      .then((res) => {
+        if (res.data) {
+          setCategories(res.data)
+          setTabs([
+            {
+              id: 'all',
+              label: 'All'
+            },
+            ...res.data.map((d) => ({ id: d.id, label: d.title }))
+          ])
+        } else {
           setCategories(undefined)
-        })
-    }
+        }
+      })
+      .catch((err) => {
+        console.log(err)
+        setCategories(undefined)
+      })
   }, [categories])
 
   useEffect(() => {
-    if (isFetching || posts !== null) {
-      fetcher((res) => {
-        if (res.data) {
-          setPosts(res.data)
-          setOffset(offset + LIMIT)
-        } else {
-          setPosts(undefined)
-        }
-        if (!res.next) {
-          setCanShowMore(false)
-        }
-      })
-    }
+    if (isFetching || posts !== null) return
+
+    fetcher((res) => {
+      if (res.data) {
+        setPosts(res.data)
+        setOffset(offset + LIMIT)
+      } else {
+        setPosts(undefined)
+      }
+      if (!res.next) {
+        setCanShowMore(false)
+      }
+    })
   }, [isFetching, offset, posts, fetcher])
 
   const handleShowMore = () => {
@@ -114,26 +114,26 @@ export default function BlogListing() {
   }
 
   const handleFilter = (categoryId) => {
-    if (isFetching === false) {
-      setIsFetching(true)
-      setOffset(0)
+    if (isFetching) return
 
-      fetch(`/api/blog?limit=${LIMIT}&offset=0&categoryId=${categoryId}`)
-        .then((res) => res.json())
-        .then((res) => {
-          if (res.data) {
-            const newPosts = res.data
-            setPosts(newPosts)
-            setOffset(newPosts.length)
-          }
+    setIsFetching(true)
+    setOffset(0)
 
-          setCanShowMore(res.next)
-        })
-        .catch((err) => {
-          console.log(err)
-        })
-        .finally(() => setIsFetching(false))
-    }
+    fetch(`/api/blog?limit=${LIMIT}&offset=0&categoryId=${categoryId}`)
+      .then((res) => res.json())
+      .then((res) => {
+        if (res.data) {
+          const newPosts = res.data
+          setPosts(newPosts)
+          setOffset(newPosts.length)
+        }
+
+        setCanShowMore(res.next)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+      .finally(() => setIsFetching(false))
   }
 
   return (
