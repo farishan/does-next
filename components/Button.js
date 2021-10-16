@@ -13,13 +13,13 @@ export default function Button({
   const [hovered, setHovered] = useState(false)
   const text = viewMore ? label_view_more : children
 
-  const baseClass = `border border-transparent py-4 px-8 text-white text-sm uppercase leading-loose ${
+  const baseClass = `select-none border border-transparent py-3 px-6 md:py-4 md:px-8 text-white text-sm font-light md:font-normal uppercase leading-loose ${
     arrow ? 'flex items-center' : ''
   }`
   const animationClass = 'transition-all duration-200 ease-in-out'
   const stateClass = `${
     outline
-      ? 'border-white text-white hover:bg-primary hover:border-primary'
+      ? 'border-white text-white hover:bg-primary hover:border-primary border-opacity-30'
       : 'bg-primary hover:text-primary hover:bg-black hover:border-primary'
   }`
   const className = `${baseClass} ${animationClass} ${stateClass} ${extendClass}`

@@ -1,12 +1,10 @@
-/* @TODO: add slider */
-
 import Button from '@/components/Button'
 import useContent from '@/helpers/use-content'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
-import PostCards from '../PostCards'
+import SliderFeatured from '@/components/slider/SliderFeatured'
 
-const LIMIT = 3
+const LIMIT = 6
 
 export default function SectionFeaturedBlog() {
   const { nav_blog } = useContent()
@@ -35,10 +33,10 @@ export default function SectionFeaturedBlog() {
   }, [isFetching, posts])
 
   return (
-    <section className="container py-8 md:py-16">
-      <div className="flex items-center mb-12">
+    <section className="container pt-10 pb-14 lg:py-16">
+      <div className="flex items-center mb-10 md:mb-12">
         <div>
-          <h2 className="text-xl mr-10 font-bold tracking-widest">
+          <h2 className="md:text-xl mr-4 md:mr-10 tracking-widest">
             {sectionTitle}
           </h2>
         </div>
@@ -47,9 +45,9 @@ export default function SectionFeaturedBlog() {
         </div>
       </div>
 
-      <PostCards posts={posts} />
+      <SliderFeatured posts={posts}/>
 
-      <div className="flex justify-center -mt-12">
+      <div className="flex justify-center mt-8 md:-mt-16">
         <Link href="/blog">
           <a>
             <Button outline arrow>

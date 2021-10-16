@@ -3,7 +3,7 @@ import Layout from '@/components/Layout'
 import useContent from '@/helpers/use-content'
 import { useCallback, useEffect, useState } from 'react'
 import Button from '@/components/Button'
-import PostCards from '@/components/PostCards'
+import PostCards from '@/components/post/PostCards'
 import TabNav from '@/components/TabNav'
 
 const LIMIT = 12

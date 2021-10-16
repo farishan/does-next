@@ -41,8 +41,8 @@ const containerBase = {
   maxWidth: '100%',
   marginLeft: 'auto',
   marginRight: 'auto',
-  paddingLeft: '16px',
-  paddingRight: '16px',
+  paddingLeft: '24px',
+  paddingRight: '24px',
   '@screen md': {
     paddingLeft: '30px',
     paddingRight: '30px'
