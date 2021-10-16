@@ -19,7 +19,8 @@ const POPULAR_CATEGORY_ID = 1 // 1 = popular
 export default function Blog() {
   const {
     label_show_more,
-    nav_blog,
+    atf_blog,
+    atf_blog_image,
     label_no_more_post,
     site_fetching,
     label_popular_post,
@@ -110,7 +111,7 @@ export default function Blog() {
 
   return (
     <Layout>
-      <ATF title={nav_blog} />
+      <ATF title={atf_blog} imageURL={atf_blog_image} />
 
       <div className="container">
         {popularPosts && (

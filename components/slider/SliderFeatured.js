@@ -14,7 +14,7 @@ SwiperCore.use([Navigation])
 export default function SliderFeatured({ posts }) {
   const prevRef = useRef(null)
   const nextRef = useRef(null)
-  const [canNext, setCanNext] = useState(false)
+  const [canNext, setCanNext] = useState(true)
   const [canPrev, setCanPrev] = useState(false)
 
   if (!posts || posts === null) return <></>

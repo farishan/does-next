@@ -88,6 +88,14 @@
     "value": "Hubungi Kami"
   },
   {
+    "key": "atf_blog",
+    "value": "Berita"
+  },
+  {
+    "key": "atf_blog_image",
+    "value": "https://i.ibb.co/9rkGvZv/Mask-Group.png"
+  },
+  {
     "key": "work",
     "value": "Karya"
   },
