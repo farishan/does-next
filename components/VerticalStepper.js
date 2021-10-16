@@ -1,6 +1,6 @@
 /* TODO integrate with sections, refactor */
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const animationClass = 'transition-all duration-200 ease-in-out'
 
@@ -31,24 +31,35 @@ const Line = ({ isActive }) => {
   )
 }
 
-export default function VerticalStepper() {
-  const [a, setA] = useState(0)
+export default function VerticalStepper({
+  active = 0,
+  onClick = () => {},
+  steps = [1, 2, 3, 4]
+}) {
+  const [activeLocal, setActiveLocal] = useState(0)
 
-  const steps = [1, 2, 3, 4]
+  useEffect(() => {
+    if (active !== activeLocal) {
+      setActiveLocal(active)
+    }
+  }, [active, activeLocal])
 
   return (
     <div className="flex flex-col items-center justify-between">
       {steps.map((step, index) =>
         index === 0 ? (
           <Circle
-            isActive={index <= a}
-            onClick={() => setA(index)}
+            isActive={index <= activeLocal}
+            onClick={() => onClick(index)}
             key={`step_${index}`}
           />
         ) : (
           <div className="flex flex-col items-center" key={`step_${index}`}>
-            <Line isActive={index <= a} />
-            <Circle isActive={index <= a} onClick={() => setA(index)} />
+            <Line isActive={index <= activeLocal} />
+            <Circle
+              isActive={index <= activeLocal}
+              onClick={() => onClick(index)}
+            />
           </div>
         )
       )}

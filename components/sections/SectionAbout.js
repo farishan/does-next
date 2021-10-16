@@ -2,7 +2,6 @@ import Html from '../Html'
 import Link from 'next/link'
 import Image from 'next/image'
 import Button from '../Button'
-import SectionNext from '../SectionNext'
 import SectionLabel from './SectionLabel'
 import styles from './SectionAbout.module.css'
 import Section from '@/components/sections/Section'
@@ -36,7 +35,7 @@ export default function SectionAbout({
           src={mainImage.src}
           alt={mainImage.alt}
           layout="fill"
-          className="object-contain"
+          className="object-contain select-none"
         />
       </div>
 
@@ -76,15 +75,6 @@ export default function SectionAbout({
           layout="fill"
           className="object-contain"
         />
-      </div>
-
-      {/*
-        TODO
-        - Integrate next section
-        - Find better responsive solution
-      */}
-      <div className="absolute w-full bottom-4 flex justify-center z-30">
-        <SectionNext>Berita</SectionNext>
       </div>
     </Section>
   )

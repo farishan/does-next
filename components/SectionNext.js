@@ -1,6 +1,9 @@
-export default function SectionNext({ children }) {
+export default function SectionNext({ children, ...props }) {
   return (
-    <div className="flex flex-col items-center cursor-pointer">
+    <div
+      className="flex flex-col items-center cursor-pointer select-none"
+      {...props}
+    >
       <div className="rounded-full border border-white border-opacity-30 h-10 w-10 flex items-center justify-center mb-2">
         <svg
           width="24"
