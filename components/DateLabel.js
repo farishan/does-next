@@ -1,8 +1,10 @@
-const DateLabel = ({ extendClass = '', children }) => {
+const DateLabel = ({ color, extendClass = '', children }) => {
   return (
     <>
       <p
-        className={`pl-4 border-l-2 border-primary text-xs lg:text-sm uppercase text-gray-bbb ${extendClass}`}
+        className={`pl-4 border-l-2 border-primary text-xs lg:text-sm uppercase ${
+          color ? color : 'text-gray-bbb'
+        } ${extendClass}`}
       >
         {children}
       </p>

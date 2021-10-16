@@ -18,35 +18,30 @@ const BigCard = ({ data }) => {
   return (
     <>
       <div
-        className="relative flex items-end cursor-pointer transition-shadow duration-200"
+        className="relative flex items-end cursor-pointer border-2 border-transparent hover:border-primary transition-colors duration-200"
         style={{ minHeight: '100%' }}
       >
         {thumbnail && (
           <>
-            <Link href={`/blog/${slug}`}>
-              <a>
-                <Image
-                  src={
-                    thumbnail.src ? thumbnail.src : `/images/placeholder.png`
-                  }
-                  alt={thumbnail.alt ? thumbnail.alt : title}
-                  layout="fill"
-                  className="absolute object-cover object-center"
-                  blurDataURL={BLUR_IMAGE}
-                  placeholder="blur"
-                />
-              </a>
-            </Link>
+            <Image
+              src={thumbnail.src ? thumbnail.src : `/images/placeholder.png`}
+              alt={thumbnail.alt ? thumbnail.alt : title}
+              layout="fill"
+              className="absolute object-cover object-center"
+              blurDataURL={BLUR_IMAGE}
+              placeholder="blur"
+            />
           </>
         )}
 
         <div
-          onClick={() => router.push(`/blog/${`together`}`)}
+          onClick={() => router.push(`/blog/${slug}`)}
           className="absolute w-full h-full"
           style={{
             background:
               'linear-gradient(0.28deg, #000000 -12.83%, rgba(0, 0, 0, 0) 91.09%)'
           }}
+          title={`Link to ${title}`}
         ></div>
 
         <div className="p-5 lg:p-10 relative z-10">

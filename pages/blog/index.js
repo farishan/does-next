@@ -41,13 +41,39 @@ export default function Blog() {
           if (callback) callback(res)
         })
         .catch((err) => {
-          console.log(err)
           setPosts(undefined)
         })
         .finally(() => setIsFetching(false))
     },
     [offset]
   )
+
+  useEffect(() => {
+    if (popularPosts === null) {
+      fetch(
+        `/api/blog?limit=${POPULAR_POST_LENGTH}&offset=0&categoryId=${POPULAR_CATEGORY_ID}`
+      )
+        .then((res) => res.json())
+        .then((res) => {
+          if (res.data) {
+            let newPopularPosts = res.data
+            if (res.data < POPULAR_POST_LENGTH) {
+              let remaining = POPULAR_POST_LENGTH - res.data.length
+              let additionals = posts.slice(0, remaining)
+              newPopularPosts = [...res.data, ...additionals]
+            }
+
+            setPopularPosts(newPopularPosts)
+          } else {
+            setPopularPosts(undefined)
+          }
+        })
+        .catch((err) => {
+          setPopularPosts(undefined)
+        })
+        .finally(() => setIsFetching(false))
+    }
+  }, [popularPosts, posts])
 
   useEffect(() => {
     if (isFetching || posts !== null) return
@@ -65,24 +91,6 @@ export default function Blog() {
       }
     })
   }, [isFetching, offset, posts, fetcher])
-
-  useEffect(() => {
-    if (!posts || posts === null || posts.length === 0) return
-
-    let additionalPosts = []
-    let newPopularPosts = posts.filter((post) => {
-      if (post.categories.includes(POPULAR_CATEGORY_ID)) return
-      additionalPosts.push(post)
-    })
-
-    if (newPopularPosts.length < POPULAR_POST_LENGTH) {
-      let remaining = POPULAR_POST_LENGTH - newPopularPosts.length
-      let additionals = additionalPosts.slice(0, remaining)
-      newPopularPosts = [...newPopularPosts, ...additionals]
-    }
-
-    setPopularPosts(newPopularPosts)
-  }, [posts])
 
   const handleShowMore = () => {
     if (isFetching === false) {
@@ -105,13 +113,15 @@ export default function Blog() {
       <ATF title={nav_blog} />
 
       <div className="container">
-        <div className="py-10 md:py-20 lg:py-40">
-          <UnderlinedTitle text1={label_popular_post} lineBold BigText />
-          <PopularPosts
-            data={popularPosts}
-            extendClass={'mt-4 md:mt-10 lg:mt-20'}
-          />
-        </div>
+        {popularPosts && (
+          <div className="py-10 md:py-20 lg:py-40">
+            <UnderlinedTitle text1={label_popular_post} lineBold BigText />
+            <PopularPosts
+              data={popularPosts}
+              extendClass={'mt-4 md:mt-10 lg:mt-20'}
+            />
+          </div>
+        )}
 
         <UnderlinedTitle text1={label_latest_post} lineBold BigText />
 

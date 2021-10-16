@@ -132,6 +132,10 @@
     "value": "Latest News"
   },
   {
+    "key": "label_similar_post",
+    "value": "Similar News"
+  },
+  {
     "key": "label_no_more_post",
     "value": "No more posts."
   },

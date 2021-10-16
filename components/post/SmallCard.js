@@ -16,7 +16,7 @@ const SmallCard = ({ data }) => {
       <div className="flex -mx-2 lg:-mx-5">
         <div className="px-2 lg:px-5 w-auto">
           <Link href={link}>
-            <a className="block w-32 md:w-64 h-32 md:h-64 relative">
+            <a className="block w-32 md:w-64 h-32 md:h-64 relative border-2 border-transparent hover:border-primary transition-colors duration-200">
               <Image
                 src={thumbnail ? thumbnail.src : `/images/placeholder.png`}
                 alt={{ title }}

@@ -97,6 +97,15 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      typography: {
+        DEFAULT: {
+          css: {
+            '*, strong, h1, h2, h3, h4, h5, h6, blockquote, a, code, pre, ol li:before': {
+              color: '#fff'
+            },
+          }
+        }
+      },
       screens: screensConfig,
       colors: {
         dark: '#222222',
@@ -126,5 +135,10 @@ module.exports = {
   variants: {
     extend: {}
   },
-  plugins: [globalStyles, containerStyles, scrollBarStyles]
+  plugins: [
+    require('@tailwindcss/typography'),
+    globalStyles,
+    containerStyles,
+    scrollBarStyles
+  ]
 }

@@ -5,25 +5,25 @@ const types = [
   {
     type: 'rich',
     content:
-      '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Malesuada amet, enim convallis platea feugiat venenatis venenatis, risus massa. Nisl lectus a turpis neque pulvinar fermentum, tristique sit nibh. Hac egestas tristique eu nisl platea sapien sit. Purus consectetur elementum, posuere placerat id non luctus a felis. Amet, justo, duis nulla netus ullamcorper. Vel etiam vulputate sollicitudin elementum. Vestibulum consequat nulla sit scelerisque risus quis aliquet massa. Est habitant consectetur penatibus interdum odio in at odio ornare. Integer enim, sed ornare mauris nunc lacus mauris nisi. Dui risus elit volutpat quisque tortor vitae risus. Proin ultricies diam et, volutpat eget. Adipiscing sagittis, dignissim velit tempus sagittis ligula laoreet. Quis sollicitudin vestibulum fermentum morbi eu. Tincidunt consequat aenean phasellus ultrices. Mauris, quis hac ornare justo, sagittis, tellus sed. Vitae amet ut facilisi laoreet semper. A, vulputate id nullam lectus vel, metus enim. Tempus volutpat ut in id at fames eget. Pulvinar quam sodales quisque mattis. Feugiat et tristique aliquet arcu in id rutrum et tellus. Id quis interdum enim velit. Id convallis sed massa a, risus sed. Volutpat sed integer fusce lectus quam. Justo, nec sed interdum ac. Bibendum et urna, vel donec. Elit sed ultricies lobortis massa fames eget risus. Quam auctor odio interdum ultrices. Sem quis praesent ac enim accumsan, orci. Ac, tortor at sed pharetra, porttitor eu. Sit dolor dui ipsum fringilla placerat tristique non quam sit. Ultricies magna pulvinar varius suspendisse. Pulvinar odio dolor elit mauris urna, netus ac felis, consectetur. Integer viverra egestas leo tortor vitae elementum. Tincidunt dui eget dolor tristique maecenas interdum vitae duis odio. Molestie venenatis fringilla aenean eget pellentesque duis. A proin dui lectus nibh proin ac integer purus mi.</p>'
+      '<h1>HTML Ipsum Presents</h1> <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p> <h2>Header Level 2</h2> <ol> <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li> <li>Aliquam tincidunt mauris eu risus.</li> </ol> <blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote> <h3>Header Level 3</h3> <ul> <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li> <li>Aliquam tincidunt mauris eu risus.</li> </ul> <pre><code> #header h1 a { display: block; width: 300px; height: 80px; } </code></pre>'
   },
   {
     type: 'gallery',
     images: [
       {
-        src: 'https://i.ibb.co/30pjWJX/erix-2-1.png',
+        src: 'https://i.ibb.co/TT3wtXh/Frame-30.jpg',
         alt: 'alt text'
       },
       {
-        src: 'https://i.ibb.co/30pjWJX/erix-2-1.png',
+        src: 'https://i.ibb.co/n7HGX6L/Rectangle-77.jpg',
         alt: 'alt text'
       },
       {
-        src: 'https://i.ibb.co/30pjWJX/erix-2-1.png',
+        src: 'https://i.ibb.co/q0m2b4h/Rectangle-78.jpg',
         alt: 'alt text'
       },
       {
-        src: 'https://i.ibb.co/30pjWJX/erix-2-1.png',
+        src: 'https://i.ibb.co/Q6CxCHX/Rectangle-79.jpg',
         alt: 'alt text'
       }
     ]
@@ -45,15 +45,17 @@ function generateBlock(index) {
 function generateDummyBlog(index) {
   const title = faker.lorem.sentence(5)
   const blocks = []
+  let withGallery = false
 
   for (let index = 0; index < Math.floor(Math.random() * 3) + 1; index++) {
     const block = generateBlock(index)
+    if (block.type === 'gallery') withGallery = true
     blocks.push(block)
   }
 
   const post = {
     id: index + 1,
-    title,
+    title: withGallery ? '[gallery] ' + title : title,
     slug: faker.helpers.slugify(title.toLowerCase()),
     date: faker.date.past(),
     excerpt: faker.lorem.sentence(25),
