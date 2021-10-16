@@ -44,6 +44,22 @@
     "value": "Fetching..."
   },
   {
+    "key": "site_instagram",
+    "value": "https://www.instagram.com/doesofficial"
+  },
+  {
+    "key": "site_youtube",
+    "value": "https://www.youtube.com/channel/UCLAlGn0fvx92nQkF_v4Yq1w"
+  },
+  {
+    "key": "site_twitter",
+    "value": "https://www.instagram.com/doesofficial"
+  },
+  {
+    "key": "site_facebook",
+    "value": "https://www.instagram.com/doesofficial"
+  },
+  {
     "key": "nav_works",
     "value": "Karya"
   },

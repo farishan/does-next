@@ -15,7 +15,12 @@ export default function Footer() {
     nav_department,
     nav_donation,
     nav_contact,
-    copy_right
+    copy_right,
+    site_email,
+    site_instagram,
+    site_youtube,
+    site_twitter,
+    site_facebook
   } = useContent()
 
   const navItems = [
@@ -49,22 +54,22 @@ export default function Footer() {
     {
       name: 'facebook',
       src: require('../assets/icons/icon-fb-grey.png'),
-      path: '/'
+      path: site_facebook
     },
     {
       name: 'twitter',
       src: require('../assets/icons/icon-twitter-grey.png'),
-      path: '/'
+      path: site_twitter
     },
     {
       name: 'instagram',
       src: require('../assets/icons/icon-ig-grey.png'),
-      path: 'https://www.instagram.com/doesofficial'
+      path: site_instagram
     },
     {
       name: 'youtube',
       src: require('../assets/icons/icon-youtube-grey.png'),
-      path: 'https://www.youtube.com/channel/UCLAlGn0fvx92nQkF_v4Yq1w'
+      path: site_youtube
     }
   ]
 
@@ -106,7 +111,7 @@ export default function Footer() {
         <div className="flex flex-col items-start w-1/2">
           <span className="font-extralight mb-7">HUBUNGI KAMI DI</span>
           <span className="text-lg bra">
-            <UnderlinedTitle text1="doesuniversity@gmail.com" />
+            <UnderlinedTitle text1={site_email} />
           </span>
         </div>
         <div className="w-1/2 flex justify-end mr-10">

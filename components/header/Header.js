@@ -4,7 +4,7 @@ import useContent from '@/helpers/use-content'
 import Image from 'next/image'
 import Link from 'next/link'
 import Navbar from './Navbar'
-import NavbarMobileView from './NavbarMobileView'
+// import NavbarMobileView from './NavbarMobileView'
 
 export default function Header() {
   const [showNavModal, setShowNavModal] = useState(false)
@@ -14,8 +14,6 @@ export default function Header() {
   const router = useRouter()
   const {
     site_logo,
-    nav_works,
-    featured_work_title,
     nav_works_top,
     nav_works_short,
     nav_blog,
@@ -24,7 +22,11 @@ export default function Header() {
     nav_about,
     nav_department,
     nav_donation,
-    nav_contact
+    nav_contact,
+    site_instagram,
+    site_youtube,
+    site_twitter,
+    site_facebook
   } = useContent()
 
   useEffect(() => {
@@ -48,22 +50,22 @@ export default function Header() {
     {
       name: 'facebook',
       src: require('../../assets/icons/icon-fb-grey.png'),
-      path: '#'
+      path: site_facebook
     },
     {
       name: 'twitter',
       src: require('../../assets/icons/icon-twitter-grey.png'),
-      path: '#'
+      path: site_twitter
     },
     {
       name: 'instagram',
       src: require('../../assets/icons/icon-ig-grey.png'),
-      path: 'https://www.instagram.com/doesofficial'
+      path: site_instagram
     },
     {
       name: 'youtube',
       src: require('../../assets/icons/icon-youtube-grey.png'),
-      path: 'https://www.youtube.com/channel/UCLAlGn0fvx92nQkF_v4Yq1w'
+      path: site_youtube
     }
   ]
 
