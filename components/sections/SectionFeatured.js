@@ -1,4 +1,4 @@
-import Slider from '@/components/slider/Slider'
+import WorkSlider from '@/components/slider/WorkSlider'
 import useContent from '@/helpers/use-content'
 
 export default function SectionFeatured() {
@@ -17,7 +17,7 @@ export default function SectionFeatured() {
         </div>
       </div>
 
-      <Slider />
+      <WorkSlider />
     </section>
   )
 }

@@ -11,7 +11,7 @@ import { useRef, useState } from 'react'
 // install Swiper modules
 SwiperCore.use([Navigation])
 
-export default function SliderFeatured({ posts }) {
+export default function PostSlider({ posts }) {
   const prevRef = useRef(null)
   const nextRef = useRef(null)
   const [canNext, setCanNext] = useState(true)

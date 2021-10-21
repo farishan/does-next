@@ -2,7 +2,7 @@ import Button from '@/components/Button'
 import useContent from '@/helpers/use-content'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
-import SliderFeatured from '@/components/slider/SliderFeatured'
+import PostSlider from '@/components/slider/PostSlider'
 
 const LIMIT = 6
 
@@ -45,7 +45,7 @@ export default function SectionFeaturedBlog() {
         </div>
       </div>
 
-      <SliderFeatured posts={posts}/>
+      <PostSlider posts={posts}/>
 
       <div className="flex justify-center mt-8 md:-mt-16">
         <Link href="/blog">
