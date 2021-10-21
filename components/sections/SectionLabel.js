@@ -1,7 +1,15 @@
 import IconHome from '../icons/IconHome'
+import IconPlay from '../icons/IconPlay'
+import IconProfile from '../icons/IconProfile'
+
+const map = {
+  home: IconHome,
+  profile: IconProfile,
+  play: IconPlay
+}
 
 export default function SectionLabel({ icon, text, extendClass = '' }) {
-  const Icon = icon === 'home' ? IconHome : IconHome
+  const Icon = map[icon] || IconHome
 
   return (
     <>
