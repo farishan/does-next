@@ -27,18 +27,20 @@ export default function SectionAbout({
       extendClass="overflow-y-hidden"
     >
       {/* Main Image - Desktop */}
-      <div
-        className={`${styles['main-image']} hidden lg:block absolute bottom-0 left-0 z-30 xl`}
-        style={{ width: '43vw', height: '49vw' }}
-      >
-        {mainImage.src && (
-          <Image
-            src={mainImage.src}
-            alt={mainImage.alt}
-            layout="fill"
-            className="object-contain select-none"
-          />
-        )}
+      <div className="hidden lg:block absolute bottom-0 left-0 z-30">
+        <div
+          className={`${styles['main-image']} relative`}
+          style={{ width: '43vw', height: '49vw' }}
+        >
+          {mainImage.src && (
+            <Image
+              src={mainImage.src}
+              alt={mainImage.alt}
+              layout="fill"
+              className="object-contain select-none"
+            />
+          )}
+        </div>
       </div>
 
       <main className="container pt-8 md:pt-16 lg:pt-24 pb-12 md:pb-20 lg:pb-32 relative z-40 3xl:h-screen 3xl:flex 3xl:items-center">
@@ -67,18 +69,20 @@ export default function SectionAbout({
       </main>
 
       {/* Main Image - Mobile */}
-      <div
-        className={`${styles['main-image']} hidden sm:block lg:hidden absolute bottom-0 left-0 z-30 -mb-28 md:-mb-72`}
-        style={{ width: '100vw', height: '112vw' }}
-      >
-        {mainImage.src && (
-          <Image
-            src={mainImage.src}
-            alt={mainImage.alt}
-            layout="fill"
-            className="object-contain"
-          />
-        )}
+      <div className="hidden sm:block lg:hidden absolute bottom-0 left-0 z-30">
+        <div
+          className={`${styles['main-image']} relative -mb-28 md:-mb-72`}
+          style={{ width: '100vw', height: '112vw' }}
+        >
+          {mainImage.src && (
+            <Image
+              src={mainImage.src}
+              alt={mainImage.alt}
+              layout="fill"
+              className="object-contain"
+            />
+          )}
+        </div>
       </div>
     </Section>
   )

@@ -88,9 +88,9 @@ export default function Home() {
           if (step !== stepIndex['atf']) {
             setStep(stepIndex['atf'])
           }
-        } else {
+        } /* else {
           console.error(`something wrong`, step)
-        }
+        } */
       }
     }
 

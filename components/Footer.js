@@ -83,12 +83,12 @@ export default function Footer() {
             </a>
           </Link>
         </div>
-        <div className="w-1/2 flex justify-start">
+        <div className="w-1/2 flex flex-wrap justify-start">
           {navItems.map((item, index) => {
             return (
               <div
                 key={index}
-                className="w-1/3 flex flex-col items-start uppercase"
+                className="w-full lg:w-1/3 flex flex-col items-start uppercase"
               >
                 <span className="font-body text-white mb-7">{item.label}</span>
                 <div className="flex flex-col items-start">
