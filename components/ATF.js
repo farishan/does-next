@@ -7,14 +7,16 @@ const Content = ({ title, imageURL }) => {
 
   return (
     <>
-      <Image
-        src={imageURL}
-        layout="fill"
-        className="object-cover"
-        alt={title}
-        blurDataURL={BLUR_IMAGE}
-        placeholder="blur"
-      />
+      {imageURL && (
+        <Image
+          src={imageURL}
+          layout="fill"
+          className="object-cover"
+          alt={title}
+          blurDataURL={BLUR_IMAGE}
+          placeholder="blur"
+        />
+      )}
 
       <div
         className="absolute w-full h-full left-0 top-0 z-10"

@@ -38,5 +38,45 @@
   {
     "key": "section_about_label_icon",
     "value": "home"
+  },
+  {
+    "key": "section_atf_background",
+    "value": "https://i.ibb.co/DkMJjq5/Mask-Group-8.jpg"
+  },
+  {
+    "key": "section_atf_main_image",
+    "value": "https://i.ibb.co/sF6dYqV/Mask-Group-1.png"
+  },
+  {
+    "key": "section_atf_content_image",
+    "value": "https://i.ibb.co/nQVMcBV/untitled42-1.png"
+  },
+  {
+    "key": "section_atf_content_text",
+    "value": "Berkisah tentang seorang pemuda desa bersama dua kawannya, seekor komodo dan tupai terbang yang sedang menghadapi kekeringan ekstrim di pulau tempat mereka tinggal."
+  },
+  {
+    "key": "section_atf_label_1",
+    "value": "profile"
+  },
+  {
+    "key": "section_atf_label_1_text",
+    "value": "DOES GEN 6"
+  },
+  {
+    "key": "section_atf_label_2",
+    "value": "play"
+  },
+  {
+    "key": "section_atf_label_2_text",
+    "value": "3D ANIMATION"
+  },
+  {
+    "key": "section_atf_link",
+    "value": "/trailer/padar"
+  },
+  {
+    "key": "section_atf_link_text",
+    "value": "Lihat Trailer"
   }
 ]
