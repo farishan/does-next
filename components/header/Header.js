@@ -39,7 +39,7 @@ export default function Header() {
     { label: nav_works_short, path: '#' },
     { label: nav_blog, path: '/blog' },
     { label: nav_merchandise, path: '#' },
-    { label: nav_registration, path: '#' },
+    { label: nav_registration, path: '/registration?tab=information' },
     { label: nav_about, path: '/about' },
     { label: nav_department, path: '#' },
     { label: nav_donation, path: '#' },
