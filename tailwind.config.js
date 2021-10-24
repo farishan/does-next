@@ -105,9 +105,10 @@ module.exports = {
       typography: {
         DEFAULT: {
           css: {
-            '*, strong, h1, h2, h3, h4, h5, h6, blockquote, a, code, pre, ol li:before': {
-              color: '#fff'
-            },
+            '*, strong, h1, h2, h3, h4, h5, h6, blockquote, a, code, pre, ol li:before':
+              {
+                color: '#fff'
+              }
           }
         }
       },
@@ -121,7 +122,11 @@ module.exports = {
         'gray-bbb': '#BBBBBB'
       },
       fontSize: {
-        xl: ['1.25rem', '2.5rem']
+        xl: ['1.25rem', '2.5rem'],
+        '4xlp': [
+          '2.5rem', // 40px
+          '3.75rem' // 60px
+        ]
       },
       fontFamily: {
         accent: ['Poppins', 'ui-sans-serif'],

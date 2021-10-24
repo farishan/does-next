@@ -174,5 +174,13 @@
   {
     "key": "copy_right",
     "value": "© 2021 DOES University | Designed by Gen 7, Developed by Gen 3 & Gen 6"
+  },
+  {
+    "key": "copy_right_mobile",
+    "value": "© 2021 DOES University<br>Designed by Gen 7, Developed by Gen 3 & Gen 6"
+  },
+  {
+    "key": "footer_background",
+    "value": "https://i.ibb.co/pyJC6qD/footer-background.jpg"
   }
 ]
