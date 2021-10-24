@@ -6,21 +6,21 @@ import useContent from '@/helpers/use-content'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
+import content from '@/content/registration.json'
+import { sanitize } from 'isomorphic-dompurify'
 
-const tabs = [
-  {
-    id: 'information',
-    label: 'Informasi'
-  },
-  {
-    id: 'how-to',
-    label: 'Syarat dan Tata Cara'
-  },
-  {
-    id: 'form',
-    label: 'Form Pendaftaran'
-  }
-]
+const contentMap = {}
+
+content.forEach((c) => {
+  let id = c.section.split(' ').join('_').toLowerCase()
+  c.id = id
+  contentMap[id] = c
+})
+
+const tabs = content.map((c) => ({
+  id: c.id,
+  label: c.section
+}))
 
 export default function Registration() {
   const router = useRouter()
@@ -33,8 +33,10 @@ export default function Registration() {
   }
 
   useEffect(() => {
-    if (queryTab !== selectedTab) {
-      setSelectedTab(queryTab)
+    if (queryTab) {
+      if (queryTab !== selectedTab) {
+        setSelectedTab(queryTab)
+      }
     }
 
     // eslint-disable-next-line
@@ -62,107 +64,22 @@ export default function Registration() {
           watchThis={queryTab}
         />
 
-        <div className="mt-16">
-          {selectedTab === 'information' && (
-            <div className="leading-loose">
-              <h2 className="text-3xl font-semibold mb-12">Rundown</h2>
-              <p className="mb-12 lg:text-xl">
-                &nbsp; A, vulputate id nullam lectus vel, metus enim. Tempus
-                volutpat ut in id at fames eget. Pulvinar quam sodales quisque
-                mattis. Feugiat et tristique aliquet arcu in id rutrum et
-                tellus. Id quis interdum enim velit. Id convallis sed massa a,
-                risus sed. Volutpat sed integer fusce lectus quam. Justo, nec
-                sed interdum ac. Bibendum et urna, vel donec. Elit sed ultricies
-                lobortis massa fames eget risus. Quam auctor odio interdum
-                ultrices. Sem quis praesent ac enim accumsan, orci. Ac, tortor
-                at sed pharetra, porttitor eu. Sit dolor dui ipsum fringilla
-                placerat tristique non quam sit. Ultricies magna pulvinar varius
-                suspendisse. Pulvinar odio dolor elit mauris urna, netus ac
-                felis, consectetur. Integer viverra egestas leo tortor vitae
-                elementum. Tincidunt dui eget dolor tristique maecenas interdum
-                vitae duis odio. Molestie venenatis fringilla aenean eget
-                pellentesque duis. A proin dui lectus nibh proin ac integer
-                purus mi.
-              </p>
-              <p className="mb-12 lg:text-xl">
-                &nbsp; A, vulputate id nullam lectus vel, metus enim. Tempus
-                volutpat ut in id at fames eget. Pulvinar quam sodales quisque
-                mattis. Feugiat et tristique aliquet arcu in id rutrum et
-                tellus. Id quis interdum enim velit. Id convallis sed massa a,
-                risus sed. Volutpat sed integer fusce lectus quam. Justo, nec
-                sed interdum ac. Bibendum et urna, vel donec. Elit sed ultricies
-                lobortis massa fames eget risus. Quam auctor odio interdum
-                ultrices. Sem quis praesent ac enim accumsan, orci. Ac, tortor
-                at sed pharetra, porttitor eu. Sit dolor dui ipsum fringilla
-                placerat tristique non quam sit. Ultricies magna pulvinar varius
-                suspendisse. Pulvinar odio dolor elit mauris urna, netus ac
-                felis, consectetur. Integer viverra egestas leo tortor vitae
-                elementum. Tincidunt dui eget dolor tristique maecenas interdum
-                vitae duis odio. Molestie venenatis fringilla aenean eget
-                pellentesque duis. A proin dui lectus nibh proin ac integer
-                purus mi.
-              </p>
-            </div>
-          )}
-          {selectedTab === 'how-to' && (
-            <div className="leading-loose">
-              <h2 className="text-3xl font-semibold mb-12">
-                Syarat dan Tata Cara
-              </h2>
-              <p className="mb-12 lg:text-xl">
-                &nbsp; A, vulputate id nullam lectus vel, metus enim. Tempus
-                volutpat ut in id at fames eget. Pulvinar quam sodales quisque
-                mattis. Feugiat et tristique aliquet arcu in id rutrum et
-                tellus. Id quis interdum enim velit. Id convallis sed massa a,
-                risus sed. Volutpat sed integer fusce lectus quam. Justo, nec
-                sed interdum ac. Bibendum et urna, vel donec. Elit sed ultricies
-                lobortis massa fames eget risus. Quam auctor odio interdum
-                ultrices. Sem quis praesent ac enim accumsan, orci. Ac, tortor
-                at sed pharetra, porttitor eu. Sit dolor dui ipsum fringilla
-                placerat tristique non quam sit. Ultricies magna pulvinar varius
-                suspendisse. Pulvinar odio dolor elit mauris urna, netus ac
-                felis, consectetur. Integer viverra egestas leo tortor vitae
-                elementum. Tincidunt dui eget dolor tristique maecenas interdum
-                vitae duis odio. Molestie venenatis fringilla aenean eget
-                pellentesque duis. A proin dui lectus nibh proin ac integer
-                purus mi.
-              </p>
-              <p className="mb-12 lg:text-xl">
-                &nbsp; A, vulputate id nullam lectus vel, metus enim. Tempus
-                volutpat ut in id at fames eget. Pulvinar quam sodales quisque
-                mattis. Feugiat et tristique aliquet arcu in id rutrum et
-                tellus. Id quis interdum enim velit. Id convallis sed massa a,
-                risus sed. Volutpat sed integer fusce lectus quam. Justo, nec
-                sed interdum ac. Bibendum et urna, vel donec. Elit sed ultricies
-                lobortis massa fames eget risus. Quam auctor odio interdum
-                ultrices. Sem quis praesent ac enim accumsan, orci. Ac, tortor
-                at sed pharetra, porttitor eu. Sit dolor dui ipsum fringilla
-                placerat tristique non quam sit. Ultricies magna pulvinar varius
-                suspendisse. Pulvinar odio dolor elit mauris urna, netus ac
-                felis, consectetur. Integer viverra egestas leo tortor vitae
-                elementum. Tincidunt dui eget dolor tristique maecenas interdum
-                vitae duis odio. Molestie venenatis fringilla aenean eget
-                pellentesque duis. A proin dui lectus nibh proin ac integer
-                purus mi.
-              </p>
-            </div>
-          )}
-          {selectedTab === 'form' && (
-            <div>
-              <h2 className="text-3xl font-semibold mb-12">Form Pendaftaran</h2>
-              <p className="mb-12 lg:text-xl">
-                Silahkan mendaftar dengan mengisi form pendaftaran berikut
-              </p>
-              <a
-                href="https://forms.google.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button arrow>Daftar Sekarang</Button>
-              </a>
-            </div>
-          )}
-        </div>
+        <div
+          className="mt-16 prose text-white max-w-none mb-8 lg:mb-12 full-image"
+          dangerouslySetInnerHTML={{
+            __html: sanitize(contentMap[selectedTab].content)
+          }}
+        ></div>
+
+        {contentMap[selectedTab].link !== '' && (
+          <a
+            href={contentMap[selectedTab].link}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button arrow>{contentMap[selectedTab].link_text}</Button>
+          </a>
+        )}
       </div>
     </Layout>
   )

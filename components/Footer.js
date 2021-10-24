@@ -29,7 +29,7 @@ export default function Footer() {
       children: [
         { label: nav_about, path: '#' },
         { label: nav_department, path: '#' },
-        { label: nav_registration, path: '/registration?tab=information' }
+        { label: nav_registration, path: '/registration' }
       ]
     },
     {

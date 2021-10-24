@@ -19,6 +19,11 @@ const globalStyles = ({ addBase, config }) => {
       '&:hover': {
         color: config('theme.colors.primary')
       }
+    },
+    '.full-image': {
+      img: {
+        width: '100%'
+      }
     }
   })
 }
