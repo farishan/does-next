@@ -6,6 +6,7 @@ export default function Button({
   extendClass = '',
   children,
   outline,
+  transparent,
   arrow,
   ...props
 }) {
@@ -20,6 +21,8 @@ export default function Button({
   const stateClass = `${
     outline
       ? 'border-white text-white hover:bg-primary hover:border-primary border-opacity-30'
+      : transparent
+      ? 'text-primary hover:text-white hover:bg-primary hover:border-primary'
       : 'bg-primary hover:text-primary hover:bg-transparent hover:border-primary'
   }`
   const className = `${baseClass} ${animationClass} ${stateClass} ${extendClass}`

@@ -3,7 +3,7 @@ import Link from 'next/link'
 import useContent from '@/helpers/use-content'
 import UnderlinedTitle from './UnderlinedTitle'
 import { sanitize } from 'isomorphic-dompurify'
-import IconSocmed from './icons/IconSocmed'
+import SocialLinks from './SocialLinks'
 
 export default function Footer() {
   const {
@@ -20,10 +20,6 @@ export default function Footer() {
     copy_right,
     copy_right_mobile,
     site_email,
-    site_instagram,
-    site_youtube,
-    site_twitter,
-    site_facebook,
     footer_background
   } = useContent()
 
@@ -54,33 +50,6 @@ export default function Footer() {
     }
   ]
 
-  const socialMediaLogoPaths = [
-    {
-      name: 'facebook',
-      src: require('../assets/icons/icon-fb-grey.png'),
-      path: site_facebook,
-      icon: <IconSocmed />
-    },
-    {
-      name: 'twitter',
-      src: require('../assets/icons/icon-twitter-grey.png'),
-      path: site_twitter,
-      icon: <IconSocmed type="twitter" />
-    },
-    {
-      name: 'instagram',
-      src: require('../assets/icons/icon-ig-grey.png'),
-      path: site_instagram,
-      icon: <IconSocmed type="instagram" />
-    },
-    {
-      name: 'youtube',
-      src: require('../assets/icons/icon-youtube-grey.png'),
-      path: site_youtube,
-      icon: <IconSocmed type="youtube" />
-    }
-  ]
-
   return (
     <footer className="relative">
       <div className="container relative z-20">
@@ -101,15 +70,15 @@ export default function Footer() {
                 <p className="text-sm xl:text-base xl:tracking-widest font-light mb-2 md:mb-4">
                   HUBUNGI KAMI DI
                 </p>
-                <p className="font-light">
-                  <a href={`mailto:${site_email}`}>
+                <div>
+                  <a href={`mailto:${site_email}`} className="font-light">
                     <UnderlinedTitle
                       text1={site_email}
                       hoverable
                       customSize="text-2xl md:text-4xl xl:text-4xlp"
                     />
                   </a>
-                </p>
+                </div>
               </div>
             </div>
           </div>
@@ -138,33 +107,7 @@ export default function Footer() {
                 </div>
               ))}
               <div className="w-1/2 md:w-full px-2 lg:px-4 mb-12 md:mb-8 md:mt-8 lg:my-0 flex items-end lg:justify-end pb-5 lg:pb-4 xl:pb-5">
-                <div className="flex">
-                  {socialMediaLogoPaths.map((item, idx) => (
-                    <Link key={idx} href={item.path}>
-                      <a
-                        target="_blank"
-                        className={`${
-                          idx !== socialMediaLogoPaths.length - 1
-                            ? 'mr-4 lg:mr-10'
-                            : 'mr-0'
-                        }`}
-                      >
-                        <div className="relative w-5 lg:w-6 h-5 lg:h-6">
-                          {item.icon ? (
-                            item.icon
-                          ) : (
-                            <Image
-                              src={item.src}
-                              layout="fill"
-                              alt="socmedicon"
-                              className="object-contain object-center"
-                            />
-                          )}
-                        </div>
-                      </a>
-                    </Link>
-                  ))}
-                </div>
+                <SocialLinks />
               </div>
             </div>
           </div>

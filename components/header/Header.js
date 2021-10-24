@@ -1,130 +1,85 @@
-import React, { useState, useEffect } from 'react'
-import { useRouter } from 'next/router'
+import React, { useState } from 'react'
 import useContent from '@/helpers/use-content'
 import Image from 'next/image'
 import Link from 'next/link'
-import Navbar from './Navbar'
-// import NavbarMobileView from './NavbarMobileView'
+import Menu from './Menu'
+import { BLUR_IMAGE } from '@/constants'
+import MenuTrigger from './MenuTrigger'
+import Button from '../Button'
+
+/*
+  throttle: cooldown time between showMenu state changes.
+  - Set to 800ms for safer microanimations.
+  - Set to 0 for faster toggling.
+  !WARNING: 0 cooldown time = menu toggling can be abused by user.
+*/
+const THROTTLE = 600 // ms
 
 export default function Header() {
-  const [showNavModal, setShowNavModal] = useState(false)
-  const [hoveredNav, setHoveredNav] = useState(null)
-  const [activeRoute, setActiveRoute] = useState('/')
+  const [isCoolingDown, setIsCoolingDown] = useState(false)
+  const [showMenu, setShowMenu] = useState(false)
+  const { site_logo } = useContent()
 
-  const router = useRouter()
-  const {
-    site_logo,
-    nav_works_top,
-    nav_works_short,
-    nav_blog,
-    nav_merchandise,
-    nav_registration,
-    nav_about,
-    nav_department,
-    nav_donation,
-    nav_contact,
-    site_instagram,
-    site_youtube,
-    site_twitter,
-    site_facebook
-  } = useContent()
-
-  useEffect(() => {
-    const currentRoute = router.pathname
-    setActiveRoute(currentRoute)
-  }, [router.pathname])
-
-  const navItems = [
-    { label: nav_works_top, path: '/works/featured' },
-    { label: nav_works_short, path: '#' },
-    { label: nav_blog, path: '/blog' },
-    { label: nav_merchandise, path: '#' },
-    { label: nav_registration, path: '/registration' },
-    { label: nav_about, path: '/about' },
-    { label: nav_department, path: '#' },
-    { label: nav_donation, path: '#' },
-    { label: nav_contact, path: '/contact' }
-  ]
-
-  const socialMediaLogoPaths = [
-    {
-      name: 'facebook',
-      src: require('../../assets/icons/icon-fb-grey.png'),
-      path: site_facebook
-    },
-    {
-      name: 'twitter',
-      src: require('../../assets/icons/icon-twitter-grey.png'),
-      path: site_twitter
-    },
-    {
-      name: 'instagram',
-      src: require('../../assets/icons/icon-ig-grey.png'),
-      path: site_instagram
-    },
-    {
-      name: 'youtube',
-      src: require('../../assets/icons/icon-youtube-grey.png'),
-      path: site_youtube
+  const toggleMenu = () => {
+    if (!isCoolingDown) {
+      setIsCoolingDown(true)
+      setShowMenu(!showMenu)
+      setTimeout(() => {
+        setIsCoolingDown(false)
+      }, THROTTLE)
     }
-  ]
-
-  const toggleNavModal = () => {
-    setShowNavModal(!showNavModal)
-  }
-
-  const handleHover = (index = null) => {
-    console.log('handleHover >>> index ', index)
-    setHoveredNav(index)
-  }
-
-  const renderSiteLogo = () => {
-    return (
-      <Link href="/">
-        <a>
-          <Image src={`${site_logo}`} height={40} width={70} alt="main-logo" />
-        </a>
-      </Link>
-    )
   }
 
   return (
-    <header className="md:fixed z-50 w-full">
-      <div className="container">
-        <div className="flex items-center justify-between h-24">
-          <Link href="/">
-            <a>
-              <Image
-                src={`${site_logo}`}
-                height={40}
-                width={70}
-                alt="main-logo"
-              />
-            </a>
-          </Link>
+    <>
+      <header className="fixed z-header w-full">
+        <div className="container">
+          <div className="flex items-center justify-between py-6 lg:py-12">
+            <Link href="/">
+              <a>
+                <div className="hidden lg:block">
+                  <Image
+                    src={`${site_logo}`}
+                    height={56}
+                    width={100}
+                    alt="main-logo"
+                    className="object-contain object-center"
+                    placeholder="blur"
+                    blurDataURL={BLUR_IMAGE}
+                  />
+                </div>
+                <div className="lg:hidden">
+                  <Image
+                    src={`${site_logo}`}
+                    height={40}
+                    width={73}
+                    alt="main-logo"
+                    className="object-contain object-center"
+                    placeholder="blur"
+                    blurDataURL={BLUR_IMAGE}
+                  />
+                </div>
+              </a>
+            </Link>
 
-          {/* Navbar - mobile view */}
-          {/* <NavbarMobileView
-            navItems={navItems}
-            toggleNavModal={toggleNavModal}
-            showNavModal={showNavModal}
-            hoveredNav={hoveredNav}
-            handleHover={handleHover}
-          /> */}
-
-          {/* Navbar - non mobile view */}
-          <Navbar
-            navItems={navItems}
-            hoveredNav={hoveredNav}
-            handleHover={handleHover}
-            toggleNavModal={toggleNavModal}
-            showNavModal={showNavModal}
-            siteLogo={renderSiteLogo}
-            socialMediaLogoPaths={socialMediaLogoPaths}
-            activeRoute={activeRoute}
-          />
+            <div className="flex items-center">
+              {showMenu && (
+                <div className="items-center hidden lg:flex opacity-0 animate-fade-in-delayed">
+                  <Button transparent extendClass="mr-2">
+                    <span className="text-xs uppercase">Daftar</span>
+                  </Button>
+                  <Button outline extendClass="mr-10">
+                    <span className="text-xs uppercase">Masuk</span>
+                  </Button>
+                </div>
+              )}
+              <MenuTrigger isActive={showMenu} onClick={toggleMenu} />
+            </div>
+          </div>
         </div>
-      </div>
-    </header>
+      </header>
+
+      <Menu show={showMenu} />
+    </>
   )
 }

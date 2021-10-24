@@ -113,6 +113,9 @@ module.exports = {
         }
       },
       screens: screensConfig,
+      height: {
+        18: '4.5rem' // 72px
+      },
       colors: {
         dark: '#222222',
         primary: '#D2292D',
@@ -139,6 +142,26 @@ module.exports = {
       },
       transitionTimingFunction: {
         'custom-cubic': 'cubic-bezier(.63,0,.52,.77)'
+      },
+      zIndex: {
+        header: '999',
+        menu: '998'
+      },
+      animation: {
+        'fade-in': 'fadeIn 0.2s ease-in-out forwards',
+        'fade-in-delayed': 'fadeIn 0.1s ease-in-out 0.2s forwards',
+        'fade-out': 'fadeOut 0.2s ease-in-out forwards',
+        'fade-out-delayed': 'fadeOut 0.1s ease-in-out 0.2s forwards'
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' }
+        },
+        fadeOut: {
+          '0%': { opacity: '1' },
+          '100%': { opacity: '0' }
+        }
       }
     }
   },
