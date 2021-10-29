@@ -126,7 +126,7 @@ export default function Menu({ show }) {
               />
             ))}
           </NavWrapper>
-          <div className="container w-full flex flex-col md:flex-row justify-between items-start md:items-center">
+          <div className="container w-full flex flex-col lg:flex-row justify-between items-start lg:items-center">
             <nav className="w-full flex flex-col lg:flex-row order-2 lg:order-1">
               {secondaryLinks.map((item, index) => (
                 <MenuItem
@@ -145,7 +145,7 @@ export default function Menu({ show }) {
                 />
               ))}
             </nav>
-            <div className="mb-12 md:mb-0 order-1 lg:order-2">
+            <div className="mb-12 lg:mb-0 order-1 lg:order-2">
               <SocialLinks />
             </div>
           </div>

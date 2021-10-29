@@ -29,7 +29,7 @@ export default function TabItem({
       {...props}
     >
       <span className="font-medium opacity-0 relative z-10 h-full pointer-events-none">
-        {children}
+        {children} {String(isActive)}
       </span>
 
       {/* Masking to fix font-weight glitch */}
