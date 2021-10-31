@@ -1,6 +1,7 @@
 import 'tailwindcss/tailwind.css'
 import NextNprogress from 'nextjs-progressbar'
 import 'react-image-lightbox/style.css'
+import '../index.css'
 
 function MyApp({ Component, pageProps }) {
   return (

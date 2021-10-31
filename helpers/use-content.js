@@ -1,9 +1,11 @@
 import global from '@/content/global.json'
 import page_home from '@/content/page_home.json'
+import about from '@/content/about.json'
 
 const contentMap = {
   global,
-  page_home
+  page_home,
+  about
 }
 
 export default function useContent(key = 'global') {

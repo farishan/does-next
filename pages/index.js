@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { useEffect, useRef, useState } from 'react'
-import ATF from '@/components/ATF'
+import ATFHome from '@/components/ATFHome'
 import Layout from '@/components/Layout'
 import useContent from '@/helpers/use-content'
 import SectionNext from '@/components/SectionNext'
@@ -88,9 +88,9 @@ export default function Home() {
           if (step !== stepIndex['atf']) {
             setStep(stepIndex['atf'])
           }
-        } else {
+        } /* else {
           console.error(`something wrong`, step)
-        }
+        } */
       }
     }
 
@@ -120,7 +120,7 @@ export default function Home() {
       </div>
 
       <div className="relative" ref={sectionAtfRef}>
-        <ATF />
+        <ATFHome />
         <div className="absolute w-full bottom-4 flex justify-center z-40">
           <SectionNext onClick={() => handleNextSection(sectionWorkRef)}>
             {nav_works}

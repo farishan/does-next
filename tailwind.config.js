@@ -19,6 +19,11 @@ const globalStyles = ({ addBase, config }) => {
       '&:hover': {
         color: config('theme.colors.primary')
       }
+    },
+    '.full-image': {
+      img: {
+        width: '100%'
+      }
     }
   })
 }
@@ -100,13 +105,17 @@ module.exports = {
       typography: {
         DEFAULT: {
           css: {
-            '*, strong, h1, h2, h3, h4, h5, h6, blockquote, a, code, pre, ol li:before': {
-              color: '#fff'
-            },
+            '*, strong, h1, h2, h3, h4, h5, h6, blockquote, a, code, pre, ol li:before':
+              {
+                color: '#fff'
+              }
           }
         }
       },
       screens: screensConfig,
+      height: {
+        18: '4.5rem' // 72px
+      },
       colors: {
         dark: '#222222',
         primary: '#D2292D',
@@ -116,7 +125,11 @@ module.exports = {
         'gray-bbb': '#BBBBBB'
       },
       fontSize: {
-        xl: ['1.25rem', '2.5rem']
+        xl: ['1.25rem', '2.5rem'],
+        '4xlp': [
+          '2.5rem', // 40px
+          '3.75rem' // 60px
+        ]
       },
       fontFamily: {
         accent: ['Poppins', 'ui-sans-serif'],
@@ -129,6 +142,26 @@ module.exports = {
       },
       transitionTimingFunction: {
         'custom-cubic': 'cubic-bezier(.63,0,.52,.77)'
+      },
+      zIndex: {
+        header: '999',
+        menu: '998'
+      },
+      animation: {
+        'fade-in': 'fadeIn 0.2s ease-in-out forwards',
+        'fade-in-delayed': 'fadeIn 0.1s ease-in-out 0.2s forwards',
+        'fade-out': 'fadeOut 0.2s ease-in-out forwards',
+        'fade-out-delayed': 'fadeOut 0.1s ease-in-out 0.2s forwards'
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' }
+        },
+        fadeOut: {
+          '0%': { opacity: '1' },
+          '100%': { opacity: '0' }
+        }
       }
     }
   },

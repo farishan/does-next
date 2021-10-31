@@ -1,0 +1,64 @@
+.menu {
+  position: relative;
+  width: 32px;
+  height: 32px;
+}
+
+.menu::before,
+.menu::after {
+  content: '';
+  position: absolute;
+  border-radius: 5px;
+  background-color: #ffffff;
+  right: 4px;
+  height: 2px;
+  transition: 0.2s;
+}
+
+.menu::before {
+  width: 75%;
+  top: 10px;
+}
+
+.menu::after {
+  width: 40%;
+  bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .menu {
+    width: 48px;
+    height: 48px;
+  }
+
+  .menu::before,
+  .menu::after {
+    height: 3px;
+    right: 6px;
+    border-radius: 3px;
+  }
+
+  .menu::before {
+    top: 16px;
+  }
+
+  .menu::after {
+    bottom: 16px;
+  }
+}
+
+.menu-active::before,
+.menu-active::after {
+  width: 100%;
+  right: 0;
+}
+
+.menu-active::before {
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg) scale(0.7);
+}
+
+.menu-active::after {
+  bottom: 50%;
+  transform: translateY(50%) rotate(45deg) scale(0.7);
+}

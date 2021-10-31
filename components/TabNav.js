@@ -20,7 +20,8 @@ const defaultTabs = [
 export default function TabNav({
   tabs = defaultTabs,
   onChange = () => {},
-  defaultValue
+  defaultValue,
+  watchThis
 }) {
   const ref = createRef()
   const [width, setWidth] = useState(0)
@@ -31,6 +32,14 @@ export default function TabNav({
   const [implementingPage, setImplementingPage] = useState('')
 
   const router = useRouter()
+
+  useEffect(() => {
+    if (watchThis && watchThis !== selected) {
+      setSelected(watchThis)
+    }
+
+    // eslint-disable-next-line
+  }, [watchThis])
 
   const listener = (e) => {
     setViewport(e.target.innerWidth)

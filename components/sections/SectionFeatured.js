@@ -1,5 +1,6 @@
-import Slider from '@/components/slider/Slider'
+import WorkSlider from '@/components/slider/WorkSlider'
 import useContent from '@/helpers/use-content'
+import Button from '../Button'
 
 export default function SectionFeatured() {
   const { nav_works } = useContent()
@@ -7,17 +8,25 @@ export default function SectionFeatured() {
   const title = nav_works
 
   return (
-    <section className="container py-8 md:py-16">
-      <div className="flex items-center mb-10 md:mb-12">
-        <div>
-          <h2 className="md:text-xl mr-4 md:mr-10 tracking-widest">{title}</h2>
-        </div>
-        <div className="w-full">
-          <hr className="border-white opacity-50" />
+    <section className="py-8 md:pt-16 md:pb-12">
+      <div className="container">
+        <div className="flex items-center">
+          <div>
+            <h2 className="md:text-xl mr-4 md:mr-10 tracking-widest">
+              {title}
+            </h2>
+          </div>
+          <div className="w-full">
+            <hr className="border-white opacity-50" />
+          </div>
         </div>
       </div>
 
-      <Slider />
+      <WorkSlider />
+
+      <div className="flex justify-center">
+        <Button arrow>Lihat Detail</Button>
+      </div>
     </section>
   )
 }

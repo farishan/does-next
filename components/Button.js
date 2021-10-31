@@ -6,6 +6,7 @@ export default function Button({
   extendClass = '',
   children,
   outline,
+  transparent,
   arrow,
   ...props
 }) {
@@ -20,7 +21,9 @@ export default function Button({
   const stateClass = `${
     outline
       ? 'border-white text-white hover:bg-primary hover:border-primary border-opacity-30'
-      : 'bg-primary hover:text-primary hover:bg-black hover:border-primary'
+      : transparent
+      ? 'text-primary hover:text-white hover:bg-primary hover:border-primary'
+      : 'bg-primary hover:text-primary hover:bg-transparent hover:border-primary'
   }`
   const className = `${baseClass} ${animationClass} ${stateClass} ${extendClass}`
 
@@ -48,7 +51,7 @@ export default function Button({
           >
             <path
               d="M2 12H22M22 12L16 6M22 12L16 18"
-              stroke="white"
+              stroke={!outline && hovered ? '#D2292D' : '#fff'}
               strokeLinecap="round"
               strokeLinejoin="round"
             />

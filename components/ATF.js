@@ -7,24 +7,28 @@ const Content = ({ title, imageURL }) => {
 
   return (
     <>
-      <Image
-        src={imageURL}
-        layout="fill"
-        className="object-cover"
-        alt={title}
-        blurDataURL={BLUR_IMAGE}
-        placeholder="blur"
-      />
+      {imageURL && (
+        <div className="absolute w-full h-full left-0 top-0 z-10 grayscale">
+          <Image
+            src={imageURL}
+            layout="fill"
+            className="object-cover"
+            alt={title}
+            blurDataURL={BLUR_IMAGE}
+            placeholder="blur"
+          />
+        </div>
+      )}
 
       <div
-        className="absolute w-full h-full left-0 top-0 z-10"
+        className="absolute w-full h-full left-0 top-0 z-20"
         style={{
           background:
             'radial-gradient(94.56% 59.35% at 50% 49.94%, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 42.15%, rgba(0, 0, 0, 0.8) 100%)'
         }}
       ></div>
 
-      <div className="container">
+      <div className="container relative z-30">
         {title && (
           <h1 className="text-4xl md:text-6xl lg:text-8xl relative z-10 select-none">
             <span className="font-bold">{title}</span>
