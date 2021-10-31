@@ -36,7 +36,7 @@ export default function Header() {
 
   const navItems = [
     { label: nav_works_top, path: '/works/featured' },
-    { label: nav_works_short, path: '#' },
+    { label: nav_works_short, path: '/works' },
     { label: nav_blog, path: '/blog' },
     { label: nav_merchandise, path: '#' },
     { label: nav_registration, path: '#' },
@@ -74,7 +74,6 @@ export default function Header() {
   }
 
   const handleHover = (index = null) => {
-    console.log('handleHover >>> index ', index)
     setHoveredNav(index)
   }
 

@@ -1,0 +1,69 @@
+[
+  {
+    "name": 1,
+    "label": "Gen 1",
+    "period": "2014-2015",
+    "majors": [
+      "3D Animation",
+      "3D Modeling"
+    ]
+  },
+  {
+    "name": 2,
+    "label": "Gen 2",
+    "period": "2015-2016",
+    "majors": [
+      "3D Animation",
+      "3D Modeling"
+    ]
+  },
+  {
+    "name": 3,
+    "label": "Gen 3",
+    "period": "2016-2017",
+    "majors": [
+      "Programming"
+    ]
+  },
+  {
+    "name": 4,
+    "label": "Gen 4",
+    "period": "2017-2018",
+    "majors": [
+      "3D Animation",
+      "3D Modeling", 
+      "Compositor"
+    ]
+  },
+  {
+    "name": 5,
+    "label": "Gen 5",
+    "period": "2018-2019",
+    "majors": [
+      "Programming"
+    ]
+  },
+  {
+    "name": 6,
+    "label": "Gen 6",
+    "period": "2019-2020",
+    "majors": [
+      "3D Animation",
+      "3D Modeling", 
+      "Compositor",
+      "Programming"
+    ]
+  },
+  {
+    "name": 7,
+    "label": "Gen 7",
+    "period": "2020-2021",
+    "majors": [
+      "3D Animation",
+      "3D Modeling", 
+      "Software Developer",
+      "UI/UX Design",
+      "Cinematografi"
+    ]
+  }
+]

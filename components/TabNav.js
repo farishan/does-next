@@ -1,4 +1,5 @@
 import { createRef, useEffect, useState } from 'react'
+import { useRouter } from 'next/router'
 import TabItem from './TabItem'
 
 const defaultTabs = [
@@ -27,13 +28,22 @@ export default function TabNav({
   const [viewport, setViewport] = useState(0)
   const [selected, setSelected] = useState(defaultValue ? defaultValue : 'all')
   const [showOverlay, setShowOverlay] = useState(false)
+  const [implementingPage, setImplementingPage] = useState('')
+
+  const router = useRouter()
 
   const listener = (e) => {
     setViewport(e.target.innerWidth)
   }
 
   useEffect(() => {
+    const currentMainPathName = router.pathname.split('/')
+
     window.addEventListener('resize', listener)
+
+    setImplementingPage(currentMainPathName[1])
+
+    if (currentMainPathName[1] === 'works') setSelected(router.pathname)
 
     return () => {
       window.removeEventListener('resize', listener)
@@ -53,9 +63,21 @@ export default function TabNav({
     // eslint-disable-next-line
   }, [ref, viewport])
 
-  const handleClick = (id) => {
-    setSelected(id)
-    onChange(id)
+  const handleClick = (id, pathName) => {
+    /**
+     * Check where this component implemented
+     * Do the action according to the current page needed
+     */
+    switch (implementingPage) {
+      case 'blog':
+        onChange(id)
+        setSelected(id)
+        break
+      case 'works':
+        onChange(pathName)
+        setSelected(pathName)
+        break
+    }
   }
 
   const handleActive = (target) => {
@@ -77,8 +99,8 @@ export default function TabNav({
         {tabs.map((tab, index) => (
           <TabItem
             key={`tabItem_${tab.id}`}
-            isActive={selected === tab.id}
-            onClick={() => handleClick(tab.id)}
+            isActive={selected === tab.id || selected === tab.path}
+            onClick={() => handleClick(tab.id, tab.path)}
             onActive={handleActive}
             isLast={index === tabs.length - 1}
           >

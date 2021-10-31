@@ -1,28 +1,18 @@
-import ATF from '@/components/ATF'
-import Layout from '@/components/Layout'
 import WorkItems from '@/components/WorkItems'
 import useContent from '@/helpers/use-content'
-import Head from 'next/head'
+import WorksLayout from '@/components/WorksLayout'
+import SectionHighlight from '@/components/sections/SectionHighlight'
 
 /* @todo: get real data, setup state manager (store) */
 import works from '@/assets/works.dummy.json'
+const featuredWorks = works.filter((work) => work.featured)
 
 export default function Works() {
-  const { site_title, nav_works, works_image } = useContent()
+  const { site_title, works_image, featured_work_title } = useContent()
 
   return (
-    <Layout>
-      <Head>
-        <title>
-          {nav_works} - {site_title}
-        </title>
-      </Head>
-
-      <ATF title={nav_works} imageURL={works_image} />
-
-      <div className="container py-10 md:py-20">
-        <WorkItems data={works} />
-      </div>
-    </Layout>
+    <WorksLayout headTitle={featured_work_title}>
+      <SectionHighlight />
+    </WorksLayout>
   )
 }

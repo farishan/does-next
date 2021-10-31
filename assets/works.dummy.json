@@ -1,12 +1,17 @@
 [
   {
     "id": 1,
+    "generation": 1,
+    "type": "team",
+    "isFeatured": true,
     "title": "Padar",
     "slug": "padar",
     "featured": true,
     "image": "/images/dummy/work_1.png",
-    "description": "Karya Murid DOES Gen 6",
-    "date": "15 Desember 2020",
+    "duration": "8 menit",
+    "contentType": "3D Animation Short Movie",
+    "description": "Berkisah tentang seorang pemuda desa bersama dua kawannya, seekor komodo dan tupai terbang yang sedang menghadapi kekeringan ekstrim di pulau tempat mereka tinggal.",
+    "releaseDate": "15 Desember 2020",
     "thumbnail": "/images/dummy/work_1_thumbnail.jpg",
     "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque vitae quam vitae elit eu. Non ullamcorper cras nibh eget a et. Enim, in tellus sit integer nibh. Egestas et facilisi massa arcu ut sit tincidunt. Eu mauris in diam fusce odio eu. Dui in consequat mattis est. Quis imperdiet morbi arcu, amet non enim sit. Turpis nec arcu egestas facilisis tincidunt sed vel donec eu. Neque morbi pretium, diam volutpat, orci. Vivamus facilisis volutpat netus in volutpat at vitae. Nunc, eu, sit felis sed tristique.</p><p>Praesent facilisis integer non, pretium. Amet urna, sollicitudin enim montes, auctor. Gravida eget sed vitae vitae nascetur. Dignissim odio sit at scelerisque eu mauris dui. Ut vestibulum sed nunc pretium, mauris cursus. Nunc nunc in ac adipiscing magna facilisi molestie neque. Praesent nunc ultricies mauris non in. Viverra magna metus mauris a suspendisse convallis feugiat lacus, lacus. Scelerisque aenean non eleifend nec felis cras. Sit pharetra arcu et imperdiet lacinia felis.</p>",
     "video": {
@@ -152,11 +157,17 @@
   },
   {
     "id": 2,
-    "title": "Padar 2",
-    "slug": "padar-2",
+    "generation": 2,
+    "type": "team",
+    "isFeatured": true,
+    "title": "Padar",
+    "slug": "padar",
+    "featured": true,
     "image": "/images/dummy/work_1.png",
-    "description": "Karya Murid DOES Gen 10",
-    "date": "1 Januari 2024",
+    "duration": "8 menit",
+    "contentType": "3D Animation Short Movie",
+    "description": "Berkisah tentang seorang pemuda desa bersama dua kawannya, seekor komodo dan tupai terbang yang sedang menghadapi kekeringan ekstrim di pulau tempat mereka tinggal.",
+    "releaseDate": "15 Desember 2020",
     "thumbnail": "/images/dummy/work_1_thumbnail.jpg",
     "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque vitae quam vitae elit eu. Non ullamcorper cras nibh eget a et. Enim, in tellus sit integer nibh. Egestas et facilisi massa arcu ut sit tincidunt. Eu mauris in diam fusce odio eu. Dui in consequat mattis est. Quis imperdiet morbi arcu, amet non enim sit. Turpis nec arcu egestas facilisis tincidunt sed vel donec eu. Neque morbi pretium, diam volutpat, orci. Vivamus facilisis volutpat netus in volutpat at vitae. Nunc, eu, sit felis sed tristique.</p><p>Praesent facilisis integer non, pretium. Amet urna, sollicitudin enim montes, auctor. Gravida eget sed vitae vitae nascetur. Dignissim odio sit at scelerisque eu mauris dui. Ut vestibulum sed nunc pretium, mauris cursus. Nunc nunc in ac adipiscing magna facilisi molestie neque. Praesent nunc ultricies mauris non in. Viverra magna metus mauris a suspendisse convallis feugiat lacus, lacus. Scelerisque aenean non eleifend nec felis cras. Sit pharetra arcu et imperdiet lacinia felis.</p>",
     "video": {
@@ -176,7 +187,41 @@
               "/images/dummy/work_1a1a.jpg",
               "/images/dummy/work_1a1b.jpg",
               "/images/dummy/work_1a1c.jpg",
-              "/images/dummy/work_1a1d.jpg"
+              "/images/dummy/work_1a1d.jpg",
+              "/images/dummy/work_1a1b.jpg",
+              "/images/dummy/work_1a1c.jpg",
+              "/images/dummy/work_1a1d.jpg",
+              "/images/dummy/work_1a1a.jpg"
+            ]
+          },
+          {
+            "id": 2,
+            "name": "Grappy",
+            "description": "Grappy is a ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque vitae quam vitae elit eu. Non ullamcorper cras nibh eget a et. Enim, in tellus sit integer nibh. Egestas et facilisi massa arcu ut sit tincidunt. Eu mauris in diam fusce odio eu. Dui in consequat mattis est. Quis imperdiet morbi arcu, amet non enim sit. Turpis nec arcu egestas facilisis tincidunt sed vel donec eu. Neque morbi pretium, diam volutpat, orci. Vivamus facilisis volutpat netus in volutpat at vitae. Nunc, eu, sit felis sed tristique.",
+            "images": [
+              "/images/dummy/work_1a2a.jpg",
+              "/images/dummy/work_1a2b.jpg",
+              "/images/dummy/work_1a2c.jpg",
+              "/images/dummy/work_1a2d.jpg",
+              "/images/dummy/work_1a2d.jpg",
+              "/images/dummy/work_1a2c.jpg",
+              "/images/dummy/work_1a2a.jpg",
+              "/images/dummy/work_1a2b.jpg"
+            ]
+          },
+          {
+            "id": 3,
+            "name": "Sugar",
+            "description": "Sugar is a ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque vitae quam vitae elit eu. Non ullamcorper cras nibh eget a et. Enim, in tellus sit integer nibh. Egestas et facilisi massa arcu ut sit tincidunt. Eu mauris in diam fusce odio eu. Dui in consequat mattis est. Quis imperdiet morbi arcu, amet non enim sit. Turpis nec arcu egestas facilisis tincidunt sed vel donec eu. Neque morbi pretium, diam volutpat, orci. Vivamus facilisis volutpat netus in volutpat at vitae. Nunc, eu, sit felis sed tristique.",
+            "images": [
+              "/images/dummy/work_1a3a.jpg",
+              "/images/dummy/work_1a3b.jpg",
+              "/images/dummy/work_1a3c.jpg",
+              "/images/dummy/work_1a3d.jpg",
+              "/images/dummy/work_1a3c.jpg",
+              "/images/dummy/work_1a3d.jpg",
+              "/images/dummy/work_1a3b.jpg",
+              "/images/dummy/work_1a3a.jpg"
             ]
           }
         ]
@@ -194,6 +239,17 @@
               "/images/dummy/work_1b1b.jpg",
               "/images/dummy/work_1b1c.jpg",
               "/images/dummy/work_1b1d.jpg"
+            ]
+          },
+          {
+            "id": 2,
+            "name": "Candi",
+            "description": "Candi is a ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque vitae quam vitae elit eu. Non ullamcorper cras nibh eget a et. Enim, in tellus sit integer nibh. Egestas et facilisi massa arcu ut sit tincidunt. Eu mauris in diam fusce odio eu. Dui in consequat mattis est. Quis imperdiet morbi arcu, amet non enim sit. Turpis nec arcu egestas facilisis tincidunt sed vel donec eu. Neque morbi pretium, diam volutpat, orci. Vivamus facilisis volutpat netus in volutpat at vitae. Nunc, eu, sit felis sed tristique.",
+            "images": [
+              "/images/dummy/work_1b2a.jpg",
+              "/images/dummy/work_1b2b.jpg",
+              "/images/dummy/work_1b2c.jpg",
+              "/images/dummy/work_1b2d.jpg"
             ]
           }
         ]
@@ -227,6 +283,808 @@
               "id": 2,
               "name": "Hendry Adi Saputra",
               "instagram": "@hendrydoes6"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Music Produced By",
+          "members": [
+            {
+              "id": 1,
+              "name": "M. Iqbal",
+              "instagram": "@iqbaldoes6"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Technical Director",
+          "members": [
+            {
+              "id": 1,
+              "name": "Ridhwan Budi Syaputra",
+              "instagram": "@ridhwandoes6"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "generation": 3,
+    "type": "team",
+    "isFeatured": true,
+    "title": "Padar",
+    "slug": "padar",
+    "featured": true,
+    "image": "/images/dummy/work_1.png",
+    "duration": "8 menit",
+    "contentType": "3D Animation Short Movie",
+    "description": "Berkisah tentang seorang pemuda desa bersama dua kawannya, seekor komodo dan tupai terbang yang sedang menghadapi kekeringan ekstrim di pulau tempat mereka tinggal.",
+    "releaseDate": "15 Desember 2020",
+    "thumbnail": "/images/dummy/work_1_thumbnail.jpg",
+    "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque vitae quam vitae elit eu. Non ullamcorper cras nibh eget a et. Enim, in tellus sit integer nibh. Egestas et facilisi massa arcu ut sit tincidunt. Eu mauris in diam fusce odio eu. Dui in consequat mattis est. Quis imperdiet morbi arcu, amet non enim sit. Turpis nec arcu egestas facilisis tincidunt sed vel donec eu. Neque morbi pretium, diam volutpat, orci. Vivamus facilisis volutpat netus in volutpat at vitae. Nunc, eu, sit felis sed tristique.</p><p>Praesent facilisis integer non, pretium. Amet urna, sollicitudin enim montes, auctor. Gravida eget sed vitae vitae nascetur. Dignissim odio sit at scelerisque eu mauris dui. Ut vestibulum sed nunc pretium, mauris cursus. Nunc nunc in ac adipiscing magna facilisi molestie neque. Praesent nunc ultricies mauris non in. Viverra magna metus mauris a suspendisse convallis feugiat lacus, lacus. Scelerisque aenean non eleifend nec felis cras. Sit pharetra arcu et imperdiet lacinia felis.</p>",
+    "video": {
+      "title": "\"Padar\" Short Movie",
+      "embed_url": "https://www.youtube.com/embed/h60VOHsLJ3Y"
+    },
+    "entity": {
+      "character": {
+        "title": "Karakter",
+        "image": "/images/dummy/work_1a.jpg",
+        "entities": [
+          {
+            "id": 1,
+            "name": "Padar",
+            "description": "Padar is a ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque vitae quam vitae elit eu. Non ullamcorper cras nibh eget a et. Enim, in tellus sit integer nibh. Egestas et facilisi massa arcu ut sit tincidunt. Eu mauris in diam fusce odio eu. Dui in consequat mattis est. Quis imperdiet morbi arcu, amet non enim sit. Turpis nec arcu egestas facilisis tincidunt sed vel donec eu. Neque morbi pretium, diam volutpat, orci. Vivamus facilisis volutpat netus in volutpat at vitae. Nunc, eu, sit felis sed tristique.",
+            "images": [
+              "/images/dummy/work_1a1a.jpg",
+              "/images/dummy/work_1a1b.jpg",
+              "/images/dummy/work_1a1c.jpg",
+              "/images/dummy/work_1a1d.jpg",
+              "/images/dummy/work_1a1b.jpg",
+              "/images/dummy/work_1a1c.jpg",
+              "/images/dummy/work_1a1d.jpg",
+              "/images/dummy/work_1a1a.jpg"
+            ]
+          },
+          {
+            "id": 2,
+            "name": "Grappy",
+            "description": "Grappy is a ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque vitae quam vitae elit eu. Non ullamcorper cras nibh eget a et. Enim, in tellus sit integer nibh. Egestas et facilisi massa arcu ut sit tincidunt. Eu mauris in diam fusce odio eu. Dui in consequat mattis est. Quis imperdiet morbi arcu, amet non enim sit. Turpis nec arcu egestas facilisis tincidunt sed vel donec eu. Neque morbi pretium, diam volutpat, orci. Vivamus facilisis volutpat netus in volutpat at vitae. Nunc, eu, sit felis sed tristique.",
+            "images": [
+              "/images/dummy/work_1a2a.jpg",
+              "/images/dummy/work_1a2b.jpg",
+              "/images/dummy/work_1a2c.jpg",
+              "/images/dummy/work_1a2d.jpg",
+              "/images/dummy/work_1a2d.jpg",
+              "/images/dummy/work_1a2c.jpg",
+              "/images/dummy/work_1a2a.jpg",
+              "/images/dummy/work_1a2b.jpg"
+            ]
+          },
+          {
+            "id": 3,
+            "name": "Sugar",
+            "description": "Sugar is a ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque vitae quam vitae elit eu. Non ullamcorper cras nibh eget a et. Enim, in tellus sit integer nibh. Egestas et facilisi massa arcu ut sit tincidunt. Eu mauris in diam fusce odio eu. Dui in consequat mattis est. Quis imperdiet morbi arcu, amet non enim sit. Turpis nec arcu egestas facilisis tincidunt sed vel donec eu. Neque morbi pretium, diam volutpat, orci. Vivamus facilisis volutpat netus in volutpat at vitae. Nunc, eu, sit felis sed tristique.",
+            "images": [
+              "/images/dummy/work_1a3a.jpg",
+              "/images/dummy/work_1a3b.jpg",
+              "/images/dummy/work_1a3c.jpg",
+              "/images/dummy/work_1a3d.jpg",
+              "/images/dummy/work_1a3c.jpg",
+              "/images/dummy/work_1a3d.jpg",
+              "/images/dummy/work_1a3b.jpg",
+              "/images/dummy/work_1a3a.jpg"
+            ]
+          }
+        ]
+      },
+      "location": {
+        "title": "Set Lokasi",
+        "image": "/images/dummy/work_1b.jpg",
+        "entities": [
+          {
+            "id": 1,
+            "name": "Padang Gurun",
+            "description": "Padang gurun is a ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque vitae quam vitae elit eu. Non ullamcorper cras nibh eget a et. Enim, in tellus sit integer nibh. Egestas et facilisi massa arcu ut sit tincidunt. Eu mauris in diam fusce odio eu. Dui in consequat mattis est. Quis imperdiet morbi arcu, amet non enim sit. Turpis nec arcu egestas facilisis tincidunt sed vel donec eu. Neque morbi pretium, diam volutpat, orci. Vivamus facilisis volutpat netus in volutpat at vitae. Nunc, eu, sit felis sed tristique.",
+            "images": [
+              "/images/dummy/work_1b1a.jpg",
+              "/images/dummy/work_1b1b.jpg",
+              "/images/dummy/work_1b1c.jpg",
+              "/images/dummy/work_1b1d.jpg"
+            ]
+          },
+          {
+            "id": 2,
+            "name": "Candi",
+            "description": "Candi is a ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque vitae quam vitae elit eu. Non ullamcorper cras nibh eget a et. Enim, in tellus sit integer nibh. Egestas et facilisi massa arcu ut sit tincidunt. Eu mauris in diam fusce odio eu. Dui in consequat mattis est. Quis imperdiet morbi arcu, amet non enim sit. Turpis nec arcu egestas facilisis tincidunt sed vel donec eu. Neque morbi pretium, diam volutpat, orci. Vivamus facilisis volutpat netus in volutpat at vitae. Nunc, eu, sit felis sed tristique.",
+            "images": [
+              "/images/dummy/work_1b2a.jpg",
+              "/images/dummy/work_1b2b.jpg",
+              "/images/dummy/work_1b2c.jpg",
+              "/images/dummy/work_1b2d.jpg"
+            ]
+          }
+        ]
+      }
+    },
+    "credit": {
+      "title": "Tim Produksi",
+      "image": "/images/dummy/work_1c.jpg",
+      "roles": [
+        {
+          "id": 1,
+          "title": "Directed By",
+          "members": [
+            {
+              "id": 1,
+              "name": "Afwan Amirul",
+              "instagram": "@afwandoes6"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Produced By",
+          "members": [
+            {
+              "id": 1,
+              "name": "Krisna Wahyu Pratama",
+              "instagram": "@krisnadoes6"
+            },
+            {
+              "id": 2,
+              "name": "Hendry Adi Saputra",
+              "instagram": "@hendrydoes6"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Music Produced By",
+          "members": [
+            {
+              "id": 1,
+              "name": "M. Iqbal",
+              "instagram": "@iqbaldoes6"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Technical Director",
+          "members": [
+            {
+              "id": 1,
+              "name": "Ridhwan Budi Syaputra",
+              "instagram": "@ridhwandoes6"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": 4,
+    "generation": 4,
+    "type": "team",
+    "isFeatured": true,
+    "title": "Padar",
+    "slug": "padar",
+    "featured": true,
+    "image": "/images/dummy/work_1.png",
+    "duration": "8 menit",
+    "contentType": "3D Animation Short Movie",
+    "description": "Berkisah tentang seorang pemuda desa bersama dua kawannya, seekor komodo dan tupai terbang yang sedang menghadapi kekeringan ekstrim di pulau tempat mereka tinggal.",
+    "releaseDate": "15 Desember 2020",
+    "thumbnail": "/images/dummy/work_1_thumbnail.jpg",
+    "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque vitae quam vitae elit eu. Non ullamcorper cras nibh eget a et. Enim, in tellus sit integer nibh. Egestas et facilisi massa arcu ut sit tincidunt. Eu mauris in diam fusce odio eu. Dui in consequat mattis est. Quis imperdiet morbi arcu, amet non enim sit. Turpis nec arcu egestas facilisis tincidunt sed vel donec eu. Neque morbi pretium, diam volutpat, orci. Vivamus facilisis volutpat netus in volutpat at vitae. Nunc, eu, sit felis sed tristique.</p><p>Praesent facilisis integer non, pretium. Amet urna, sollicitudin enim montes, auctor. Gravida eget sed vitae vitae nascetur. Dignissim odio sit at scelerisque eu mauris dui. Ut vestibulum sed nunc pretium, mauris cursus. Nunc nunc in ac adipiscing magna facilisi molestie neque. Praesent nunc ultricies mauris non in. Viverra magna metus mauris a suspendisse convallis feugiat lacus, lacus. Scelerisque aenean non eleifend nec felis cras. Sit pharetra arcu et imperdiet lacinia felis.</p>",
+    "video": {
+      "title": "\"Padar\" Short Movie",
+      "embed_url": "https://www.youtube.com/embed/h60VOHsLJ3Y"
+    },
+    "entity": {
+      "character": {
+        "title": "Karakter",
+        "image": "/images/dummy/work_1a.jpg",
+        "entities": [
+          {
+            "id": 1,
+            "name": "Padar",
+            "description": "Padar is a ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque vitae quam vitae elit eu. Non ullamcorper cras nibh eget a et. Enim, in tellus sit integer nibh. Egestas et facilisi massa arcu ut sit tincidunt. Eu mauris in diam fusce odio eu. Dui in consequat mattis est. Quis imperdiet morbi arcu, amet non enim sit. Turpis nec arcu egestas facilisis tincidunt sed vel donec eu. Neque morbi pretium, diam volutpat, orci. Vivamus facilisis volutpat netus in volutpat at vitae. Nunc, eu, sit felis sed tristique.",
+            "images": [
+              "/images/dummy/work_1a1a.jpg",
+              "/images/dummy/work_1a1b.jpg",
+              "/images/dummy/work_1a1c.jpg",
+              "/images/dummy/work_1a1d.jpg",
+              "/images/dummy/work_1a1b.jpg",
+              "/images/dummy/work_1a1c.jpg",
+              "/images/dummy/work_1a1d.jpg",
+              "/images/dummy/work_1a1a.jpg"
+            ]
+          },
+          {
+            "id": 2,
+            "name": "Grappy",
+            "description": "Grappy is a ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque vitae quam vitae elit eu. Non ullamcorper cras nibh eget a et. Enim, in tellus sit integer nibh. Egestas et facilisi massa arcu ut sit tincidunt. Eu mauris in diam fusce odio eu. Dui in consequat mattis est. Quis imperdiet morbi arcu, amet non enim sit. Turpis nec arcu egestas facilisis tincidunt sed vel donec eu. Neque morbi pretium, diam volutpat, orci. Vivamus facilisis volutpat netus in volutpat at vitae. Nunc, eu, sit felis sed tristique.",
+            "images": [
+              "/images/dummy/work_1a2a.jpg",
+              "/images/dummy/work_1a2b.jpg",
+              "/images/dummy/work_1a2c.jpg",
+              "/images/dummy/work_1a2d.jpg",
+              "/images/dummy/work_1a2d.jpg",
+              "/images/dummy/work_1a2c.jpg",
+              "/images/dummy/work_1a2a.jpg",
+              "/images/dummy/work_1a2b.jpg"
+            ]
+          },
+          {
+            "id": 3,
+            "name": "Sugar",
+            "description": "Sugar is a ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque vitae quam vitae elit eu. Non ullamcorper cras nibh eget a et. Enim, in tellus sit integer nibh. Egestas et facilisi massa arcu ut sit tincidunt. Eu mauris in diam fusce odio eu. Dui in consequat mattis est. Quis imperdiet morbi arcu, amet non enim sit. Turpis nec arcu egestas facilisis tincidunt sed vel donec eu. Neque morbi pretium, diam volutpat, orci. Vivamus facilisis volutpat netus in volutpat at vitae. Nunc, eu, sit felis sed tristique.",
+            "images": [
+              "/images/dummy/work_1a3a.jpg",
+              "/images/dummy/work_1a3b.jpg",
+              "/images/dummy/work_1a3c.jpg",
+              "/images/dummy/work_1a3d.jpg",
+              "/images/dummy/work_1a3c.jpg",
+              "/images/dummy/work_1a3d.jpg",
+              "/images/dummy/work_1a3b.jpg",
+              "/images/dummy/work_1a3a.jpg"
+            ]
+          }
+        ]
+      },
+      "location": {
+        "title": "Set Lokasi",
+        "image": "/images/dummy/work_1b.jpg",
+        "entities": [
+          {
+            "id": 1,
+            "name": "Padang Gurun",
+            "description": "Padang gurun is a ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque vitae quam vitae elit eu. Non ullamcorper cras nibh eget a et. Enim, in tellus sit integer nibh. Egestas et facilisi massa arcu ut sit tincidunt. Eu mauris in diam fusce odio eu. Dui in consequat mattis est. Quis imperdiet morbi arcu, amet non enim sit. Turpis nec arcu egestas facilisis tincidunt sed vel donec eu. Neque morbi pretium, diam volutpat, orci. Vivamus facilisis volutpat netus in volutpat at vitae. Nunc, eu, sit felis sed tristique.",
+            "images": [
+              "/images/dummy/work_1b1a.jpg",
+              "/images/dummy/work_1b1b.jpg",
+              "/images/dummy/work_1b1c.jpg",
+              "/images/dummy/work_1b1d.jpg"
+            ]
+          },
+          {
+            "id": 2,
+            "name": "Candi",
+            "description": "Candi is a ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque vitae quam vitae elit eu. Non ullamcorper cras nibh eget a et. Enim, in tellus sit integer nibh. Egestas et facilisi massa arcu ut sit tincidunt. Eu mauris in diam fusce odio eu. Dui in consequat mattis est. Quis imperdiet morbi arcu, amet non enim sit. Turpis nec arcu egestas facilisis tincidunt sed vel donec eu. Neque morbi pretium, diam volutpat, orci. Vivamus facilisis volutpat netus in volutpat at vitae. Nunc, eu, sit felis sed tristique.",
+            "images": [
+              "/images/dummy/work_1b2a.jpg",
+              "/images/dummy/work_1b2b.jpg",
+              "/images/dummy/work_1b2c.jpg",
+              "/images/dummy/work_1b2d.jpg"
+            ]
+          }
+        ]
+      }
+    },
+    "credit": {
+      "title": "Tim Produksi",
+      "image": "/images/dummy/work_1c.jpg",
+      "roles": [
+        {
+          "id": 1,
+          "title": "Directed By",
+          "members": [
+            {
+              "id": 1,
+              "name": "Afwan Amirul",
+              "instagram": "@afwandoes6"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Produced By",
+          "members": [
+            {
+              "id": 1,
+              "name": "Krisna Wahyu Pratama",
+              "instagram": "@krisnadoes6"
+            },
+            {
+              "id": 2,
+              "name": "Hendry Adi Saputra",
+              "instagram": "@hendrydoes6"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Music Produced By",
+          "members": [
+            {
+              "id": 1,
+              "name": "M. Iqbal",
+              "instagram": "@iqbaldoes6"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Technical Director",
+          "members": [
+            {
+              "id": 1,
+              "name": "Ridhwan Budi Syaputra",
+              "instagram": "@ridhwandoes6"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": 5,
+    "generation": 5,
+    "type": "team",
+    "isFeatured": true,
+    "title": "Padar",
+    "slug": "padar",
+    "featured": true,
+    "image": "/images/dummy/work_1.png",
+    "duration": "8 menit",
+    "contentType": "3D Animation Short Movie",
+    "description": "Berkisah tentang seorang pemuda desa bersama dua kawannya, seekor komodo dan tupai terbang yang sedang menghadapi kekeringan ekstrim di pulau tempat mereka tinggal.",
+    "releaseDate": "15 Desember 2020",
+    "thumbnail": "/images/dummy/work_1_thumbnail.jpg",
+    "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque vitae quam vitae elit eu. Non ullamcorper cras nibh eget a et. Enim, in tellus sit integer nibh. Egestas et facilisi massa arcu ut sit tincidunt. Eu mauris in diam fusce odio eu. Dui in consequat mattis est. Quis imperdiet morbi arcu, amet non enim sit. Turpis nec arcu egestas facilisis tincidunt sed vel donec eu. Neque morbi pretium, diam volutpat, orci. Vivamus facilisis volutpat netus in volutpat at vitae. Nunc, eu, sit felis sed tristique.</p><p>Praesent facilisis integer non, pretium. Amet urna, sollicitudin enim montes, auctor. Gravida eget sed vitae vitae nascetur. Dignissim odio sit at scelerisque eu mauris dui. Ut vestibulum sed nunc pretium, mauris cursus. Nunc nunc in ac adipiscing magna facilisi molestie neque. Praesent nunc ultricies mauris non in. Viverra magna metus mauris a suspendisse convallis feugiat lacus, lacus. Scelerisque aenean non eleifend nec felis cras. Sit pharetra arcu et imperdiet lacinia felis.</p>",
+    "video": {
+      "title": "\"Padar\" Short Movie",
+      "embed_url": "https://www.youtube.com/embed/h60VOHsLJ3Y"
+    },
+    "entity": {
+      "character": {
+        "title": "Karakter",
+        "image": "/images/dummy/work_1a.jpg",
+        "entities": [
+          {
+            "id": 1,
+            "name": "Padar",
+            "description": "Padar is a ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque vitae quam vitae elit eu. Non ullamcorper cras nibh eget a et. Enim, in tellus sit integer nibh. Egestas et facilisi massa arcu ut sit tincidunt. Eu mauris in diam fusce odio eu. Dui in consequat mattis est. Quis imperdiet morbi arcu, amet non enim sit. Turpis nec arcu egestas facilisis tincidunt sed vel donec eu. Neque morbi pretium, diam volutpat, orci. Vivamus facilisis volutpat netus in volutpat at vitae. Nunc, eu, sit felis sed tristique.",
+            "images": [
+              "/images/dummy/work_1a1a.jpg",
+              "/images/dummy/work_1a1b.jpg",
+              "/images/dummy/work_1a1c.jpg",
+              "/images/dummy/work_1a1d.jpg",
+              "/images/dummy/work_1a1b.jpg",
+              "/images/dummy/work_1a1c.jpg",
+              "/images/dummy/work_1a1d.jpg",
+              "/images/dummy/work_1a1a.jpg"
+            ]
+          },
+          {
+            "id": 2,
+            "name": "Grappy",
+            "description": "Grappy is a ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque vitae quam vitae elit eu. Non ullamcorper cras nibh eget a et. Enim, in tellus sit integer nibh. Egestas et facilisi massa arcu ut sit tincidunt. Eu mauris in diam fusce odio eu. Dui in consequat mattis est. Quis imperdiet morbi arcu, amet non enim sit. Turpis nec arcu egestas facilisis tincidunt sed vel donec eu. Neque morbi pretium, diam volutpat, orci. Vivamus facilisis volutpat netus in volutpat at vitae. Nunc, eu, sit felis sed tristique.",
+            "images": [
+              "/images/dummy/work_1a2a.jpg",
+              "/images/dummy/work_1a2b.jpg",
+              "/images/dummy/work_1a2c.jpg",
+              "/images/dummy/work_1a2d.jpg",
+              "/images/dummy/work_1a2d.jpg",
+              "/images/dummy/work_1a2c.jpg",
+              "/images/dummy/work_1a2a.jpg",
+              "/images/dummy/work_1a2b.jpg"
+            ]
+          },
+          {
+            "id": 3,
+            "name": "Sugar",
+            "description": "Sugar is a ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque vitae quam vitae elit eu. Non ullamcorper cras nibh eget a et. Enim, in tellus sit integer nibh. Egestas et facilisi massa arcu ut sit tincidunt. Eu mauris in diam fusce odio eu. Dui in consequat mattis est. Quis imperdiet morbi arcu, amet non enim sit. Turpis nec arcu egestas facilisis tincidunt sed vel donec eu. Neque morbi pretium, diam volutpat, orci. Vivamus facilisis volutpat netus in volutpat at vitae. Nunc, eu, sit felis sed tristique.",
+            "images": [
+              "/images/dummy/work_1a3a.jpg",
+              "/images/dummy/work_1a3b.jpg",
+              "/images/dummy/work_1a3c.jpg",
+              "/images/dummy/work_1a3d.jpg",
+              "/images/dummy/work_1a3c.jpg",
+              "/images/dummy/work_1a3d.jpg",
+              "/images/dummy/work_1a3b.jpg",
+              "/images/dummy/work_1a3a.jpg"
+            ]
+          }
+        ]
+      },
+      "location": {
+        "title": "Set Lokasi",
+        "image": "/images/dummy/work_1b.jpg",
+        "entities": [
+          {
+            "id": 1,
+            "name": "Padang Gurun",
+            "description": "Padang gurun is a ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque vitae quam vitae elit eu. Non ullamcorper cras nibh eget a et. Enim, in tellus sit integer nibh. Egestas et facilisi massa arcu ut sit tincidunt. Eu mauris in diam fusce odio eu. Dui in consequat mattis est. Quis imperdiet morbi arcu, amet non enim sit. Turpis nec arcu egestas facilisis tincidunt sed vel donec eu. Neque morbi pretium, diam volutpat, orci. Vivamus facilisis volutpat netus in volutpat at vitae. Nunc, eu, sit felis sed tristique.",
+            "images": [
+              "/images/dummy/work_1b1a.jpg",
+              "/images/dummy/work_1b1b.jpg",
+              "/images/dummy/work_1b1c.jpg",
+              "/images/dummy/work_1b1d.jpg"
+            ]
+          },
+          {
+            "id": 2,
+            "name": "Candi",
+            "description": "Candi is a ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque vitae quam vitae elit eu. Non ullamcorper cras nibh eget a et. Enim, in tellus sit integer nibh. Egestas et facilisi massa arcu ut sit tincidunt. Eu mauris in diam fusce odio eu. Dui in consequat mattis est. Quis imperdiet morbi arcu, amet non enim sit. Turpis nec arcu egestas facilisis tincidunt sed vel donec eu. Neque morbi pretium, diam volutpat, orci. Vivamus facilisis volutpat netus in volutpat at vitae. Nunc, eu, sit felis sed tristique.",
+            "images": [
+              "/images/dummy/work_1b2a.jpg",
+              "/images/dummy/work_1b2b.jpg",
+              "/images/dummy/work_1b2c.jpg",
+              "/images/dummy/work_1b2d.jpg"
+            ]
+          }
+        ]
+      }
+    },
+    "credit": {
+      "title": "Tim Produksi",
+      "image": "/images/dummy/work_1c.jpg",
+      "roles": [
+        {
+          "id": 1,
+          "title": "Directed By",
+          "members": [
+            {
+              "id": 1,
+              "name": "Afwan Amirul",
+              "instagram": "@afwandoes6"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Produced By",
+          "members": [
+            {
+              "id": 1,
+              "name": "Krisna Wahyu Pratama",
+              "instagram": "@krisnadoes6"
+            },
+            {
+              "id": 2,
+              "name": "Hendry Adi Saputra",
+              "instagram": "@hendrydoes6"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Music Produced By",
+          "members": [
+            {
+              "id": 1,
+              "name": "M. Iqbal",
+              "instagram": "@iqbaldoes6"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Technical Director",
+          "members": [
+            {
+              "id": 1,
+              "name": "Ridhwan Budi Syaputra",
+              "instagram": "@ridhwandoes6"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": 6,
+    "generation": 6,
+    "type": "team",
+    "isFeatured": true,
+    "title": "Padar",
+    "slug": "padar",
+    "featured": true,
+    "image": "/images/dummy/work_1.png",
+    "duration": "8 menit",
+    "contentType": "3D Animation Short Movie",
+    "description": "Berkisah tentang seorang pemuda desa bersama dua kawannya, seekor komodo dan tupai terbang yang sedang menghadapi kekeringan ekstrim di pulau tempat mereka tinggal.",
+    "releaseDate": "15 Desember 2020",
+    "thumbnail": "/images/dummy/work_1_thumbnail.jpg",
+    "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque vitae quam vitae elit eu. Non ullamcorper cras nibh eget a et. Enim, in tellus sit integer nibh. Egestas et facilisi massa arcu ut sit tincidunt. Eu mauris in diam fusce odio eu. Dui in consequat mattis est. Quis imperdiet morbi arcu, amet non enim sit. Turpis nec arcu egestas facilisis tincidunt sed vel donec eu. Neque morbi pretium, diam volutpat, orci. Vivamus facilisis volutpat netus in volutpat at vitae. Nunc, eu, sit felis sed tristique.</p><p>Praesent facilisis integer non, pretium. Amet urna, sollicitudin enim montes, auctor. Gravida eget sed vitae vitae nascetur. Dignissim odio sit at scelerisque eu mauris dui. Ut vestibulum sed nunc pretium, mauris cursus. Nunc nunc in ac adipiscing magna facilisi molestie neque. Praesent nunc ultricies mauris non in. Viverra magna metus mauris a suspendisse convallis feugiat lacus, lacus. Scelerisque aenean non eleifend nec felis cras. Sit pharetra arcu et imperdiet lacinia felis.</p>",
+    "video": {
+      "title": "\"Padar\" Short Movie",
+      "embed_url": "https://www.youtube.com/embed/h60VOHsLJ3Y"
+    },
+    "entity": {
+      "character": {
+        "title": "Karakter",
+        "image": "/images/dummy/work_1a.jpg",
+        "entities": [
+          {
+            "id": 1,
+            "name": "Padar",
+            "description": "Padar is a ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque vitae quam vitae elit eu. Non ullamcorper cras nibh eget a et. Enim, in tellus sit integer nibh. Egestas et facilisi massa arcu ut sit tincidunt. Eu mauris in diam fusce odio eu. Dui in consequat mattis est. Quis imperdiet morbi arcu, amet non enim sit. Turpis nec arcu egestas facilisis tincidunt sed vel donec eu. Neque morbi pretium, diam volutpat, orci. Vivamus facilisis volutpat netus in volutpat at vitae. Nunc, eu, sit felis sed tristique.",
+            "images": [
+              "/images/dummy/work_1a1a.jpg",
+              "/images/dummy/work_1a1b.jpg",
+              "/images/dummy/work_1a1c.jpg",
+              "/images/dummy/work_1a1d.jpg",
+              "/images/dummy/work_1a1b.jpg",
+              "/images/dummy/work_1a1c.jpg",
+              "/images/dummy/work_1a1d.jpg",
+              "/images/dummy/work_1a1a.jpg"
+            ]
+          },
+          {
+            "id": 2,
+            "name": "Grappy",
+            "description": "Grappy is a ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque vitae quam vitae elit eu. Non ullamcorper cras nibh eget a et. Enim, in tellus sit integer nibh. Egestas et facilisi massa arcu ut sit tincidunt. Eu mauris in diam fusce odio eu. Dui in consequat mattis est. Quis imperdiet morbi arcu, amet non enim sit. Turpis nec arcu egestas facilisis tincidunt sed vel donec eu. Neque morbi pretium, diam volutpat, orci. Vivamus facilisis volutpat netus in volutpat at vitae. Nunc, eu, sit felis sed tristique.",
+            "images": [
+              "/images/dummy/work_1a2a.jpg",
+              "/images/dummy/work_1a2b.jpg",
+              "/images/dummy/work_1a2c.jpg",
+              "/images/dummy/work_1a2d.jpg",
+              "/images/dummy/work_1a2d.jpg",
+              "/images/dummy/work_1a2c.jpg",
+              "/images/dummy/work_1a2a.jpg",
+              "/images/dummy/work_1a2b.jpg"
+            ]
+          },
+          {
+            "id": 3,
+            "name": "Sugar",
+            "description": "Sugar is a ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque vitae quam vitae elit eu. Non ullamcorper cras nibh eget a et. Enim, in tellus sit integer nibh. Egestas et facilisi massa arcu ut sit tincidunt. Eu mauris in diam fusce odio eu. Dui in consequat mattis est. Quis imperdiet morbi arcu, amet non enim sit. Turpis nec arcu egestas facilisis tincidunt sed vel donec eu. Neque morbi pretium, diam volutpat, orci. Vivamus facilisis volutpat netus in volutpat at vitae. Nunc, eu, sit felis sed tristique.",
+            "images": [
+              "/images/dummy/work_1a3a.jpg",
+              "/images/dummy/work_1a3b.jpg",
+              "/images/dummy/work_1a3c.jpg",
+              "/images/dummy/work_1a3d.jpg",
+              "/images/dummy/work_1a3c.jpg",
+              "/images/dummy/work_1a3d.jpg",
+              "/images/dummy/work_1a3b.jpg",
+              "/images/dummy/work_1a3a.jpg"
+            ]
+          }
+        ]
+      },
+      "location": {
+        "title": "Set Lokasi",
+        "image": "/images/dummy/work_1b.jpg",
+        "entities": [
+          {
+            "id": 1,
+            "name": "Padang Gurun",
+            "description": "Padang gurun is a ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque vitae quam vitae elit eu. Non ullamcorper cras nibh eget a et. Enim, in tellus sit integer nibh. Egestas et facilisi massa arcu ut sit tincidunt. Eu mauris in diam fusce odio eu. Dui in consequat mattis est. Quis imperdiet morbi arcu, amet non enim sit. Turpis nec arcu egestas facilisis tincidunt sed vel donec eu. Neque morbi pretium, diam volutpat, orci. Vivamus facilisis volutpat netus in volutpat at vitae. Nunc, eu, sit felis sed tristique.",
+            "images": [
+              "/images/dummy/work_1b1a.jpg",
+              "/images/dummy/work_1b1b.jpg",
+              "/images/dummy/work_1b1c.jpg",
+              "/images/dummy/work_1b1d.jpg"
+            ]
+          },
+          {
+            "id": 2,
+            "name": "Candi",
+            "description": "Candi is a ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque vitae quam vitae elit eu. Non ullamcorper cras nibh eget a et. Enim, in tellus sit integer nibh. Egestas et facilisi massa arcu ut sit tincidunt. Eu mauris in diam fusce odio eu. Dui in consequat mattis est. Quis imperdiet morbi arcu, amet non enim sit. Turpis nec arcu egestas facilisis tincidunt sed vel donec eu. Neque morbi pretium, diam volutpat, orci. Vivamus facilisis volutpat netus in volutpat at vitae. Nunc, eu, sit felis sed tristique.",
+            "images": [
+              "/images/dummy/work_1b2a.jpg",
+              "/images/dummy/work_1b2b.jpg",
+              "/images/dummy/work_1b2c.jpg",
+              "/images/dummy/work_1b2d.jpg"
+            ]
+          }
+        ]
+      }
+    },
+    "credit": {
+      "title": "Tim Produksi",
+      "image": "/images/dummy/work_1c.jpg",
+      "roles": [
+        {
+          "id": 1,
+          "title": "Directed By",
+          "members": [
+            {
+              "id": 1,
+              "name": "Afwan Amirul",
+              "instagram": "@afwandoes6"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Produced By",
+          "members": [
+            {
+              "id": 1,
+              "name": "Krisna Wahyu Pratama",
+              "instagram": "@krisnadoes6"
+            },
+            {
+              "id": 2,
+              "name": "Hendry Adi Saputra",
+              "instagram": "@hendrydoes6"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Music Produced By",
+          "members": [
+            {
+              "id": 1,
+              "name": "M. Iqbal",
+              "instagram": "@iqbaldoes6"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Technical Director",
+          "members": [
+            {
+              "id": 1,
+              "name": "Ridhwan Budi Syaputra",
+              "instagram": "@ridhwandoes6"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": 7,
+    "generation": 7,
+    "type": "team",
+    "isFeatured": true,
+    "title": "Padar",
+    "slug": "padar",
+    "featured": true,
+    "image": "/images/dummy/work_1.png",
+    "duration": "8 menit",
+    "contentType": "3D Animation Short Movie",
+    "description": "Berkisah tentang seorang pemuda desa bersama dua kawannya, seekor komodo dan tupai terbang yang sedang menghadapi kekeringan ekstrim di pulau tempat mereka tinggal.",
+    "releaseDate": "15 Desember 2020",
+    "thumbnail": "/images/dummy/work_1_thumbnail.jpg",
+    "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque vitae quam vitae elit eu. Non ullamcorper cras nibh eget a et. Enim, in tellus sit integer nibh. Egestas et facilisi massa arcu ut sit tincidunt. Eu mauris in diam fusce odio eu. Dui in consequat mattis est. Quis imperdiet morbi arcu, amet non enim sit. Turpis nec arcu egestas facilisis tincidunt sed vel donec eu. Neque morbi pretium, diam volutpat, orci. Vivamus facilisis volutpat netus in volutpat at vitae. Nunc, eu, sit felis sed tristique.</p><p>Praesent facilisis integer non, pretium. Amet urna, sollicitudin enim montes, auctor. Gravida eget sed vitae vitae nascetur. Dignissim odio sit at scelerisque eu mauris dui. Ut vestibulum sed nunc pretium, mauris cursus. Nunc nunc in ac adipiscing magna facilisi molestie neque. Praesent nunc ultricies mauris non in. Viverra magna metus mauris a suspendisse convallis feugiat lacus, lacus. Scelerisque aenean non eleifend nec felis cras. Sit pharetra arcu et imperdiet lacinia felis.</p>",
+    "video": {
+      "title": "\"Padar\" Short Movie",
+      "embed_url": "https://www.youtube.com/embed/h60VOHsLJ3Y"
+    },
+    "entity": {
+      "character": {
+        "title": "Karakter",
+        "image": "/images/dummy/work_1a.jpg",
+        "entities": [
+          {
+            "id": 1,
+            "name": "Padar",
+            "description": "Padar is a ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque vitae quam vitae elit eu. Non ullamcorper cras nibh eget a et. Enim, in tellus sit integer nibh. Egestas et facilisi massa arcu ut sit tincidunt. Eu mauris in diam fusce odio eu. Dui in consequat mattis est. Quis imperdiet morbi arcu, amet non enim sit. Turpis nec arcu egestas facilisis tincidunt sed vel donec eu. Neque morbi pretium, diam volutpat, orci. Vivamus facilisis volutpat netus in volutpat at vitae. Nunc, eu, sit felis sed tristique.",
+            "images": [
+              "/images/dummy/work_1a1a.jpg",
+              "/images/dummy/work_1a1b.jpg",
+              "/images/dummy/work_1a1c.jpg",
+              "/images/dummy/work_1a1d.jpg",
+              "/images/dummy/work_1a1b.jpg",
+              "/images/dummy/work_1a1c.jpg",
+              "/images/dummy/work_1a1d.jpg",
+              "/images/dummy/work_1a1a.jpg"
+            ]
+          },
+          {
+            "id": 2,
+            "name": "Grappy",
+            "description": "Grappy is a ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque vitae quam vitae elit eu. Non ullamcorper cras nibh eget a et. Enim, in tellus sit integer nibh. Egestas et facilisi massa arcu ut sit tincidunt. Eu mauris in diam fusce odio eu. Dui in consequat mattis est. Quis imperdiet morbi arcu, amet non enim sit. Turpis nec arcu egestas facilisis tincidunt sed vel donec eu. Neque morbi pretium, diam volutpat, orci. Vivamus facilisis volutpat netus in volutpat at vitae. Nunc, eu, sit felis sed tristique.",
+            "images": [
+              "/images/dummy/work_1a2a.jpg",
+              "/images/dummy/work_1a2b.jpg",
+              "/images/dummy/work_1a2c.jpg",
+              "/images/dummy/work_1a2d.jpg",
+              "/images/dummy/work_1a2d.jpg",
+              "/images/dummy/work_1a2c.jpg",
+              "/images/dummy/work_1a2a.jpg",
+              "/images/dummy/work_1a2b.jpg"
+            ]
+          },
+          {
+            "id": 3,
+            "name": "Sugar",
+            "description": "Sugar is a ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque vitae quam vitae elit eu. Non ullamcorper cras nibh eget a et. Enim, in tellus sit integer nibh. Egestas et facilisi massa arcu ut sit tincidunt. Eu mauris in diam fusce odio eu. Dui in consequat mattis est. Quis imperdiet morbi arcu, amet non enim sit. Turpis nec arcu egestas facilisis tincidunt sed vel donec eu. Neque morbi pretium, diam volutpat, orci. Vivamus facilisis volutpat netus in volutpat at vitae. Nunc, eu, sit felis sed tristique.",
+            "images": [
+              "/images/dummy/work_1a3a.jpg",
+              "/images/dummy/work_1a3b.jpg",
+              "/images/dummy/work_1a3c.jpg",
+              "/images/dummy/work_1a3d.jpg",
+              "/images/dummy/work_1a3c.jpg",
+              "/images/dummy/work_1a3d.jpg",
+              "/images/dummy/work_1a3b.jpg",
+              "/images/dummy/work_1a3a.jpg"
+            ]
+          }
+        ]
+      },
+      "location": {
+        "title": "Set Lokasi",
+        "image": "/images/dummy/work_1b.jpg",
+        "entities": [
+          {
+            "id": 1,
+            "name": "Padang Gurun",
+            "description": "Padang gurun is a ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque vitae quam vitae elit eu. Non ullamcorper cras nibh eget a et. Enim, in tellus sit integer nibh. Egestas et facilisi massa arcu ut sit tincidunt. Eu mauris in diam fusce odio eu. Dui in consequat mattis est. Quis imperdiet morbi arcu, amet non enim sit. Turpis nec arcu egestas facilisis tincidunt sed vel donec eu. Neque morbi pretium, diam volutpat, orci. Vivamus facilisis volutpat netus in volutpat at vitae. Nunc, eu, sit felis sed tristique.",
+            "images": [
+              "/images/dummy/work_1b1a.jpg",
+              "/images/dummy/work_1b1b.jpg",
+              "/images/dummy/work_1b1c.jpg",
+              "/images/dummy/work_1b1d.jpg"
+            ]
+          },
+          {
+            "id": 2,
+            "name": "Candi",
+            "description": "Candi is a ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque vitae quam vitae elit eu. Non ullamcorper cras nibh eget a et. Enim, in tellus sit integer nibh. Egestas et facilisi massa arcu ut sit tincidunt. Eu mauris in diam fusce odio eu. Dui in consequat mattis est. Quis imperdiet morbi arcu, amet non enim sit. Turpis nec arcu egestas facilisis tincidunt sed vel donec eu. Neque morbi pretium, diam volutpat, orci. Vivamus facilisis volutpat netus in volutpat at vitae. Nunc, eu, sit felis sed tristique.",
+            "images": [
+              "/images/dummy/work_1b2a.jpg",
+              "/images/dummy/work_1b2b.jpg",
+              "/images/dummy/work_1b2c.jpg",
+              "/images/dummy/work_1b2d.jpg"
+            ]
+          }
+        ]
+      }
+    },
+    "credit": {
+      "title": "Tim Produksi",
+      "image": "/images/dummy/work_1c.jpg",
+      "roles": [
+        {
+          "id": 1,
+          "title": "Directed By",
+          "members": [
+            {
+              "id": 1,
+              "name": "Afwan Amirul",
+              "instagram": "@afwandoes6"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Produced By",
+          "members": [
+            {
+              "id": 1,
+              "name": "Krisna Wahyu Pratama",
+              "instagram": "@krisnadoes6"
+            },
+            {
+              "id": 2,
+              "name": "Hendry Adi Saputra",
+              "instagram": "@hendrydoes6"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Music Produced By",
+          "members": [
+            {
+              "id": 1,
+              "name": "M. Iqbal",
+              "instagram": "@iqbaldoes6"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Technical Director",
+          "members": [
+            {
+              "id": 1,
+              "name": "Ridhwan Budi Syaputra",
+              "instagram": "@ridhwandoes6"
             }
           ]
         }
