@@ -139,16 +139,47 @@ export default function About() {
             )}
             {selectedTab === 'major' && (
               <>
-                <div>{major_content}</div>
-                <div>
-                  {majors.map((major) => (
-                    <div key={major.name} className="my-8">
-                      <p>{major.name}</p>
-                      <p>{major.generations}</p>
-                      <p>{major.description}</p>
-                    </div>
-                  ))}
+                <div className="font-light leading-loose text-sm md:text-xl mb-8 md:mb-10">
+                  {major_content}
                 </div>
+                {majors.map((major, index) => (
+                  <div
+                    key={major.name}
+                    className="mb-8 md:mb-12 flex flex-wrap -mx-4"
+                  >
+                    <div className="w-full md:w-7/12 px-4 mb-5 md:mb-0">
+                      <div className="flex md:pr-4">
+                        <div className="mr-2.5 lg:mr-8 text-4xl md:text-5xl xl:text-7xl font-medium">
+                          {index + 1}.
+                        </div>
+                        <div>
+                          <h2 className="text-4xl md:text-5xl xl:text-7xl font-medium mb-5 md:mb-8">
+                            {major.name}
+                          </h2>
+                        </div>
+                      </div>
+                      <div className="flex md:pr-4">
+                        <div className="hidden md:block mr-2.5 lg:mr-8 text-4xl md:text-5xl xl:text-7xl font-medium">
+                          <span className="md:opacity-0">{index + 1}.</span>
+                        </div>
+                        <div>
+                          <p className="text-gray-888 font-light">
+                            {major.generations
+                              .split(', ')
+                              .map((major, index1) => (
+                                <div key={major + index1}>&bull; {major}</div>
+                              ))}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="w-full md:w-5/12 px-4">
+                      <p className="font-light text-sm md:text-xl leading-loose">
+                        {major.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
               </>
             )}
           </div>
