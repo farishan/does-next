@@ -9,6 +9,8 @@ import { useRouter } from 'next/router'
 import { useEffect, useMemo, useState } from 'react'
 import Image from 'next/image'
 import majors from '@/content/majors.json'
+// import ContactForm from '@/components/ContactForm'
+import ContactInfo from '@/components/ContactInfo'
 
 export default function About() {
   const {
@@ -20,7 +22,7 @@ export default function About() {
     donation_account_number,
     donation_bank_logo,
     donation_description,
-    contact_content,
+    // contact_content,
     major_content
   } = useContent('about')
   const router = useRouter()
@@ -121,7 +123,18 @@ export default function About() {
             )}
             {selectedTab === 'contact' && (
               <>
-                <div>{contact_content}</div>
+                <ContactInfo />
+                {/* <div className="flex -mx-4">
+                  <div className="w-full md:w-1/2 px-4">
+                    <p className="text-sm md:text-xl font-light mb-12">
+                      {contact_content}
+                    </p>
+                    <ContactForm />
+                  </div>
+                  <div className="w-full md:w-5/12 md:ml-auto px-4">
+                    <ContactInfo />
+                  </div>
+                </div> */}
               </>
             )}
             {selectedTab === 'major' && (
