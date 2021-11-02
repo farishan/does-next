@@ -19,7 +19,9 @@ export default function PopularPosts({ extendClass = '', data }) {
       </div>
 
       {/* Mobile-Tablet */}
-      <PostCards posts={data} />
+      <div className="lg:hidden">
+        <PostCards posts={data} />
+      </div>
     </>
   )
 }

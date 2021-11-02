@@ -5,6 +5,8 @@ import IconArrowRight from './icons/IconArrowRight'
 import IconClock from './icons/IconClock'
 import IconCalendar from './icons/IconCalendar'
 import IconPlayButton from './icons/IconPlayButton'
+import Button from './Button'
+import useContent from '@/helpers/use-content'
 
 const placeholder = {
   title: 'No Title',
@@ -15,6 +17,8 @@ const placeholder = {
 }
 
 export default function FeaturedWorkItem({ data = placeholder }) {
+  const { label_view_more } = useContent()
+
   return (
     <>
       <div className="flex">
@@ -54,28 +58,24 @@ export default function FeaturedWorkItem({ data = placeholder }) {
               {data?.contentType}
             </div>
           </div>
-          <div className="sm:hidden md:block">
+          <div className="hidden md:block">
             <div className="w-full border-t border-white border-opacity-30 my-10" />
-            <p className="text-sm font-extralight">{data?.description}</p>
+            <p className="text-sm font-extralight mb-12">
+              {data?.description}
+            </p>
             <Link href={`/works/${data?.slug}`}>
-              <a className="bg-red-600 text-white w-max p-6 mt-10 flex">
-                SELENGKAPNYA
-                <span className="ml-3">
-                  <IconArrowRight />
-                </span>
+              <a>
+                <Button arrow>{label_view_more}</Button>
               </a>
             </Link>
           </div>
         </div>
       </div>
       <div className="md:hidden">
-        <p className="text-sm font-extralight">{data?.description}</p>
+        <p className="text-sm font-extralight mb-8">{data?.description}</p>
         <Link href={`/works/${data?.slug}`}>
-          <a className="bg-red-600 text-white w-max p-6 mt-10 flex">
-            SELENGKAPNYA
-            <span className="ml-3">
-              <IconArrowRight />
-            </span>
+          <a>
+            <Button arrow>{label_view_more}</Button>
           </a>
         </Link>
       </div>
