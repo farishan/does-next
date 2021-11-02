@@ -57,6 +57,8 @@ export default function TabNav({
     return () => {
       window.removeEventListener('resize', listener)
     }
+
+    // eslint-disable-next-line
   }, [])
 
   useEffect(() => {
