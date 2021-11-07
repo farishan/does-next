@@ -31,14 +31,14 @@ export default function UnderlinedTitle({
     return (
       <div
         className={`w-full h-10 border-red-700 ${
-          lineBold ? 'border-t-8 -translate-y-3' : 'border-t-2'
+          lineBold ? 'border-t-8 -translate-y-5' : 'border-t-2'
         }`}
       />
     )
   }
 
   return (
-    <div className={text2 ? '-mb-20' : '-mb-10'}>
+    <div className={text2 ? '-mb-20' : '-mb-12'}>
       <div className="w-max">
         {renderText(text1)}
         {renderUnderline()}
