@@ -57,6 +57,8 @@ export default function TabNav({
     return () => {
       window.removeEventListener('resize', listener)
     }
+
+    // eslint-disable-next-line
   }, [])
 
   useEffect(() => {
@@ -77,16 +79,18 @@ export default function TabNav({
      * Check where this component implemented
      * Do the action according to the current page needed
      */
-    switch (implementingPage) {
-      case 'blog':
-        onChange(id)
-        setSelected(id)
-        break
-      case 'works':
-        onChange(pathName)
-        setSelected(pathName)
-        break
+    const WITH_PATHNAME_PAGES = ['works'] // <- Add page that use pathName instead of id.
+
+    const USE_PATHNAME = WITH_PATHNAME_PAGES.includes(pathName)
+
+    if (USE_PATHNAME) {
+      onChange(pathName)
+      setSelected(pathName)
+      return
     }
+
+    onChange(id)
+    setSelected(id)
   }
 
   const handleActive = (target) => {

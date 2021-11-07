@@ -1,0 +1,22 @@
+[
+  {
+    "key": "label_name",
+    "value": "Nama"
+  },
+  {
+    "key": "label_email",
+    "value": "Alamat Email"
+  },
+  {
+    "key": "label_subject",
+    "value": "Subjek"
+  },
+  {
+    "key": "label_message",
+    "value": "Pesan"
+  },
+  {
+    "key": "label_submit",
+    "value": "Kirim"
+  }
+]

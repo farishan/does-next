@@ -124,7 +124,14 @@ export default function Blog() {
           </div>
         )}
 
-        <UnderlinedTitle text1={label_latest_post} lineBold BigText />
+        <div className="mb-8 md:mb-12 lg:mb-24">
+          <UnderlinedTitle
+            text1={label_latest_post}
+            lineBold
+            BigText
+            extendClass
+          />
+        </div>
 
         {!posts || posts === null ? (
           <>{site_no_data}</>

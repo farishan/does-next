@@ -70,6 +70,7 @@ export default function WorkDetail() {
   })
 
   useEffect(() => {
+    /* @TODO: Fetch from /api route */
     const selected = works.find((work) => work.slug === slug)
 
     if (selected && selected.entity) {
