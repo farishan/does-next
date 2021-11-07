@@ -46,13 +46,20 @@ export default function Featured() {
       })
   }
 
-  const renderGenerationDetail = (gen) => {
+  const renderGenerationPeriod = (gen) => {
     return (
       <div>
         <div className="font-body w-max px-5 py-1 rounded-2xl border bg-opacity-40 bg-red-700 border-red-700">
           {gen.period}
         </div>
-        <ul className="mt-5">
+      </div>
+    )
+  }
+
+  const renderGenerationMajor = (gen) => {
+    return (
+      <div>
+        <ul className="md:mt-5">
           {gen.majors?.map((major, index) => {
             return (
               <li
@@ -87,7 +94,8 @@ export default function Featured() {
               <SectionHighlight
                 key={index}
                 title={gen.label}
-                childTitle={renderGenerationDetail(gen)}
+                childTitle={renderGenerationPeriod(gen)}
+                childTitleSecondary={renderGenerationMajor(gen)}
                 childContent={renderFeaturedWorkItem(gen.name)}
               />
             )
