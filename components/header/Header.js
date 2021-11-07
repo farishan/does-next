@@ -15,17 +15,6 @@ import Button from '../Button'
 */
 const THROTTLE = 600 // ms
 
-  const navItems = [
-    { label: nav_works_top, path: '/works/featured' },
-    { label: nav_works_short, path: '/works' },
-    { label: nav_blog, path: '/blog' },
-    { label: nav_merchandise, path: '#' },
-    { label: nav_registration, path: '#' },
-    { label: nav_about, path: '/about' },
-    { label: nav_department, path: '#' },
-    { label: nav_donation, path: '#' },
-    { label: nav_contact, path: '/contact' }
-  ]
 export default function Header() {
   const [isCoolingDown, setIsCoolingDown] = useState(false)
   const [showMenu, setShowMenu] = useState(false)
@@ -39,7 +28,7 @@ export default function Header() {
         setIsCoolingDown(false)
       }, THROTTLE)
     }
-  ]
+  }
 
   const toggleNavModal = () => {
     setShowNavModal(!showNavModal)
