@@ -20,17 +20,34 @@ export default function UnderlinedTitle({
       <div
         className={`${animationClass} ${sizeClass} text-white ${
           hoverable ? 'hover:text-primary' : ''
-        } font-body relative z-10 pb-2 border-b md:border-b-2 border-primary`}
+        } font-body relative z-10 pb-2`}
       >
         {text}
       </div>
     )
   }
 
+  const renderUnderline = () => {
+    return (
+      <div
+        className={`w-full h-10 border-red-700 ${
+          lineBold ? 'border-t-8 -translate-y-5' : 'border-t-2'
+        }`}
+      />
+    )
+  }
+
   return (
-    <>
-      <div className="w-max">{renderText(text1)}</div>
-      {text2 && <div className="w-max -translate-y-8">{renderText(text2)}</div>}
-    </>
+    <div className={text2 ? '-mb-20' : '-mb-12'}>
+      <div className="w-max">
+        {renderText(text1)}
+        {renderUnderline()}
+      </div>
+      {text2 && (
+        <div className="w-max -translate-y-8">
+          {renderText(text2)} {renderUnderline()}
+        </div>
+      )}
+    </div>
   )
 }
