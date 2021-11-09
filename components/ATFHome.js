@@ -52,7 +52,7 @@ export default function ATFHome() {
                 {section_atf_content_text}
               </p>
 
-              <Link href={section_atf_link}>
+              <Link href={section_atf_link + '?backLink=/'}>
                 <a>
                   <Button arrow>{section_atf_link_text}</Button>
                 </a>
