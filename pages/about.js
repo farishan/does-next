@@ -1,16 +1,15 @@
 import ATF from '@/components/ATF'
 import Layout from '@/components/Layout'
 import TabNav from '@/components/TabNav'
-import { BLUR_IMAGE } from '@/constants'
 import useContent from '@/helpers/use-content'
 import { sanitize } from 'isomorphic-dompurify'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { useEffect, useMemo, useState } from 'react'
-import Image from 'next/image'
 import majors from '@/content/majors.json'
 // import ContactForm from '@/components/ContactForm'
 import ContactInfo from '@/components/ContactInfo'
+import BankAccount from '@/components/BankAccount'
 
 export default function About() {
   const {
@@ -105,20 +104,13 @@ export default function About() {
             )}
             {selectedTab === 'donation' && (
               <>
-                <div>
-                  <p>{donation_label}</p>
-                  <p>{donation_bank}</p>
-                  <Image
-                    src={donation_bank_logo}
-                    alt={donation_bank}
-                    width={209}
-                    height={147}
-                    placeholder="blur"
-                    blurDataURL={BLUR_IMAGE}
-                  />
-                  <p>{donation_account_number}</p>
-                  <p>{donation_description}</p>
-                </div>
+                <BankAccount
+                  label={donation_label}
+                  name={donation_bank}
+                  logo={donation_bank_logo}
+                  description={donation_description}
+                  accountNumber={donation_account_number}
+                />
               </>
             )}
             {selectedTab === 'contact' && (
