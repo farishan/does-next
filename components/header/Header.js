@@ -21,6 +21,7 @@ export default function Header() {
   const [isCoolingDown, setIsCoolingDown] = useState(false)
   const [showMenu, setShowMenu] = useState(false)
   const { site_logo } = useContent()
+  const [showBackground, setShowBackground] = useState(false)
 
   // const navItems = [
   //   { label: nav_works_top, path: '/works/featured' },
@@ -67,9 +68,36 @@ export default function Header() {
   //   )
   // }
 
+  useEffect(() => {
+    const listener = (e) => {
+      if (e.target.scrollingElement.scrollTop > 100) {
+        setShowBackground(true)
+      } else {
+        setShowBackground(false)
+      }
+    }
+
+    if (window) {
+      window.addEventListener('scroll', listener)
+    }
+
+    return () => {
+      window.removeEventListener('scroll', listener)
+    }
+  }, [])
+
   return (
     <>
-      <header className="fixed z-header w-full">
+      <header
+        className={`fixed z-header w-full transition-transform duration-200 ${
+          showBackground ? 'lg:-translate-y-6' : 'translate-y-0'
+        }`}
+      >
+        <div
+          className={`absolute h-full w-full left-0 top-0 transition-all duration-200 ${
+            showBackground ? 'lg:-translate-y-6 bg-black bg-opacity-90 backdrop-blur shadow-xl' : '-translate-y-full shadow-xs'
+          }`}
+        ></div>
         <div className="container">
           <div className="flex items-center justify-between py-6 lg:py-12">
             <Link href="/">

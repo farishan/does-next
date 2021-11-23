@@ -116,7 +116,7 @@ export default function Blog() {
 
       <div className="container relative">
         <SoonOverlay>
-          <div className="sticky top-0 pt-10 lg:pt-20 flex justify-center">
+          <div className="sticky top-0 pt-28 lg:pt-40 flex justify-center">
             <UnderlinedTitle text1="SOON"/>
           </div>
         </SoonOverlay>
