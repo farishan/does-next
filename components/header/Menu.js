@@ -64,16 +64,16 @@ export default function Menu({ show }) {
   }, [router.pathname])
 
   const navItems = [
-    { label: nav_works_top, path: '/works/featured' },
-    { label: nav_works_short, path: '#' },
+    { label: nav_works_top, path: '/works/featured', isDisabled: 1 },
+    { label: nav_works_short, path: '#', isDisabled: 1 },
     { label: nav_blog, path: '/blog' },
-    { label: nav_merchandise, path: '#' },
+    { label: nav_merchandise, path: '#', isDisabled: 1 },
     { label: nav_registration, path: '/registration' },
 
     { label: nav_about, path: '/about' },
-    { label: nav_department, path: '#' },
-    { label: nav_donation, path: '#' },
-    { label: nav_contact, path: '/contact' }
+    { label: nav_department, path: '/about?tab=major' },
+    { label: nav_donation, path: '/about?tab=donation' },
+    { label: nav_contact, path: '/about?tab=contact' }
   ]
   const primaryLinks = navItems.slice(0, 5)
   const secondaryLinks = navItems.slice(5, navItems.length)
@@ -118,6 +118,7 @@ export default function Menu({ show }) {
                 item={item}
                 onMouseOver={() => handleMouseOver(item.label)}
                 onMouseLeave={handleMouseLeave}
+                isDisabled={item.isDisabled}
                 isLast={index === primaryLinks.length - 1}
                 isActive={
                   hoveredNav === item.label ||

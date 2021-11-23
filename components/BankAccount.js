@@ -25,7 +25,7 @@ export default function BankAccount({
       <div>
         <p className="text-xl">{label}</p>
         <div className="flex flex-wrap md:flex-nowrap items-center mt-5">
-          <div>
+          <div className="relative mr-4 md:mr-10">
             <Image
               src={logo}
               alt={name}
@@ -35,9 +35,9 @@ export default function BankAccount({
               blurDataURL={BLUR_IMAGE}
             />
           </div>
-          <div className="md:ml-10">
+          <div>
             <p className="text-xl">{name}</p>
-            <p className="flex items-center relative">
+            <div className="flex items-center relative">
               <span className="text-3xl md:text-5xl my-2 mr-6">
                 {accountNumber}
               </span>
@@ -52,8 +52,8 @@ export default function BankAccount({
                   Copied!
                 </p>
               )}
-            </p>
-            <p className="text-xl font-light">{description}</p>
+            </div>
+            <div className="text-xl font-light">{description}</div>
           </div>
         </div>
       </div>

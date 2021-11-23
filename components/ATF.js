@@ -9,14 +9,16 @@ const Content = ({ title, imageURL }) => {
     <>
       {imageURL && (
         <div className="absolute w-full h-full left-0 top-0 z-10 grayscale">
-          <Image
-            src={imageURL}
-            layout="fill"
-            className="object-cover"
-            alt={title}
-            blurDataURL={BLUR_IMAGE}
-            placeholder="blur"
-          />
+          <div className="relative w-full h-full">
+            <Image
+              src={imageURL}
+              layout="fill"
+              className="object-cover"
+              alt={title}
+              blurDataURL={BLUR_IMAGE}
+              placeholder="blur"
+            />
+          </div>
         </div>
       )}
 

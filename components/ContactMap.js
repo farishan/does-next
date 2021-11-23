@@ -12,7 +12,7 @@ export default function ContactMap({ title = 'Location Map', embedURL }) {
           marginHeight="0"
           marginWidth="0"
           src={embedURL}
-          className="w-full mb-8"
+          className="w-full mb-8 grayscale invert"
         ></iframe>
       </div>
     </>

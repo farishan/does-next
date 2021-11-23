@@ -1,11 +1,12 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import useContent from '@/helpers/use-content'
 import Image from 'next/image'
 import Link from 'next/link'
 import Menu from './Menu'
 import { BLUR_IMAGE } from '@/constants'
 import MenuTrigger from './MenuTrigger'
-import Button from '../Button'
+import { useRouter } from 'next/router'
+// import Button from '../Button'
 
 /*
   throttle: cooldown time between showMenu state changes.
@@ -16,6 +17,7 @@ import Button from '../Button'
 const THROTTLE = 600 // ms
 
 export default function Header() {
+  const router = useRouter()
   const [isCoolingDown, setIsCoolingDown] = useState(false)
   const [showMenu, setShowMenu] = useState(false)
   const { site_logo } = useContent()
@@ -32,6 +34,10 @@ export default function Header() {
   //   { label: nav_contact, path: '/contact' }
   // ]
 
+  useEffect(() => {
+    setShowMenu(false)
+  }, [router.asPath])
+
   const toggleMenu = () => {
     if (!isCoolingDown) {
       setIsCoolingDown(true)
@@ -42,23 +48,24 @@ export default function Header() {
     }
   }
 
-  const toggleNavModal = () => {
-    setShowNavModal(!showNavModal)
-  }
+  /* @TODO: delete unnecessary functions */
+  // const toggleNavModal = () => {
+  //   setShowNavModal(!showNavModal)
+  // }
 
-  const handleHover = (index = null) => {
-    setHoveredNav(index)
-  }
+  // const handleHover = (index = null) => {
+  //   setHoveredNav(index)
+  // }
 
-  const renderSiteLogo = () => {
-    return (
-      <Link href="/">
-        <a>
-          <Image src={`${site_logo}`} height={40} width={70} alt="main-logo" />
-        </a>
-      </Link>
-    )
-  }
+  // const renderSiteLogo = () => {
+  //   return (
+  //     <Link href="/">
+  //       <a>
+  //         <Image src={`${site_logo}`} height={40} width={70} alt="main-logo" />
+  //       </a>
+  //     </Link>
+  //   )
+  // }
 
   return (
     <>
@@ -93,7 +100,7 @@ export default function Header() {
             </Link>
 
             <div className="flex items-center">
-              {showMenu && (
+              {/* {showMenu && (
                 <div className="items-center hidden lg:flex opacity-0 animate-fade-in-delayed">
                   <Button transparent extendClass="mr-2">
                     <span className="text-xs uppercase">Daftar</span>
@@ -102,7 +109,7 @@ export default function Header() {
                     <span className="text-xs uppercase">Masuk</span>
                   </Button>
                 </div>
-              )}
+              )} */}
               <MenuTrigger isActive={showMenu} onClick={toggleMenu} />
             </div>
           </div>

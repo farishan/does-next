@@ -8,7 +8,7 @@ import VerticalStepper from '@/components/VerticalStepper'
 import SectionAbout from '@/components/sections/SectionAbout'
 // import SectionFeatured from '@/components/sections/SectionFeatured'
 import SectionFeaturedBlog from '@/components/sections/SectionFeaturedBlog'
-import UnderlinedTitle from '@/components/UnderlinedTitle'
+import SoonOverlay from '@/components/SoonOverlay'
 
 export default function Home() {
   const sectionAtfRef = useRef(null)
@@ -169,9 +169,7 @@ export default function Home() {
       </div>
 
       <div ref={sectionBlogRef} className="relative">
-        <div className="bg-black bg-opacity-95 absolute w-full h-full left-0 top-0 z-10 flex items-center justify-center">
-          <UnderlinedTitle text1={'SOON'} />
-        </div>
+        <SoonOverlay extendClass="flex items-center justify-center"/>
         <SectionFeaturedBlog />
       </div>
     </Layout>

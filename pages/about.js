@@ -155,20 +155,20 @@ export default function About() {
                           <span className="md:opacity-0">{index + 1}.</span>
                         </div>
                         <div>
-                          <p className="text-gray-888 font-light">
+                          <div className="text-gray-888 font-light">
                             {major.generations
                               .split(', ')
                               .map((major, index1) => (
                                 <div key={major + index1}>&bull; {major}</div>
                               ))}
-                          </p>
+                          </div>
                         </div>
                       </div>
                     </div>
                     <div className="w-full md:w-5/12 px-4">
-                      <p className="font-light text-sm md:text-xl leading-loose">
+                      <div className="font-light text-sm md:text-xl leading-loose">
                         {major.description}
-                      </p>
+                      </div>
                     </div>
                   </div>
                 ))}

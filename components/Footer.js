@@ -27,25 +27,25 @@ export default function Footer() {
     {
       label: 'TENTANG KAMI',
       children: [
-        { label: nav_about, path: '#' },
-        { label: nav_department, path: '#' },
+        { label: nav_about, path: '/about' },
+        { label: nav_department, path: '/about?tab=major' },
         { label: nav_registration, path: '/registration' }
       ]
     },
     {
       label: 'KARYA',
       children: [
-        { label: nav_works_short, path: '#' },
-        { label: nav_works_top, path: '#' }
+        { label: nav_works_short, path: '#', isDisabled: 1 },
+        { label: nav_works_top, path: '#', isDisabled: 1 }
       ]
     },
     {
       label: 'LAIN-LAIN',
       children: [
         { label: nav_blog, path: '/blog' },
-        { label: nav_merchandise, path: '#' },
-        { label: nav_contact, path: '#' },
-        { label: nav_donation, path: '#' }
+        { label: nav_merchandise, path: '#', isDisabled: 1 },
+        { label: nav_contact, path: '/about?tab=contact' },
+        { label: nav_donation, path: '/about?tab=donation' }
       ]
     }
   ]
@@ -95,8 +95,15 @@ export default function Footer() {
                   </span>
                   <div className="flex flex-col items-start text-xs md:text-sm tracking-widest">
                     {item.children?.map((subItem, idx) => {
+                      if (subItem.isDisabled) {
+                        return (
+                          <span key={subItem.path+idx} className="font-body text-gray-888 mb-5 md:mb-7 font-light opacity-50 cursor-not-allowed">
+                            {subItem.label}
+                          </span>
+                        )
+                      }
                       return (
-                        <Link key={idx} href={subItem.path}>
+                        <Link key={subItem.path+idx} href={subItem.path}>
                           <a className="font-body text-gray-888 mb-5 md:mb-7 font-light hover:text-white">
                             {subItem.label}
                           </a>

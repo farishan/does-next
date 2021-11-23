@@ -9,6 +9,7 @@ import PopularPosts from '@/components/post/PopularPosts'
 import UnderlinedTitle from '@/components/UnderlinedTitle'
 import { POPULAR_POST_LENGTH } from '@/constants'
 import dayjs from 'dayjs'
+import SoonOverlay from '@/components/SoonOverlay'
 
 const LIMIT = 6
 const WITH_INFINITE_SCROLL = false
@@ -113,7 +114,13 @@ export default function Blog() {
     <Layout>
       <ATF title={atf_blog} imageURL={atf_blog_image} />
 
-      <div className="container">
+      <div className="container relative">
+        <SoonOverlay>
+          <div className="sticky top-0 pt-10 lg:pt-20 flex justify-center">
+            <UnderlinedTitle text1="SOON"/>
+          </div>
+        </SoonOverlay>
+
         {popularPosts && (
           <div className="py-10 md:py-20 lg:py-40">
             <UnderlinedTitle text1={label_popular_post} lineBold BigText />

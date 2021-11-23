@@ -17,6 +17,7 @@ const MenuItem = ({
   item,
   isActive,
   isLast,
+  isDisabled,
   extendClass = '',
   ...props
 }) => {
@@ -29,9 +30,9 @@ const MenuItem = ({
         className={`w-max mb-4 ${!isLast ? 'mb-4 lg:mb-2' : 'mb-0'}`}
         {...props}
       >
-        <Link href={item.path}>
-          <a
-            className={`${animationClass} relative flex items-center font-body cursor-pointer text-white ${
+        {isDisabled ? (
+          <span
+            className={`${animationClass} relative flex items-center font-body cursor-not-allowed text-white ${
               isActive
                 ? 'font-medium lg:font-semibold h-12 lg:h-28 hover:text-white pl-4 lg:pl-6 ml-0.5 lg:ml-1'
                 : 'lg:font-semibold h-9 lg:h-18 opacity-50'
@@ -41,8 +42,23 @@ const MenuItem = ({
             <span className={`${animationClass} block ${sizeClass}`}>
               {item.label}
             </span>
-          </a>
-        </Link>
+          </span>
+        ) : (
+          <Link href={item.path}>
+            <a
+              className={`${animationClass} relative flex items-center font-body cursor-pointer text-white ${
+                isActive
+                  ? 'font-medium lg:font-semibold h-12 lg:h-28 hover:text-white pl-4 lg:pl-6 ml-0.5 lg:ml-1'
+                  : 'lg:font-semibold h-9 lg:h-18 opacity-50'
+              }`}
+            >
+              <ActiveBar isActive={isActive} />
+              <span className={`${animationClass} block ${sizeClass}`}>
+                {item.label}
+              </span>
+            </a>
+          </Link>
+        )}
       </div>
     )
 
