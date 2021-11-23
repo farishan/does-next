@@ -5,11 +5,11 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import PostCard from '../post/PostCard'
-import SwiperCore, { Navigation } from 'swiper'
+import SwiperCore, { Navigation, Autoplay } from 'swiper'
 import { useRef, useState } from 'react'
 
 // install Swiper modules
-SwiperCore.use([Navigation])
+SwiperCore.use([Navigation, Autoplay])
 
 export default function PostSlider({ posts }) {
   const prevRef = useRef(null)
@@ -22,6 +22,9 @@ export default function PostSlider({ posts }) {
   return (
     <>
       <Swiper
+        autoplay
+        speed={2000}
+        loop
         navigation={{
           prevEl: prevRef.current,
           nextEl: nextRef.current

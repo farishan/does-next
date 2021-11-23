@@ -6,8 +6,9 @@ import useContent from '@/helpers/use-content'
 import SectionNext from '@/components/SectionNext'
 import VerticalStepper from '@/components/VerticalStepper'
 import SectionAbout from '@/components/sections/SectionAbout'
-import SectionFeatured from '@/components/sections/SectionFeatured'
+// import SectionFeatured from '@/components/sections/SectionFeatured'
 import SectionFeaturedBlog from '@/components/sections/SectionFeaturedBlog'
+import UnderlinedTitle from '@/components/UnderlinedTitle'
 
 export default function Home() {
   const sectionAtfRef = useRef(null)
@@ -47,11 +48,16 @@ export default function Home() {
   }
 
   /* @TODO: optimize vertical stepper code */
+  // const stepIndex = {
+  //   atf: 0,
+  //   work: 1,
+  //   about: 2,
+  //   blog: 3
+  // }
   const stepIndex = {
     atf: 0,
-    work: 1,
-    about: 2,
-    blog: 3
+    about: 1,
+    blog: 2
   }
 
   const handleNextSection = (ref, index) => {
@@ -65,7 +71,12 @@ export default function Home() {
     if (index || index === 0) setStep(index)
   }
 
-  const refs = [sectionAtfRef, sectionWorkRef, sectionAboutRef, sectionBlogRef]
+  const refs = [
+    sectionAtfRef,
+    /* sectionWorkRef, */
+    sectionAboutRef,
+    sectionBlogRef
+  ]
 
   useEffect(() => {
     const listener = (e) => {
@@ -80,11 +91,13 @@ export default function Home() {
           if (step !== stepIndex['about']) {
             setStep(stepIndex['about'])
           }
-        } else if (window.scrollY > sectionWorkRef.current.offsetTop - 20) {
-          if (step !== stepIndex['work']) {
-            setStep(stepIndex['work'])
-          }
-        } else if (window.scrollY >= sectionAtfRef.current.offsetTop) {
+        }
+        // else if (window.scrollY > sectionWorkRef.current.offsetTop - 20) {
+        //   if (step !== stepIndex['work']) {
+        //     setStep(stepIndex['work'])
+        //   }
+        // }
+        else if (window.scrollY >= sectionAtfRef.current.offsetTop) {
           if (step !== stepIndex['atf']) {
             setStep(stepIndex['atf'])
           }
@@ -122,21 +135,22 @@ export default function Home() {
       <div className="relative" ref={sectionAtfRef}>
         <ATFHome />
         <div className="absolute w-full bottom-4 flex justify-center z-40">
-          <SectionNext onClick={() => handleNextSection(sectionWorkRef)}>
+          {/* <SectionNext onClick={() => handleNextSection(sectionWorkRef)}> */}
+          <SectionNext onClick={() => handleNextSection(sectionAboutRef)}>
             {nav_works}
           </SectionNext>
         </div>
       </div>
 
       {/* Modular, adjustable sections */}
-      <div className="relative pb-24" ref={sectionWorkRef}>
+      {/* <div className="relative pb-24" ref={sectionWorkRef}>
         <SectionFeatured />
         <div className="absolute w-full bottom-4 flex justify-center z-40">
           <SectionNext onClick={() => handleNextSection(sectionAboutRef)}>
             {nav_about}
           </SectionNext>
         </div>
-      </div>
+      </div> */}
 
       <div className="relative" ref={sectionAboutRef}>
         <SectionAbout
@@ -154,7 +168,10 @@ export default function Home() {
         </div>
       </div>
 
-      <div ref={sectionBlogRef}>
+      <div ref={sectionBlogRef} className="relative">
+        <div className="bg-black bg-opacity-95 absolute w-full h-full left-0 top-0 z-10 flex items-center justify-center">
+          <UnderlinedTitle text1={'SOON'} />
+        </div>
         <SectionFeaturedBlog />
       </div>
     </Layout>
