@@ -194,5 +194,13 @@
   {
     "key": "footer_background",
     "value": "https://i.ibb.co/pyJC6qD/footer-background.jpg"
+  },
+  {
+    "key": "alt_blog_background_src",
+    "value": "https://i.ibb.co/vmYTkFR/alt-blog-background.png"
+  },
+  {
+    "key": "alt_blog_background_alt",
+    "value": "Foto kunjungan tamu ke DOES University"
   }
 ]
