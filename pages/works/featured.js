@@ -4,6 +4,7 @@ import useContent from '@/helpers/use-content'
 import WorksLayout from '@/components/WorksLayout'
 import SectionHighlight from '@/components/sections/SectionHighlight'
 import FeaturedWorkItem from '@/components/FeaturedWorkItem'
+import Badge from '@/components/Badge'
 
 /* @todo: get real data, setup state manager (store) */
 import works from '@/assets/works.dummy.json'
@@ -46,16 +47,6 @@ export default function Featured() {
       })
   }
 
-  const renderGenerationPeriod = (gen) => {
-    return (
-      <div>
-        <div className="font-body w-max px-5 py-1 rounded-2xl border bg-opacity-40 bg-red-700 border-red-700">
-          {gen.period}
-        </div>
-      </div>
-    )
-  }
-
   const renderGenerationMajor = (gen) => {
     return (
       <div>
@@ -94,7 +85,7 @@ export default function Featured() {
               <SectionHighlight
                 key={index}
                 title={gen.label}
-                childTitle={renderGenerationPeriod(gen)}
+                childTitle={<Badge text={gen.period} />}
                 childTitleSecondary={renderGenerationMajor(gen)}
                 childContent={renderFeaturedWorkItem(gen.name)}
               />
