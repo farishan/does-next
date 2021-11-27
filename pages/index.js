@@ -169,7 +169,6 @@ export default function Home() {
       </div>
 
       <div ref={sectionBlogRef} className="relative">
-        <SoonOverlay extendClass="flex items-center justify-center"/>
         <SectionFeaturedBlog />
       </div>
     </Layout>
