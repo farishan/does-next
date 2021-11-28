@@ -1,23 +1,21 @@
-import Button from '@/components/Button'
-import useContent from '@/helpers/use-content'
-import Link from 'next/link'
 import Image from 'next/image'
+import Badge from '@/components/Badge'
 import { useEffect, useState } from 'react'
-import PostSlider from '@/components/slider/PostSlider'
-import ExternalLinkDirection from '../ExternalLinkDirection'
-import Section from '@/components/sections/Section'
-import Badge from '../Badge'
+// import Button from '@/components/Button'
+import useContent from '@/helpers/use-content'
+// import PostSlider from '@/components/slider/PostSlider'
+import ExternalLinkDirection from '@/components/ExternalLinkDirection'
 
 const LIMIT = 6
 
 export default function SectionFeaturedBlog() {
   const {
-    nav_blog,
+    // nav_blog,
     alt_blog_background_src,
     alt_blog_background_alt,
     site_youtube
   } = useContent()
-  const sectionTitle = nav_blog
+  // const sectionTitle = nav_blog
   const [posts, setPosts] = useState(null)
   const [isFetching, setIsFetching] = useState(false)
   const alt_blog_backgroundImage = {
@@ -46,33 +44,44 @@ export default function SectionFeaturedBlog() {
   }, [isFetching, posts])
 
   return (
-    <Section
-      // overlay
-      fullscreen
-      backgroundImage={alt_blog_backgroundImage}
-      extendClass="overflow-y-hidden"
-    >
-      <div className="absolute bottom-0 left-0 z-30 h-full w-full">
-        <div className="flex flex-col justify-center items-center h-full">
-          <div className="mb-10">
-            <Badge text="2015 - 2021" />
-          </div>
-          <ExternalLinkDirection url={site_youtube}>
-            <div className="flex flex-col justify-center items-center font-extralight">
-              <h1 className="font-body text-white text-4xl md:text-6xl lg:text-8xl">
-                THE <span className="font-bold">ACTIVITY</span>
-              </h1>
-              <h1 className="font-body text-white text-4xl md:text-6xl lg:text-8xl">
-                AND <span className="font-bold">STORY</span> OF
-              </h1>
-              <h1 className="font-body text-white text-4xl md:text-6xl lg:text-8xl">
-                <span className="font-bold">DOES</span> UNIVERSITY
-              </h1>
+    <section className="py-16 md:py-32">
+      <div className="container">
+        <div className="relative py-8 md:py-16 lg:py-20">
+          <div
+            className="absolute w-full h-full z-10 left-0 top-0"
+            style={{
+              background:
+                'radial-gradient(60.55% 60.55% at 50% 49.94%, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 36.76%, rgba(0, 0, 0, 0.8) 100%)'
+            }}
+          ></div>
+          <Image
+            src={alt_blog_backgroundImage}
+            alt="Background"
+            layout="fill"
+            objectFit="cover"
+            className="mx-6"
+          />
+          <div className="flex flex-col justify-center items-center h-full relative z-20">
+            <div className="mb-10">
+              <Badge text="2015 - 2021" />
             </div>
-          </ExternalLinkDirection>
+            <ExternalLinkDirection url={site_youtube}>
+              <div className="flex flex-col justify-center items-center font-extralight">
+                <h2 className="font-body text-white text-4xl md:text-6xl lg:text-8xl text-center">
+                  THE <span className="font-bold">ACTIVITY</span>
+                </h2>
+                <h2 className="font-body text-white text-4xl md:text-6xl lg:text-8xl text-center">
+                  AND <span className="font-bold">STORY</span> OF
+                </h2>
+                <h2 className="font-body text-white text-4xl md:text-6xl lg:text-8xl text-center">
+                  <span className="font-bold">DOES</span> UNIVERSITY
+                </h2>
+              </div>
+            </ExternalLinkDirection>
+          </div>
         </div>
       </div>
-    </Section>
+    </section>
 
     /* TODO Show real content of featured blog section */
     // <section className="container pt-10 pb-14 lg:py-16 relative">
