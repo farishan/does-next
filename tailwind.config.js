@@ -116,6 +116,9 @@ module.exports = {
       height: {
         18: '4.5rem' // 72px
       },
+      spacing: {
+        '6.5': '30px',
+      },
       colors: {
         dark: '#222222',
         primary: '#D2292D',

@@ -6,9 +6,9 @@ import useContent from '@/helpers/use-content'
 import SectionNext from '@/components/SectionNext'
 import VerticalStepper from '@/components/VerticalStepper'
 import SectionAbout from '@/components/sections/SectionAbout'
-// import SectionFeatured from '@/components/sections/SectionFeatured'
+import SectionFeatured from '@/components/sections/SectionFeatured'
 import SectionFeaturedBlog from '@/components/sections/SectionFeaturedBlog'
-import SoonOverlay from '@/components/SoonOverlay'
+// import SoonOverlay from '@/components/SoonOverlay'
 
 export default function Home() {
   const sectionAtfRef = useRef(null)
@@ -143,14 +143,14 @@ export default function Home() {
       </div>
 
       {/* Modular, adjustable sections */}
-      {/* <div className="relative pb-24" ref={sectionWorkRef}>
+      <div className="relative md:pb-24" ref={sectionWorkRef}>
         <SectionFeatured />
-        <div className="absolute w-full bottom-4 flex justify-center z-40">
+        <div className="absolute w-full bottom-4 justify-center z-40 hidden md:flex">
           <SectionNext onClick={() => handleNextSection(sectionAboutRef)}>
             {nav_about}
           </SectionNext>
         </div>
-      </div> */}
+      </div>
 
       <div className="relative" ref={sectionAboutRef}>
         <SectionAbout
