@@ -48,16 +48,11 @@ export default function Home() {
   }
 
   /* @TODO: optimize vertical stepper code */
-  // const stepIndex = {
-  //   atf: 0,
-  //   work: 1,
-  //   about: 2,
-  //   blog: 3
-  // }
   const stepIndex = {
     atf: 0,
-    about: 1,
-    blog: 2
+    work: 1,
+    about: 2,
+    blog: 3
   }
 
   const handleNextSection = (ref, index) => {
@@ -73,7 +68,7 @@ export default function Home() {
 
   const refs = [
     sectionAtfRef,
-    /* sectionWorkRef, */
+    sectionWorkRef,
     sectionAboutRef,
     sectionBlogRef
   ]
@@ -92,11 +87,11 @@ export default function Home() {
             setStep(stepIndex['about'])
           }
         }
-        // else if (window.scrollY > sectionWorkRef.current.offsetTop - 20) {
-        //   if (step !== stepIndex['work']) {
-        //     setStep(stepIndex['work'])
-        //   }
-        // }
+        else if (window.scrollY > sectionWorkRef.current.offsetTop - 20) {
+          if (step !== stepIndex['work']) {
+            setStep(stepIndex['work'])
+          }
+        }
         else if (window.scrollY >= sectionAtfRef.current.offsetTop) {
           if (step !== stepIndex['atf']) {
             setStep(stepIndex['atf'])

@@ -1,7 +1,7 @@
 const Badge = ({ text }) => {
   return (
     <div>
-      <div className="font-body w-max px-5 py-1 rounded-2xl border bg-opacity-40 bg-red-700 border-red-700">
+      <div className="font-light w-max px-6 py-2 rounded-3xl border bg-opacity-20 bg-primary border-primary">
         {text}
       </div>
     </div>
