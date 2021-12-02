@@ -122,9 +122,9 @@ export default function Home() {
 
       <div className="relative" ref={sectionAtfRef}>
         <ATFHome />
-        <div className="absolute w-full bottom-4 flex justify-center z-40">
+        <div className="absolute w-full bottom-4 justify-center z-40">
           {/* <SectionNext onClick={() => handleNextSection(sectionWorkRef)}> */}
-          <SectionNext onClick={() => handleNextSection(sectionAboutRef)}>
+          <SectionNext onClick={() => handleNextSection(sectionWorkRef)}>
             {nav_works}
           </SectionNext>
         </div>

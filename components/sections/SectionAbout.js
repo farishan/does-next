@@ -72,14 +72,15 @@ export default function SectionAbout({
       <div className="hidden sm:block lg:hidden absolute bottom-0 left-0 z-30">
         <div
           className={`${styles['main-image']} relative -mb-28 md:-mb-72`}
-          style={{ width: '100vw', height: '112vw' }}
+          style={{ width: '100vw', height: '105vw' }}
         >
           {mainImage.src && (
             <Image
               src={mainImage.src}
               alt={mainImage.alt}
               layout="fill"
-              className="object-contain"
+              objectPosition="left"
+              objectFit="contain"
             />
           )}
         </div>
