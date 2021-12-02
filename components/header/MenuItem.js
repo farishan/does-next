@@ -41,6 +41,7 @@ const MenuItem = ({
             <ActiveBar isActive={isActive} />
             <span className={`${animationClass} block ${sizeClass}`}>
               {item.label}
+              <span className="lg:hidden ml-2 text-xs italic">(soon)</span>
             </span>
           </span>
         ) : (
