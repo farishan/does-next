@@ -141,11 +141,11 @@ export default function About() {
                   >
                     <div className="w-full md:w-7/12 px-4 mb-5 md:mb-0">
                       <div className="flex md:pr-4">
-                        <div className="mr-2.5 lg:mr-8 text-4xl md:text-5xl xl:text-7xl font-medium">
+                        <div className="mr-2.5 lg:mr-8 text-3xl md:text-5xl xl:text-7xl font-medium">
                           {index + 1}.
                         </div>
                         <div>
-                          <h2 className="text-4xl md:text-5xl xl:text-6xl font-medium mb-5 md:mb-8 pr-8">
+                          <h2 className="text-3xl md:text-5xl xl:text-6xl font-medium mb-5 md:mb-8 pr-8">
                             {major.name}
                           </h2>
                         </div>
