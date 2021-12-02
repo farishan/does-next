@@ -145,7 +145,7 @@ export default function About() {
                           {index + 1}.
                         </div>
                         <div>
-                          <h2 className="text-4xl md:text-5xl xl:text-7xl font-medium mb-5 md:mb-8">
+                          <h2 className="text-4xl md:text-5xl xl:text-6xl font-medium mb-5 md:mb-8 pr-8">
                             {major.name}
                           </h2>
                         </div>

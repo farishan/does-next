@@ -4,7 +4,7 @@ import useContent from '@/helpers/use-content'
 import IconSocmed from '@/components/icons/IconSocmed'
 
 export default function SocialLinks() {
-  const { site_instagram, site_youtube, site_twitter, site_facebook } =
+  const { site_instagram, site_youtube, /* site_twitter, */ site_facebook } =
     useContent()
 
   const paths = [
@@ -14,12 +14,12 @@ export default function SocialLinks() {
       path: site_facebook,
       icon: <IconSocmed />
     },
-    {
-      name: 'twitter',
-      src: require('../assets/icons/icon-twitter-grey.png'),
-      path: site_twitter,
-      icon: <IconSocmed type="twitter" />
-    },
+    // {
+    //   name: 'twitter',
+    //   src: require('../assets/icons/icon-twitter-grey.png'),
+    //   path: site_twitter,
+    //   icon: <IconSocmed type="twitter" />
+    // },
     {
       name: 'instagram',
       src: require('../assets/icons/icon-ig-grey.png'),
@@ -42,9 +42,7 @@ export default function SocialLinks() {
             <a
               target="_blank"
               className={`${
-                idx !== paths.length - 1
-                  ? 'mr-4 lg:mr-10'
-                  : 'mr-0'
+                idx !== paths.length - 1 ? 'mr-4 lg:mr-10' : 'mr-0'
               }`}
             >
               <div className="relative w-5 lg:w-6 h-5 lg:h-6">

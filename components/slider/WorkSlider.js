@@ -24,27 +24,17 @@ const works = [
     logo: '/images/dummy/work_1a2c.jpg',
     title: 'Padar',
     content:
-      '“Luca” is a coming-of-age story about one young boy experiencing an unforgettable summer filled with gelato, pasta and endless scooter rides.....'
+      'Berkisah tentang seorang pemuda desa bersama dua kawannya, seekor komodo dan tupai terbang yang sedang menghadapi kekeringan ekstrim di pulau tempat mereka tinggal.'
   },
   {
     id: 2,
     src: 'https://www.youtube.com/embed/q8ymDpGa-BE',
-    author: 'DOES GEN 8',
-    image: '/images/placeholder.png',
+    author: 'DOES GEN 7',
+    image: 'https://img.youtube.com/vi/SRTdPvrLtn0/sddefault.jpg',
     logo: '/images/placeholder.png',
     title: 'Little Hope',
     content:
-      'Donec sodales tortor turpis, ac dictum nisi finibus eu. Praesent metus orci, vulputate nec lectus in, facilisis consequat turpis. Sed ac.'
-  },
-  {
-    id: 3,
-    src: 'https://www.youtube.com/embed/q8ymDpGa-BE',
-    author: 'DOES GEN 9',
-    image: 'https://i.ibb.co/KX3d5Ky/Mask-Group-2-1.png',
-    logo: 'https://i.ibb.co/KX3d5Ky/Mask-Group-2-1.png',
-    title: 'Little Hope',
-    content:
-      'Etiam sit amet condimentum orci. Integer tortor diam, euismod eu massa at, elementum faucibus eros. Proin a sodales neque. Nunc tempor.'
+      'Kisah petualangan seru dan mengharukan Ziya untuk menyelamatkan dunia. Cerita dengan tema Sci-Fi yang belum pernah dibawakan pada animasi-animasi sebelumnya.'
   }
 ]
 

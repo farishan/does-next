@@ -1,27 +1,27 @@
 [
   {
-    "name": "3D Animator",
-    "generations": "Gen 1, Gen 5",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque vitae quam vitae elit eu. Non ullamcorper cras nibh eget a et. Enim, in tellus sit integer nibh. Egestas et facilisi massa arcu ut sit tincidunt. Eu mauris in diam fusce odio eu."
+    "name": "3D Animation",
+    "generations": "Gen 1, Gen 2, Gen 4, Gen 6, Gen 7, Gen 8",
+    "description": "The process of creating three-dimensional moving images and placing them into a digital environment. These objects are generated in software designed specifically for 3D animation. Such programs allow 3D Animators to create the illusion of movement needed to bring objects to life."
   },
   {
-    "name": "3D Modelling",
-    "generations": "Gen 1, Gen 6",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque vitae quam vitae elit eu. Non ullamcorper cras nibh eget a et. Enim, in tellus sit integer nibh. Egestas et facilisi massa arcu ut sit tincidunt. Eu mauris in diam fusce odio eu."
+    "name": "3D Modeling",
+    "generations": "Gen 2, Gen 4, Gen 6, Gen 7, Gen 8",
+    "description": "3D modeling is a technique in computer graphics for producing a 3D digital representation of any object or surface. 3D models are used for a variety of mediums including video games, movies, architecture, illustration, engineering, and commercial advertising."
   },
   {
     "name": "Software Development",
-    "generations": "Gen 1, Gen 7",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque vitae quam vitae elit eu. Non ullamcorper cras nibh eget a et. Enim, in tellus sit integer nibh. Egestas et facilisi massa arcu ut sit tincidunt. Eu mauris in diam fusce odio eu."
+    "generations": "Gen 3, Gen 5, Gen 6, Gen 7",
+    "description": "Software development is the process programmers use to build computer programs. The process, also known as the Software Development Life Cycle (SDLC), includes several phases that provide a method for building products that meet technical specifications and user requirements."
   },
   {
-    "name": "UI/UX Designer",
-    "generations": "Gen 1, Gen 8",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque vitae quam vitae elit eu. Non ullamcorper cras nibh eget a et. Enim, in tellus sit integer nibh. Egestas et facilisi massa arcu ut sit tincidunt. Eu mauris in diam fusce odio eu."
+    "name": "UI/UX Design",
+    "generations": "Gen 7",
+    "description": "UX design refers to the term “user experience design”, while UI stands for “user interface design”. UX and UI complement each other—and in today’s competitive market, getting both aspects right is an absolute must."
   },
   {
-    "name": "Sinematografi",
-    "generations": "Gen 1, Gen 9",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque vitae quam vitae elit eu. Non ullamcorper cras nibh eget a et. Enim, in tellus sit integer nibh. Egestas et facilisi massa arcu ut sit tincidunt. Eu mauris in diam fusce odio eu."
+    "name": "Cinematography",
+    "generations": "Gen 4, Gen 6, Gen 7, Gen 8",
+    "description": "Cinematography is the art and craft of making motion pictures by capturing a story visually. Cinematography composes each shot, considering, where everything in frame demands attention."
   }
 ]
