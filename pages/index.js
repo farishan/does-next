@@ -7,8 +7,8 @@ import SectionNext from '@/components/SectionNext'
 import VerticalStepper from '@/components/VerticalStepper'
 import SectionAbout from '@/components/sections/SectionAbout'
 import SectionFeatured from '@/components/sections/SectionFeatured'
-import SectionFeaturedBlog from '@/components/sections/SectionFeaturedBlog'
-// import SoonOverlay from '@/components/SoonOverlay'
+import SectionFeaturedLink from '@/components/sections/SectionFeaturedLink'
+// import SectionFeaturedBlog from '@/components/sections/SectionFeaturedBlog'
 
 export default function Home() {
   const sectionAtfRef = useRef(null)
@@ -66,12 +66,7 @@ export default function Home() {
     if (index || index === 0) setStep(index)
   }
 
-  const refs = [
-    sectionAtfRef,
-    sectionWorkRef,
-    sectionAboutRef,
-    sectionBlogRef
-  ]
+  const refs = [sectionAtfRef, sectionWorkRef, sectionAboutRef, sectionBlogRef]
 
   useEffect(() => {
     const listener = (e) => {
@@ -86,13 +81,11 @@ export default function Home() {
           if (step !== stepIndex['about']) {
             setStep(stepIndex['about'])
           }
-        }
-        else if (window.scrollY > sectionWorkRef.current.offsetTop - 20) {
+        } else if (window.scrollY > sectionWorkRef.current.offsetTop - 20) {
           if (step !== stepIndex['work']) {
             setStep(stepIndex['work'])
           }
-        }
-        else if (window.scrollY >= sectionAtfRef.current.offsetTop) {
+        } else if (window.scrollY >= sectionAtfRef.current.offsetTop) {
           if (step !== stepIndex['atf']) {
             setStep(stepIndex['atf'])
           }
@@ -163,8 +156,12 @@ export default function Home() {
         </div>
       </div>
 
-      <div ref={sectionBlogRef} className="relative">
+      {/* <div ref={sectionBlogRef} className="relative">
         <SectionFeaturedBlog />
+      </div> */}
+
+      <div ref={sectionBlogRef} className="relative">
+        <SectionFeaturedLink />
       </div>
     </Layout>
   )
