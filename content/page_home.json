@@ -78,5 +78,9 @@
   {
     "key": "section_atf_link_text",
     "value": "Lihat Trailer"
+  },
+  {
+    "key": "section_press_title",
+    "value": "<span class=\"font-light\">Diliput</span> <strong>Oleh</strong>"
   }
 ]

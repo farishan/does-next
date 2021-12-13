@@ -202,5 +202,53 @@
   {
     "key": "alt_blog_background_alt",
     "value": "Foto kunjungan tamu ke DOES University"
+  },
+  {
+    "key": "press_liputan6_src",
+    "value": "https://ibb.co/x1LJkBK"
+  },
+  {
+    "key": "press_liputan6_alt",
+    "value": "Logo liputan6"
+  },
+  {
+    "key": "press_gatra_com_src",
+    "value": "https://ibb.co/6WNnkCB"
+  },
+  {
+    "key": "press_gatra_com_alt",
+    "value": "Logo gatra.com"
+  },
+  {
+    "key": "press_kompas_com_src",
+    "value": "https://ibb.co/wR1vjBq"
+  },
+  {
+    "key": "press_kompas_com_alt",
+    "value": "Logo kompas.com"
+  },
+  {
+    "key": "press_republika_src",
+    "value": "https://ibb.co/fxx1TL7"
+  },
+  {
+    "key": "press_republika_alt",
+    "value": "Logo republika"
+  },
+  {
+    "key": "press_tribun_jogja_src",
+    "value": "https://ibb.co/VJySQy8"
+  },
+  {
+    "key": "press_tribun_jogja_alt",
+    "value": "Logo teibun jogja"
+  },
+  {
+    "key": "press_cakrawala_susindra_src",
+    "value": "https://ibb.co/5LH4hFw"
+  },
+  {
+    "key": "press_cakrawala_susindra_alt",
+    "value": "Logo cakrawala susindra"
   }
 ]
