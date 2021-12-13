@@ -178,7 +178,7 @@ export default function Home() {
         <SectionFeaturedLink />
       </div>
 
-      <div ref={sectionPressRef} className="relative">
+      <div ref={sectionPressRef} className="relative flex">
         <SectionPress title={section_press_title} />
       </div>
     </Layout>

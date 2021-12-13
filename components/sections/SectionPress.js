@@ -60,22 +60,23 @@ const SectionPress = ({ title }) => {
 
   return (
     <Section fullscreen extendClass="overflow-y-hidden">
-      <div className="w-full flex justify-center items-center">
-        <h1 className="text-4xl lg:text-7xl lg:w-10/12 xl:w-full xl:text-8xl mb-8 md:mb-12 flex justify-center">
+      <div className="w-full flex flex-col justify-center items-center">
+        <h1 className="text-4xl lg:text-7xl lg:w-10/12 xl:w-full xl:text-8xl mb-14 md:mb-16 flex justify-center">
           <Html inline>{title}</Html>
         </h1>
-        <div className="relative flex justify-center items-center z-100">
+        <div className="flex justify-center items-center flex-wrap w-3/4">
           {pressLogos.map((logo, index) => {
             return (
-              <Image
-                key={index}
-                src={logo.src}
-                alt={logo.alt}
-                // width={40}
-                // height={60}
-                layout="fill"
-                objectFit="contain"
-              />
+              <div key={index} className="mb-14 md:mr-10">
+                <Image
+                  src={logo.src}
+                  alt={logo.alt}
+                  width={220}
+                  height={42}
+                  // layout="fill"
+                  objectFit="contain"
+                />
+              </div>
             )
           })}
         </div>
