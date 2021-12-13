@@ -8,6 +8,7 @@ import VerticalStepper from '@/components/VerticalStepper'
 import SectionAbout from '@/components/sections/SectionAbout'
 import SectionFeatured from '@/components/sections/SectionFeatured'
 import SectionFeaturedLink from '@/components/sections/SectionFeaturedLink'
+import SectionPress from '@/components/sections/SectionPress'
 // import SectionFeaturedBlog from '@/components/sections/SectionFeaturedBlog'
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
   const sectionBlogRef = useRef(null)
   const sectionAboutRef = useRef(null)
   const sectionWorkRef = useRef(null)
+  const sectionPressRef = useRef(null)
   const [step, setStep] = useState(0)
   const { site_title, nav_blog, nav_about, nav_works } = useContent()
   const {
@@ -27,7 +29,8 @@ export default function Home() {
     section_about_mainImage_src,
     section_about_mainImage_alt,
     section_about_backgroundImage_src,
-    section_about_backgroundImage_alt
+    section_about_backgroundImage_alt,
+    section_press_title
   } = useContent('page_home')
 
   const about_link = {
@@ -52,7 +55,8 @@ export default function Home() {
     atf: 0,
     work: 1,
     about: 2,
-    blog: 3
+    blog: 3,
+    press: 4
   }
 
   const handleNextSection = (ref, index) => {
@@ -66,14 +70,24 @@ export default function Home() {
     if (index || index === 0) setStep(index)
   }
 
-  const refs = [sectionAtfRef, sectionWorkRef, sectionAboutRef, sectionBlogRef]
+  const refs = [
+    sectionAtfRef,
+    sectionWorkRef,
+    sectionAboutRef,
+    sectionBlogRef,
+    sectionPressRef
+  ]
 
   useEffect(() => {
     const listener = (e) => {
       if (window.scrollY === 0) {
         setStep(0)
       } else {
-        if (window.scrollY > sectionBlogRef.current.offsetTop - 20) {
+        if (window.scrollY > sectionPressRef.current.offsetTop - 20) {
+          if (step !== stepIndex['press']) {
+            setStep(stepIndex['press'])
+          }
+        } else if (window.scrollY > sectionBlogRef.current.offsetTop - 20) {
           if (step !== stepIndex['blog']) {
             setStep(stepIndex['blog'])
           }
@@ -162,6 +176,10 @@ export default function Home() {
 
       <div ref={sectionBlogRef} className="relative">
         <SectionFeaturedLink />
+      </div>
+
+      <div ref={sectionPressRef} className="relative">
+        <SectionPress title={section_press_title} />
       </div>
     </Layout>
   )
