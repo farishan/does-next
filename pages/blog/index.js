@@ -117,9 +117,22 @@ export default function Blog() {
       <div className="container relative">
         <SoonOverlay>
           <div className="sticky top-0 pt-28 lg:pt-40 flex justify-center">
-            <UnderlinedTitle text1="SOON"/>
+            <UnderlinedTitle text1="SOON" />
           </div>
         </SoonOverlay>
+
+        {/* @TODO: delete this */}
+        <div className="fixed bottom-4 right-4 px-4 py-2 bg-black shadow-2xl text-white z-header flex justify-between">
+          <div className="pr-4">
+            <p className="font-bold mb-2">GELORA</p>
+            <p className="text-sm mb-2">Anniversary Exhibition</p>
+            <Link href="/campaign">
+              <a className="underline text-primary hover:no-underline text-sm">
+                Read more
+              </a>
+            </Link>
+          </div>
+        </div>
 
         {popularPosts && (
           <div className="py-10 md:py-20 lg:py-40">

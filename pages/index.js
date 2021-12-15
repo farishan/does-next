@@ -10,6 +10,9 @@ import SectionFeatured from '@/components/sections/SectionFeatured'
 import SectionFeaturedLink from '@/components/sections/SectionFeaturedLink'
 import SectionPress from '@/components/sections/SectionPress'
 // import SectionFeaturedBlog from '@/components/sections/SectionFeaturedBlog'
+import Link from 'next/link'
+
+const BANNER_KEY = 'DOES_BANNER'
 
 export default function Home() {
   const sectionAtfRef = useRef(null)
@@ -32,6 +35,7 @@ export default function Home() {
     section_about_backgroundImage_alt,
     section_press_title
   } = useContent('page_home')
+  const [showBanner, setShowBanner] = useState(false)
 
   const about_link = {
     href: section_about_linkHref,
@@ -118,6 +122,17 @@ export default function Home() {
     // eslint-disable-next-line
   }, [])
 
+  const handleCloseBanner = () => {
+    localStorage.setItem(BANNER_KEY, true)
+    setShowBanner(false)
+  }
+
+  useEffect(() => {
+    if (!localStorage.getItem(BANNER_KEY)) {
+      setShowBanner(true)
+    }
+  }, [])
+
   return (
     <Layout>
       <Head>
@@ -181,6 +196,35 @@ export default function Home() {
       <div ref={sectionPressRef} className="relative flex">
         <SectionPress title={section_press_title} />
       </div>
+
+      {showBanner && (
+        <div className="fixed bottom-4 right-4 px-4 py-2 bg-black shadow-2xl text-white z-header flex justify-between">
+          <div className="pr-4">
+            <p className="font-bold mb-2">GELORA</p>
+            <p className="text-sm mb-2">Anniversary Exhibition</p>
+            <Link href="/campaign">
+              <a className="underline text-primary hover:no-underline text-sm">
+                Read more
+              </a>
+            </Link>
+          </div>
+          <div>
+            <button onClick={handleCloseBanner}>
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                style={{ minWidth: '14px' }}
+              >
+                <path d="M13 1L1 13" stroke="#FFFFFF" strokeWidth="2" />
+                <path d="M13 13L1 0.999999" stroke="#FFFFFF" strokeWidth="2" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      )}
     </Layout>
   )
 }
