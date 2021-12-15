@@ -24,7 +24,7 @@ export default function SectionAbout({
       overlay
       fullscreen
       backgroundImage={backgroundImage}
-      extendClass="overflow-y-hidden"
+      extendClass="overflow-hidden"
     >
       {/* Main Image - Desktop */}
       <div className="hidden lg:block absolute bottom-0 left-0 z-30">

@@ -56,7 +56,7 @@ export default function Footer() {
         <div className="flex flex-wrap justify-between pt-14 xl:pt-20 lg:mb-20 -mx-2 lg:-mx-4">
           <div className="w-full lg:w-1/2 px-2 lg:px-4">
             <Link href="/">
-              <a className="block mb-10 xl:mb-16 md:text-center lg:text-left">
+              <a className="block mb-10 xl:mb-16 text-center lg:text-left">
                 <Image
                   src={site_logo}
                   height={200}
@@ -75,7 +75,7 @@ export default function Footer() {
                     <UnderlinedTitle
                       text1={site_email}
                       hoverable
-                      customSize="text-2xl md:text-4xl xl:text-4xlp"
+                      customSize="sm:text-2xl md:text-4xl xl:text-4xlp"
                     />
                   </a>
                 </div>
@@ -97,13 +97,16 @@ export default function Footer() {
                     {item.children?.map((subItem, idx) => {
                       if (subItem.isDisabled) {
                         return (
-                          <span key={subItem.path+idx} className="font-body text-gray-888 mb-5 md:mb-7 font-light opacity-50 cursor-not-allowed">
+                          <span
+                            key={subItem.path + idx}
+                            className="font-body text-gray-888 mb-5 md:mb-7 font-light opacity-50 cursor-not-allowed"
+                          >
                             {subItem.label}
                           </span>
                         )
                       }
                       return (
-                        <Link key={subItem.path+idx} href={subItem.path}>
+                        <Link key={subItem.path + idx} href={subItem.path}>
                           <a className="font-body text-gray-888 mb-5 md:mb-7 font-light hover:text-white">
                             {subItem.label}
                           </a>

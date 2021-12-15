@@ -59,7 +59,7 @@ const SectionPress = ({ title }) => {
   ]
 
   return (
-    <Section fullscreen extendClass="overflow-y-hidden">
+    <Section extendClass="pb-20 lg:pt-32 lg:pb-32">
       <div className="w-full flex flex-col justify-center items-center">
         <h1 className="text-4xl lg:text-7xl lg:w-10/12 xl:w-full xl:text-8xl mb-14 md:mb-16 flex justify-center">
           <Html inline>{title}</Html>
