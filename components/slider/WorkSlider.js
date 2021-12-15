@@ -11,6 +11,7 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import SwiperCore, { Navigation, Autoplay } from 'swiper'
 import Button from '../Button'
+import Modal from '../Modal'
 
 // install Swiper modules
 SwiperCore.use([Navigation, Autoplay])
@@ -19,8 +20,8 @@ const works = [
   {
     id: 1,
     src: 'https://www.youtube.com/embed/h60VOHsLJ3Y',
-    author: 'DOES GEN 7',
-    image: '/images/dummy/work_1a1a.jpg',
+    author: 'DOES GEN 6',
+    image: 'https://i.ibb.co/MByDdfC/PADAR-POSTER-LANDSCAPE.jpg',
     logo: '/images/dummy/work_1a2c.jpg',
     title: 'Padar',
     content:
@@ -28,13 +29,33 @@ const works = [
   },
   {
     id: 2,
-    src: 'https://www.youtube.com/embed/q8ymDpGa-BE',
+    src: 'https://www.youtube.com/embed/SRTdPvrLtn0',
     author: 'DOES GEN 7',
     image: 'https://img.youtube.com/vi/SRTdPvrLtn0/sddefault.jpg',
     logo: '/images/placeholder.png',
     title: 'Little Hope',
     content:
       'Kisah petualangan seru dan mengharukan Ziya untuk menyelamatkan dunia. Cerita dengan tema Sci-Fi yang belum pernah dibawakan pada animasi-animasi sebelumnya.'
+  },
+  {
+    id: 3,
+    src: 'https://www.youtube.com/embed/3sDgADNrHq4',
+    author: 'DOES GEN 4',
+    image: 'https://img.youtube.com/vi/3sDgADNrHq4/maxresdefault.jpg',
+    logo: '/images/placeholder.png',
+    title: 'DIE HARD FANS',
+    content:
+      '3 orang fans yang memiliki idola yang berbeda, mereka berusaha membuktikan kecintaan mereka terhadap idola masing masing'
+  },
+  {
+    id: 4,
+    src: 'https://www.youtube.com/embed/H4pOSmY7fzg',
+    author: 'DOES GEN 2',
+    image: 'https://i.ibb.co/Bjhw0b7/pos.jpg',
+    logo: '/images/placeholder.png',
+    title: 'SUPER USA',
+    content:
+      'Super USA terdiri dari Udin, Sukro, dan Amir yang merupakan 3 karakter utama dalam dalam serial komik superhero karya Endank Soekamti berjudul "Soekamti Day".'
   }
 ]
 
@@ -132,7 +153,7 @@ export default function WorkSlider() {
                       alt={work.title}
                       width={624}
                       height={440}
-                      className="object-cover"
+                      className="object-contain cursor-pointer"
                       placeholder="blur"
                       blurDataURL={BLUR_IMAGE}
                     />
@@ -197,42 +218,53 @@ export default function WorkSlider() {
 
       {/* Modal */}
       {/* @TODO: split to component */}
-      {showModal && (
-        <div
-          className="fixed left-0 top-0 z-50 w-full h-full bg-black bg-opacity-90 flex items-center justify-center"
-          onClick={() => setShowModal(false)}
-        >
-          <div className="w-full px-5 lg:px-0 lg:w-3/4 h-2/3 text-right -mt-4 relative">
-            <button
-              className="py-2 px-4 hover:bg-primary"
-              onClick={() => setShowModal(false)}
+      <Modal
+        show={showModal}
+        onClose={() => setShowModal(false)}
+        noHeader
+        transparentContent
+      >
+        <div className="w-full h-full px-5 lg:px-0 text-right -mt-4 relative">
+          <button
+            className="py-2 px-4 hover:bg-primary"
+            onClick={() => setShowModal(false)}
+          >
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 14 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              style={{ minWidth: '14px' }}
             >
-              X
-            </button>
-            {!isLoaded && (
-              <p className="italic text-center absolute w-full left-0 top-0">
-                Loading...
-              </p>
-            )}
-            <iframe
-              width="560"
-              height="315"
-              src={
-                selectedWork && selectedWork !== null
-                  ? selectedWork.src
-                  : 'https://www.youtube.com/embed/q8ymDpGa-BE'
-              }
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="w-full h-full"
-              onClick={(e) => e.stopPropagation()}
-              onLoad={() => setIsLoaded(true)}
-            ></iframe>
-          </div>
+              <path d="M13 1L1 13" stroke="#FFFFFF" strokeWidth="2" />
+              <path d="M13 13L1 0.999999" stroke="#FFFFFF" strokeWidth="2" />
+            </svg>
+          </button>
+          {!isLoaded && (
+            <p className="italic text-center absolute w-full left-0 top-0">
+              Loading...
+            </p>
+          )}
+          <iframe
+            width="560"
+            height="315"
+            src={
+              selectedWork && selectedWork !== null
+                ? selectedWork.src
+                : 'https://www.youtube.com/embed/q8ymDpGa-BE'
+            }
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="w-full h-full"
+            onClick={(e) => e.stopPropagation()}
+            onLoad={() => setIsLoaded(true)}
+            style={{ width: '100%', height: '40vw' }}
+          ></iframe>
         </div>
-      )}
+      </Modal>
     </>
   )
 }

@@ -66,32 +66,34 @@ export default function SectionFeaturedLink() {
         noHeader
         transparentContent
       >
-        <button
-          className="block ml-auto mb-4"
-          onClick={() => setShowModal(false)}
-        >
-          <svg
-            width="14"
-            height="14"
-            viewBox="0 0 14 14"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            style={{ minWidth: '14px' }}
+        <div className="w-full h-full px-5 lg:px-0 text-right -mt-4 relative">
+          <button
+            className="py-2 px-4 hover:bg-primary"
+            onClick={() => setShowModal(false)}
           >
-            <path d="M13 1L1 13" stroke="#FFFFFF" strokeWidth="2" />
-            <path d="M13 13L1 0.999999" stroke="#FFFFFF" strokeWidth="2" />
-          </svg>
-        </button>
-        <iframe
-          width="560"
-          height="315"
-          src={site_featured_youtube_embed}
-          title="YouTube video player"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-          style={{ width: '100%', height: '40vw' }}
-        ></iframe>
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 14 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              style={{ minWidth: '14px' }}
+            >
+              <path d="M13 1L1 13" stroke="#FFFFFF" strokeWidth="2" />
+              <path d="M13 13L1 0.999999" stroke="#FFFFFF" strokeWidth="2" />
+            </svg>
+          </button>
+          <iframe
+            width="560"
+            height="315"
+            src={site_featured_youtube_embed}
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            style={{ width: '100%', height: '40vw' }}
+          ></iframe>
+        </div>
       </Modal>
     </section>
   )
