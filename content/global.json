@@ -52,6 +52,10 @@
     "value": "https://www.youtube.com/channel/UCLAlGn0fvx92nQkF_v4Yq1w"
   },
   {
+    "key": "site_featured_youtube_embed",
+    "value": "https://www.youtube.com/embed/q8ymDpGa-BE"
+  },
+  {
     "key": "site_twitter",
     "value": "https://www.instagram.com/doesofficial"
   },

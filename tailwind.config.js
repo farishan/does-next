@@ -117,7 +117,7 @@ module.exports = {
         18: '4.5rem' // 72px
       },
       spacing: {
-        '6.5': '30px',
+        6.5: '30px'
       },
       colors: {
         dark: '#222222',
@@ -147,8 +147,9 @@ module.exports = {
         'custom-cubic': 'cubic-bezier(.63,0,.52,.77)'
       },
       zIndex: {
-        header: '999',
-        menu: '998'
+        modal: '999',
+        header: '998',
+        menu: '997'
       },
       animation: {
         'fade-in': 'fadeIn 0.2s ease-in-out forwards',
