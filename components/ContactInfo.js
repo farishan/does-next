@@ -52,7 +52,7 @@ export default function ContactInfo() {
             {site_phone && (
               <p className="lg:text-xl font-light">{site_phone}</p>
             )}
-            {site_phone_alt && (
+            {site_phone_alt && site_phone_alt !== site_phone && (
               <p className="lg:text-xl font-light">{site_phone_alt}</p>
             )}
           </div>
