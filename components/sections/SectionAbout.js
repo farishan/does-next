@@ -27,7 +27,7 @@ export default function SectionAbout({
       extendClass="overflow-hidden"
     >
       {/* Main Image - Desktop */}
-      <div className="hidden lg:block absolute bottom-0 left-0 z-30">
+      <div className="hidden absolute bottom-0 left-0 z-30">
         <div
           className={`${styles['main-image']} relative`}
           style={{ width: '43vw', height: '49vw' }}
@@ -44,7 +44,7 @@ export default function SectionAbout({
       </div>
 
       <main className="container pt-8 md:pt-16 lg:pt-24 pb-12 md:pb-20 lg:pb-32 relative z-40 3xl:h-screen 3xl:flex 3xl:items-center">
-        <div className="w-full md:w-3/4 lg:w-1/2 lg:ml-auto pt-0 md:pt-5">
+        <div className="w-full pt-0 md:pt-5">
           {label && <SectionLabel {...label} extendClass="mb-6" />}
           {title && (
             <h1 className="text-4xl lg:text-7xl lg:w-10/12 xl:w-full xl:text-8xl mb-8 md:mb-12">
@@ -69,7 +69,7 @@ export default function SectionAbout({
       </main>
 
       {/* Main Image - Mobile */}
-      <div className="hidden sm:block lg:hidden absolute bottom-0 left-0 z-30">
+      <div className="hidden absolute bottom-0 left-0 z-30">
         <div
           className={`${styles['main-image']} relative -mb-28 md:-mb-72`}
           style={{ width: '100vw', height: '105vw' }}
