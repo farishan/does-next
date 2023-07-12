@@ -43,7 +43,7 @@ export default function SectionAbout({
         </div>
       </div>
 
-      <main className="container pt-8 md:pt-16 lg:pt-24 pb-12 md:pb-20 lg:pb-32 relative z-40 3xl:h-screen 3xl:flex 3xl:items-center">
+      <main className="container pt-8 md:pt-16 lg:pt-24 pb-12 md:pb-20 lg:pb-32 relative z-40">
         <div className="w-full pt-0 md:pt-5">
           {label && <SectionLabel {...label} extendClass="mb-6" />}
           {title && (
